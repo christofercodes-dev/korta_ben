@@ -1,0 +1,110 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+              escape_markup: true
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+      -
+        display: Hero
+        fields:
+          -
+            handle: hero_title
+            field:
+              type: text
+              display: 'Hero title'
+              instructions: 'Text på förstasidan'
+          -
+            handle: hero_title_italic
+            field:
+              type: text
+              display: 'Hero title italic'
+              instructions: 'Kursiv text'
+          -
+            handle: hero_subtitle
+            field:
+              type: text
+              display: 'Hero subtitle'
+              instructions: 'Andra textraden'
+          -
+            handle: hero_image_1
+            field:
+              container: assets
+              max_files: 1
+              min_files: 1
+              type: assets
+              display: 'Hero image 1'
+              instructions: 'Välj den bild som ska visas till vänster på startsidan.'
+          -
+            handle: hero_image_1_title
+            field:
+              type: text
+              display: 'Hero image 1 title'
+          -
+            handle: hero_label_1
+            field:
+              type: text
+              display: 'Hero label 1'
+          -
+            handle: hero_image_2
+            field:
+              container: assets
+              max_files: 1
+              min_files: 1
+              type: assets
+              display: 'Hero image 2'
+              instructions: 'Välj den bild som ska visas till höger på startsidan.'
+          -
+            handle: hero_image_2_title
+            field:
+              type: text
+              display: 'Hero image 2 title'
+          -
+            handle: hero_label_2
+            field:
+              type: text
+              display: 'Hero label 2'
+          -
+            handle: hero_year
+            field:
+              type: text
+              display: 'Hero year'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

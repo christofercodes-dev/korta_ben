@@ -1,0 +1,91 @@
+<section class="relative overflow-hidden border-y border-white/10 bg-[#f5f5f7] text-[#181818]">
+    <div class="marquee-track flex w-max items-center py-5 md:py-0.5">
+
+        <!-- LOOP 1 -->
+        <div class="marquee-content flex shrink-0 items-center">
+            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
+                Make good work
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+
+            <span class="mx-6 font-serif text-xl text-[#181818] md:mx-10 md:text-2xl">
+                Korta ben
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+
+            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
+                Film · Content · Branding
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+
+            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
+                From idea to image
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+        </div>
+
+
+        <!-- LOOP 2 — EXAKT SAMMA SOM LOOP 1 -->
+        <div class="marquee-content flex shrink-0 items-center" aria-hidden="true">
+            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
+                Make good work
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+
+            <span class="mx-6 font-serif text-xl text-[#181818] md:mx-10 md:text-2xl">
+                Korta ben
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+
+            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
+                Film · Content · Branding
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+
+            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
+                From idea to image
+            </span>
+
+            <span class="text-xs text-[#181818]/30">✦</span>
+        </div>
+
+    </div>
+</section>
+
+
+<style>
+    .marquee-track {
+        animation: marquee-scroll 28s linear infinite;
+        will-change: transform;
+    }
+
+    @keyframes marquee-scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @media (min-width: 768px) {
+        .marquee-track {
+            animation-duration: 36s;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .marquee-track {
+            animation: none;
+            transform: translateX(0);
+        }
+    }
+</style>
