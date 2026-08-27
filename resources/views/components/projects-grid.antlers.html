@@ -1,0 +1,116 @@
+<section class="overflow-hidden bg-white px-5 py-20 text-black md:px-8 md:py-32">
+
+    <div class="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
+
+        <div>
+            <p class="text-[10px] font-semibold uppercase tracking-[0.25em] text-black/40">
+                Projekt
+            </p>
+        </div>
+
+        <div>
+            <h1 class="max-w-[850px] text-[clamp(3rem,6vw,6.5rem)] font-medium leading-[0.92] tracking-[-0.055em]">
+                Vi skapar visuella uttryck som får varumärken att synas.
+            </h1>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="overflow-hidden bg-white px-5 pb-24 text-[#181818] md:px-8 md:pb-40">
+
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-3 md:gap-y-20">
+
+        {{ projects }}
+
+        <div class="group min-w-0">
+
+            <!-- IMAGE -->
+
+            <div class="relative aspect-[1.8] overflow-hidden bg-[#e8e6e1]">
+
+                {{ image }}
+
+                <img src="{{ url }}" alt="{{ alt ?? project_title }}"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03]">
+
+                {{ /image }}
+
+
+                {{ image_hover }}
+
+                <img src="{{ url }}" alt=""
+                    class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:opacity-100">
+
+                {{ /image_hover }}
+
+
+                <!-- HOVER OVERLAY -->
+
+                <div
+                    class="absolute inset-0 flex flex-col justify-between bg-black/0 p-5 opacity-0 transition-all duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:bg-black/45 group-hover:opacity-100 md:p-7">
+
+                    <!-- TOP -->
+
+                    <div class="flex items-start justify-between">
+
+                        <p class="text-[8px] font-medium uppercase tracking-[0.25em] text-white/70">
+                            {{ category }}
+                        </p>
+
+
+
+                    </div>
+
+
+                    <!-- BOTTOM -->
+
+                    <div class="max-w-[500px]">
+
+                        <h2
+                            class="mb-4 text-[clamp(1.5rem,2.5vw,2.5rem)] font-medium leading-[0.95] tracking-[-0.03em] text-white">
+                            {{ project_title }}
+                        </h2>
+
+                        <p class="max-w-[460px] text-[12px] leading-[1.7] text-white/75 md:text-[13px]">
+                            {{ description }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT INFO -->
+
+            <div class="flex items-center justify-between border-b border-black/10 py-5">
+
+                <div>
+
+                    <p class="mb-2 text-[8px] font-medium uppercase tracking-[0.25em] text-black/35">
+                        {{ category }}
+                    </p>
+
+                    <h2 class="text-[15px] font-medium uppercase leading-none tracking-[-0.01em] md:text-[18px]">
+                        {{ project_title }}
+                    </h2>
+
+                </div>
+
+                <span class="text-[9px] font-medium uppercase tracking-[0.2em] text-black/30">
+                    Projekt
+                </span>
+
+            </div>
+
+        </div>
+
+        {{ /projects }}
+
+    </div>
+
+</section>

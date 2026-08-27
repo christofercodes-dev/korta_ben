@@ -1,0 +1,82 @@
+title: projekt
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: projects
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: projects
+            field:
+              type: replicator
+              display: projects
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    project:
+                      display: project
+                      fields:
+                        -
+                          handle: project_title
+                          field:
+                            type: text
+                            display: 'project title'
+                        -
+                          handle: category
+                          field:
+                            options:
+                              - key: foto
+                                value: Foto
+                              - key: video
+                                value: Video
+                              - key: campaign
+                                value: Campaign
+                              - key: web
+                                value: Webb
+                            type: select
+                            display: category
+                        -
+                          handle: description
+                          field:
+                            type: textarea
+                            display: description
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: image
+                        -
+                          handle: image_hover
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'image hover'
+                        -
+                          handle: content
+                          field:
+                            container: assets
+                            remove_empty_nodes: false
+                            type: bard
+                            display: content
+      - display: 'New Section'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
