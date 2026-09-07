@@ -1,0 +1,14 @@
+title: Projects
+icon: collections
+template: components/project
+layout: layout
+revisions: false
+route: '/projekt/{slug}'
+sort_dir: asc
+date_behavior:
+  past: null
+  future: null
+preview_targets:
+  - label: Entry
+    url: '{permalink}'
+    refresh: true

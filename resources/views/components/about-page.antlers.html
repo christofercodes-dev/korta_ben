@@ -1,0 +1,570 @@
+<section class="about-hero overflow-hidden bg-white px-5 pb-28 pt-20 text-[#181818] md:px-8 md:pb-48 md:pt-32">
+
+    <div class="mx-auto max-w-[1440px]">
+
+        <!-- LABEL -->
+        <div class="mb-20 grid grid-cols-1 md:mb-32 md:grid-cols-12">
+
+            <div class="min-w-0 md:col-span-3 md:col-start-1">
+
+                <p class="about-label section-label text-black/35">
+                    Om oss
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TITLE -->
+        <div class="grid grid-cols-1 md:grid-cols-12">
+
+            <div class="md:col-span-10 md:col-start-3">
+
+                <h1
+                    class="about-title max-w-[1000px] text-[clamp(3.5rem,7.5vw,6rem)] font-light leading-[0.86] tracking-[-0.065em]">
+                    {{ big_title }}
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+        <div class="mt-20 grid grid-cols-1 md:mt-32 md:grid-cols-12">
+
+            <div class="md:col-span-5 md:col-start-7">
+
+                <div class="about-content text-[15px] leading-[1.7] tracking-[-0.01em] text-black/55 md:text-[18px]">
+                    {{ content }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================== VILKA VI ÄR ================================================== -->
+<section class="about-section about-who overflow-hidden bg-[#181818] px-5 py-24 text-white md:px-8 md:py-40">
+    <div class="mx-auto max-w-[1440px]">
+        <div class="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-10"> <!-- LABEL -->
+            <div class="min-w-0 md:col-span-3 md:col-start-1">
+                <p class="about-section-label section-label text-white/40"> {{ small_title }} </p>
+            </div> <!-- CONTENT -->
+            <div class="min-w-0 md:col-span-8 md:col-start-5">
+                <h2
+                    class="about-section-title max-w-[950px] text-[clamp(2.5rem,5vw,5.5rem)] font-medium leading-[0.92] tracking-[-0.055em]">
+                    {{ about_title }} </h2>
+                <div
+                    class="about-section-content mt-12 max-w-[600px] text-[15px] leading-[1.75] text-white/55 md:mt-20 md:text-[17px]">
+                    {{ about_content }} </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== TEAM ================================================== -->
+<section class="about-section about-team overflow-hidden bg-white px-5 py-28 text-[#181818] md:px-8 md:py-48">
+    <div class="mx-auto max-w-[1440px]"> <!-- HEADER -->
+        <div class="grid grid-cols-1 md:grid-cols-12"> <!-- LABEL -->
+            <div class="min-w-0 md:col-span-3 md:col-start-1">
+                <p class="about-section-label section-label text-black/35"> Vi som jobbar här </p>
+            </div> <!-- CONTENT -->
+            <div class="min-w-0 md:col-span-8 md:col-start-5">
+                <h2
+                    class="about-section-title max-w-[900px] text-[clamp(2.8rem,5.5vw,6rem)] font-medium leading-[0.9] tracking-[-0.06em]">
+                    Människorna bakom det vi gör. </h2>
+            </div>
+        </div> <!-- TEAM LIST -->
+        <div class="about-team-list mt-24 md:mt-40"> {{ team }} <div class="about-team-member group py-6 md:py-8">
+                <div class="grid grid-cols-1 gap-3 md:grid-cols-12 md:items-baseline">
+                    <div class="md:col-span-7 md:col-start-2">
+                        <h3
+                            class="text-[clamp(1.8rem,3.2vw,3.8rem)] font-medium leading-none tracking-[-0.045em] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
+                            {{ name }} </h3>
+                    </div>
+                    <div class="md:col-span-3 md:col-start-10 md:text-right">
+                        <p class="text-[9px] font-medium uppercase tracking-[0.2em] text-black/35"> {{ role }} </p>
+                    </div>
+                </div>
+            </div> {{ /team }} </div>
+    </div>
+</section>
+<!-- ================================================== CLOSING ================================================== -->
+<section
+    class="about-section about-closing overflow-hidden bg-white px-5 pb-32 pt-12 text-[#181818] md:px-8 md:pb-52 md:pt-20">
+    <div class="mx-auto max-w-[1440px]">
+        <div class="border-t border-black/10 pt-6">
+            <div class="grid grid-cols-1 md:grid-cols-12"> <!-- LABEL -->
+                <div class="min-w-0 md:col-span-3 md:col-start-1">
+                    <p class="about-section-label section-label text-black/35"> Kontakt </p>
+                </div> <!-- CONTENT -->
+                <div class="min-w-0 md:col-span-8 md:col-start-5">
+                    <h2
+                        class="about-section-title max-w-[1000px] text-[clamp(2.8rem,6vw,7rem)] font-medium leading-[0.88] tracking-[-0.065em]">
+                        Har du ett projekt i åtanke? </h2> <a href="/kontakt"
+                        class="about-closing-link group mt-12 inline-flex items-center gap-6 text-[10px] font-medium uppercase tracking-[0.22em]">
+                        <span> Hör av dig </span> <span
+                            class="transition-transform duration-500 group-hover:translate-x-2"> → </span> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    /* =========================================================
+   ABOUT PAGE ANIMATIONS
+   ========================================================= */
+
+
+    /* ---------------------------------------------------------
+   HERO LABEL
+   --------------------------------------------------------- */
+
+    .about-label {
+        opacity: 0;
+        transform: translateY(20px);
+
+        transition:
+            opacity 800ms cubic-bezier(.16, 1, .3, 1),
+            transform 800ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .about-label.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   HERO TITLE
+   --------------------------------------------------------- */
+
+    .about-title {
+        opacity: 0;
+        transform: translateY(80px);
+
+        transition:
+            opacity 1100ms cubic-bezier(.16, 1, .3, 1) 100ms,
+            transform 1100ms cubic-bezier(.16, 1, .3, 1) 100ms;
+    }
+
+    .about-title.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   HERO CONTENT
+   --------------------------------------------------------- */
+
+    .about-content {
+        opacity: 0;
+        transform: translateY(30px);
+
+        transition:
+            opacity 900ms cubic-bezier(.16, 1, .3, 1),
+            transform 900ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .about-content.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   GENERAL SECTION LABEL
+   --------------------------------------------------------- */
+
+    .about-section-label {
+        opacity: 0;
+        transform: translateY(20px);
+
+        transition:
+            opacity 800ms cubic-bezier(.16, 1, .3, 1),
+            transform 800ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .about-section-label.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   GENERAL SECTION TITLE
+   --------------------------------------------------------- */
+
+    .about-section-title {
+        opacity: 0;
+        transform: translateY(70px);
+
+        transition:
+            opacity 1100ms cubic-bezier(.16, 1, .3, 1),
+            transform 1100ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .about-section-title.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   GENERAL SECTION CONTENT
+   --------------------------------------------------------- */
+
+    .about-section-content {
+        opacity: 0;
+        transform: translateY(25px);
+
+        transition:
+            opacity 850ms cubic-bezier(.16, 1, .3, 1) 180ms,
+            transform 850ms cubic-bezier(.16, 1, .3, 1) 180ms;
+    }
+
+    .about-section-content.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   TEAM MEMBERS
+   --------------------------------------------------------- */
+
+    .about-team-member {
+        opacity: 0;
+        transform: translateY(45px);
+
+        transition:
+            opacity 850ms cubic-bezier(.16, 1, .3, 1),
+            transform 850ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .about-team-member.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   CLOSING LINK
+   --------------------------------------------------------- */
+
+    .about-closing-link {
+        opacity: 0;
+        transform: translateY(20px);
+
+        transition:
+            opacity 800ms cubic-bezier(.16, 1, .3, 1),
+            transform 800ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .about-closing-link.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+    @media (max-width: 767px) {
+
+        .about-title {
+            transform: translateY(50px);
+        }
+
+        .about-section-title {
+            transform: translateY(50px);
+        }
+
+        .about-team-member {
+            transform: translateY(35px);
+        }
+
+    }
+
+
+    /* ---------------------------------------------------------
+   REDUCED MOTION
+   --------------------------------------------------------- */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .about-label,
+        .about-title,
+        .about-content,
+        .about-section-label,
+        .about-section-title,
+        .about-section-content,
+        .about-team-member,
+        .about-closing-link {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+    }
+</style>
+
+
+<script>
+
+    (function () {
+
+        function initAboutAnimations() {
+
+            /* =================================================
+               HERO
+               ================================================= */
+
+            const label = document.querySelector('.about-label');
+            const title = document.querySelector('.about-title');
+            const content = document.querySelector('.about-content');
+
+
+            /*
+             * LABEL
+             */
+
+            if (label) {
+
+                setTimeout(function () {
+
+                    label.classList.add('is-visible');
+
+                }, 100);
+
+            }
+
+
+            /*
+             * TITLE
+             */
+
+            if (title) {
+
+                setTimeout(function () {
+
+                    title.classList.add('is-visible');
+
+                }, 220);
+
+            }
+
+
+            /*
+             * CONTENT
+             */
+
+            if (content) {
+
+                setTimeout(function () {
+
+                    content.classList.add('is-visible');
+
+                }, 650);
+
+            }
+
+
+            /* =================================================
+               SCROLL ANIMATIONS
+               ================================================= */
+
+            const sections =
+                document.querySelectorAll('.about-section');
+
+            if (!sections.length) return;
+
+
+            const observer =
+                new IntersectionObserver(
+
+                    function (entries) {
+
+                        entries.forEach(function (entry) {
+
+                            if (!entry.isIntersecting) return;
+
+
+                            const section =
+                                entry.target;
+
+
+                            /*
+                             * LABEL
+                             */
+
+                            const sectionLabel =
+                                section.querySelector(
+                                    '.about-section-label'
+                                );
+
+
+                            if (sectionLabel) {
+
+                                setTimeout(function () {
+
+                                    sectionLabel.classList.add(
+                                        'is-visible'
+                                    );
+
+                                }, 50);
+
+                            }
+
+
+                            /*
+                             * TITLE
+                             */
+
+                            const sectionTitle =
+                                section.querySelector(
+                                    '.about-section-title'
+                                );
+
+
+                            if (sectionTitle) {
+
+                                setTimeout(function () {
+
+                                    sectionTitle.classList.add(
+                                        'is-visible'
+                                    );
+
+                                }, 150);
+
+                            }
+
+
+                            /*
+                             * CONTENT
+                             */
+
+                            const sectionContent =
+                                section.querySelector(
+                                    '.about-section-content'
+                                );
+
+
+                            if (sectionContent) {
+
+                                setTimeout(function () {
+
+                                    sectionContent.classList.add(
+                                        'is-visible'
+                                    );
+
+                                }, 400);
+
+                            }
+
+
+                            /*
+                             * TEAM
+                             */
+
+                            const teamMembers =
+                                section.querySelectorAll(
+                                    '.about-team-member'
+                                );
+
+
+                            teamMembers.forEach(
+                                function (member, index) {
+
+                                    setTimeout(function () {
+
+                                        member.classList.add(
+                                            'is-visible'
+                                        );
+
+                                    }, 250 + (index * 100));
+
+                                }
+                            );
+
+
+                            /*
+                             * CLOSING LINK
+                             */
+
+                            const closingLink =
+                                section.querySelector(
+                                    '.about-closing-link'
+                                );
+
+
+                            if (closingLink) {
+
+                                setTimeout(function () {
+
+                                    closingLink.classList.add(
+                                        'is-visible'
+                                    );
+
+                                }, 500);
+
+                            }
+
+
+                            /*
+                             * Kör endast en gång
+                             */
+
+                            observer.unobserve(section);
+
+                        });
+
+                    },
+
+                    {
+                        threshold: 0.12,
+                        rootMargin: '0px 0px -10% 0px'
+                    }
+
+                );
+
+
+            sections.forEach(function (section) {
+
+                observer.observe(section);
+
+            });
+
+        }
+
+
+        /* =====================================================
+           INIT
+           ===================================================== */
+
+        if (document.readyState === 'loading') {
+
+            document.addEventListener(
+                'DOMContentLoaded',
+                initAboutAnimations
+            );
+
+        } else {
+
+            initAboutAnimations();
+
+        }
+
+    })();
+
+</script>

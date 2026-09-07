@@ -2,76 +2,237 @@
 
     <div class="grid gap-20 md:grid-cols-12 md:gap-8">
 
-
-
-
         <div
-        class="md:col-span-7 md:ml-25 about-animate opacity-0 translate-y-8 transition-all duration-1000 ease-out"
-    >
-        <h2 class="max-w-[900px] text-[9vw] font-light leading-[0.96] tracking-[-0.055em] md:text-[4vw]">
-            Vad sysslar vi med?
-            <br>
-        </h2>
-    
-        <p class="mt-12 max-w-[700px] text-base leading-[1.3] text-black font-light md:mt-5 md:text-2xl">
-            Korta Ben är en kreativ byrå som gillar
-            bra idéer, enkelt språk och saker som
-            känns på riktigt.
-        </p>
-    
-        <p class="mt-6 max-w-[700px] text-base leading-[1.3] font-light text-black md:text-2xl">
-            Vi jobbar med varumärken som vill göra
-            kommunikation med lite mer tanke bakom.
-            Från idé och strategi till film, content
-            och kampanjer.
-        </p>
-    
-        <a
-            href="/kontakt"
-            class="mt-10 inline-flex items-center gap-3 rounded-full bg-[#181818] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#4e4e4e]"
+            class="md:col-span-7 about-animate opacity-0 translate-y-8 transition-all duration-1000 ease-out"
         >
-            Prata med oss
-            <span aria-hidden="true">→</span>
-        </a>
-    </div>
+
+            <h2 class="max-w-[900px] text-[9vw] font-light leading-[0.96] tracking-[-0.055em] md:text-[4vw]">
+                Vad sysslar vi med?
+                <br>
+            </h2>
+
+            <p class="mt-12 max-w-[700px] text-base leading-[1.3] text-black font-light md:mt-5 md:text-2xl">
+                Korta Ben är en kreativ byrå som gillar
+                bra idéer, enkelt språk och saker som
+                känns på riktigt.
+            </p>
+
+            <p class="mt-6 max-w-[700px] text-base leading-[1.3] font-light text-black md:text-2xl">
+                Vi jobbar med varumärken som vill göra
+                kommunikation med lite mer tanke bakom.
+                Från idé och strategi till film, content
+                och kampanjer.
+            </p>
+
+
+            <!-- MAGNETIC BUTTON -->
+            <div class="mt-10">
+
+                <a
+                    href="/kontakt"
+                    class="magnetic-button group relative inline-flex items-center gap-4 rounded-full bg-[#181818] px-7 py-4 text-sm font-semibold text-white will-change-transform"
+                >
+
+                    <span>
+                        Prata med oss
+                    </span>
+
+                    <span
+                        class="magnetic-arrow inline-flex transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-1"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
 
 
         <!-- SERVICES -->
-
-        <!-- <div class="md:col-span-3 md:col-start-10">
-
-            <p class="mb-6 text-[8px] uppercase tracking-[0.28em] text-black">
-                Vi gör
-            </p>
-
-            <ul class="space-y-3 text-[10px] uppercase font-bold tracking-[0.16em]">
-
-                <li class="pb-3">
-                    Strategi
-                </li>
-
-                <li class="pb-3">
-                    Kreativitet
-                </li>
-
-                <li class="pb-3">
-                    Film
-                </li>
-
-                <li class="pb-3">
-                    Content
-                </li>
-
-                <li class="pb-3">
-                    Social
-                </li>
-
-            </ul>
-
-        </div> -->
+        <!--
+        <div class="md:col-span-3 md:col-start-10">
+            ...
+        </div>
+        -->
 
     </div>
 
-
-
 </section>
+
+
+<style>
+
+    /* =====================================
+       MAGNETIC BUTTON
+    ===================================== */
+
+    .magnetic-button {
+        transform: translate3d(0, 0, 0);
+        transition:
+            transform 700ms cubic-bezier(.16, 1, .3, 1),
+            background-color 400ms ease;
+    }
+
+    .magnetic-button:hover {
+        background-color: #4e4e4e;
+    }
+
+
+    /* =====================================
+       "HERE I AM" INTRO ANIMATION
+    ===================================== */
+
+    .magnetic-button.is-intro {
+        animation:
+            magnetic-arrive 700ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    @keyframes magnetic-arrive {
+
+        0% {
+            transform: translate3d(0, 18px, 0) scale(.96);
+        }
+
+        55% {
+            transform: translate3d(0, -7px, 0) scale(1.02);
+        }
+
+        75% {
+            transform: translate3d(0, 2px, 0) scale(.995);
+        }
+
+        100% {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+    }
+
+
+    /* =====================================
+       DESKTOP ONLY
+    ===================================== */
+
+    @media (min-width: 768px) {
+
+        .magnetic-button {
+            cursor: pointer;
+        }
+
+    }
+
+
+    /* =====================================
+       REDUCE MOTION
+    ===================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .magnetic-button {
+            animation: none !important;
+            transition: none !important;
+        }
+
+    }
+
+    /* DEBUG / FORCE NAVBAR ABOVE ABOUT PAGE */
+.site-navbar {
+    position: fixed !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+}
+
+.site-navbar-toggle {
+    position: relative !important;
+    z-index: 1000000 !important;
+    pointer-events: auto !important;
+}
+
+.site-mobile-menu {
+    position: fixed !important;
+    z-index: 999998 !important;
+    pointer-events: auto !important;
+}
+
+</style>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const section = document.querySelector('#about');
+    const button = document.querySelector('.magnetic-button');
+
+    if (!section || !button) return;
+
+
+    /* =====================================
+       INTRO — "HÄR ÄR JAG"
+    ===================================== */
+
+    let hasEntered = false;
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting && !hasEntered) {
+
+                hasEntered = true;
+
+                setTimeout(() => {
+                    button.classList.add('is-intro');
+
+                    setTimeout(() => {
+                        button.classList.remove('is-intro');
+                    }, 750);
+
+                }, 250);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.35
+    });
+
+    observer.observe(section);
+
+
+    /* =====================================
+       MAGNETIC MOVEMENT
+    ===================================== */
+
+    if (window.matchMedia('(min-width: 768px)').matches) {
+
+        const strength = 0.28;
+
+        button.addEventListener('mousemove', (event) => {
+
+            const rect = button.getBoundingClientRect();
+
+            const x = event.clientX - (rect.left + rect.width / 2);
+            const y = event.clientY - (rect.top + rect.height / 2);
+
+            button.style.transform =
+                `translate3d(${x * strength}px, ${y * strength}px, 0)`;
+
+        });
+
+
+        button.addEventListener('mouseleave', () => {
+
+            button.style.transform =
+                'translate3d(0, 0, 0)';
+
+        });
+
+    }
+
+});
+
+</script>

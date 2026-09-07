@@ -1,0 +1,66 @@
+title: Tjänster
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+      -
+        display: Tjänster
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Titel
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: textarea
+              display: content
+          -
+            handle: services
+            field:
+              type: replicator
+              display: services
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    services:
+                      display: services
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: titel
+                        -
+                          handle: description
+                          field:
+                            type: textarea
+                            display: description
+          -
+            handle: approach_content
+            field:
+              type: textarea
+              display: 'approach content'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

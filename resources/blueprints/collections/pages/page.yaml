@@ -97,6 +97,48 @@ tabs:
             field:
               type: text
               display: 'Hero year'
+      -
+        display: 'projekt första sidan'
+        fields:
+          -
+            handle: featured_projects
+            field:
+              type: replicator
+              display: featured_projects
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    featured_projects:
+                      display: featured_projects
+                      fields:
+                        -
+                          handle: project_first_page_title
+                          field:
+                            type: text
+                            display: 'project first page title'
+                        -
+                          handle: projects_first_page_content
+                          field:
+                            type: textarea
+                            display: 'projects first page content'
+                        -
+                          handle: projects_first_page_image
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'projects first page image'
+                        -
+                          handle: projects_first_page_image_hover
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'projects first page image hover'
+                        -
+                          handle: image_title
+                          field:
+                            type: textarea
+                            display: 'image title'
   sidebar:
     display: Sidebar
     sections:

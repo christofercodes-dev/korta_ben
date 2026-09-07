@@ -1,0 +1,816 @@
+{{ partial:components/navbar }}
+
+
+<!-- ==================================================
+     CONTACT — HERO
+================================================== -->
+
+<section class="contact-hero overflow-hidden bg-white px-5 pb-24 pt-20 text-[#181818] md:px-8 md:pb-40 md:pt-32">
+
+    <div class="mx-auto max-w-[1440px]">
+
+        <!-- LABEL -->
+        <div class="mb-20 grid grid-cols-1 md:mb-32 md:grid-cols-12">
+            <div class="min-w-0 md:col-span-3 md:col-start-1">
+                <p class="contact-hero-label section-label text-black/35">
+                    Kontakt
+                </p>
+            </div>
+        </div>
+
+
+        <!-- TITLE -->
+        <div class="grid grid-cols-1 md:grid-cols-12">
+
+            <!--
+                Contact skiljer sig från Services:
+                Titeln börjar längre åt höger.
+            -->
+            <div class="min-w-0 md:col-span-8 md:col-start-5">
+
+                <h1 class="contact-hero-title max-w-[900px] text-[clamp(3.8rem,8vw,8rem)] font-light leading-[0.86] tracking-[-0.075em]">
+                    {{ big_title }}
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <!-- INTRO -->
+        <div class="mt-16 grid grid-cols-1 md:mt-24 md:grid-cols-12">
+
+            <!--
+                Ännu längre åt höger än Services.
+                Ger Contact en tydligare egen karaktär.
+            -->
+            <div class="min-w-0 md:col-span-4 md:col-start-9">
+
+                <div class="contact-hero-content max-w-[520px] text-[15px] leading-[1.7] tracking-[-0.01em] text-black/55 md:text-[17px]">
+                    {{ content }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CONTACT FORM
+================================================== -->
+
+<section class="contact-section contact-form-section overflow-hidden bg-[#181818] px-5 py-24 text-white md:px-8 md:py-40">
+
+    <div class="mx-auto max-w-[1440px]">
+
+        <div class="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-10">
+
+            <!-- LABEL -->
+            <div class="min-w-0 md:col-span-3 md:col-start-1">
+
+                <p class="contact-section-label section-label text-white/40">
+                    Skicka förfrågan
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+            <div class="min-w-0 md:col-span-8 md:col-start-5">
+
+                <h2 class="contact-section-title max-w-[850px] text-[clamp(2.8rem,5.5vw,6rem)] font-medium leading-[0.9] tracking-[-0.06em]">
+                    Berätta om ditt projekt.
+                </h2>
+
+
+                <form
+                    method="POST"
+                    action="#"
+                    class="contact-form mt-20 md:mt-28"
+                >
+
+                    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-8 md:gap-y-16">
+
+
+                        <!-- NAME -->
+                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
+
+                            <label
+                                for="name"
+                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
+                            >
+                                Namn
+                            </label>
+
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                required
+                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
+                                placeholder="Ditt namn"
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
+
+                            <label
+                                for="email"
+                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
+                            >
+                                E-post
+                            </label>
+
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                required
+                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
+                                placeholder="din@email.se"
+                            >
+
+                        </div>
+
+
+                        <!-- COMPANY -->
+                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
+
+                            <label
+                                for="company"
+                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
+                            >
+                                Företag
+                            </label>
+
+                            <input
+                                id="company"
+                                name="company"
+                                type="text"
+                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
+                                placeholder="Företagsnamn"
+                            >
+
+                        </div>
+
+
+                        <!-- PROJECT TYPE -->
+                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
+
+                            <label
+                                for="project"
+                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
+                            >
+                                Projekt
+                            </label>
+
+                            <input
+                                id="project"
+                                name="project"
+                                type="text"
+                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
+                                placeholder="Vad behöver ni hjälp med?"
+                            >
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white md:col-span-2">
+
+                            <label
+                                for="message"
+                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
+                            >
+                                Meddelande
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="4"
+                                required
+                                class="w-full resize-none border-0 bg-transparent p-0 text-[17px] font-light leading-[1.5] tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
+                                placeholder="Berätta lite om projektet..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <div class="contact-form-submit mt-14 flex items-center justify-between md:mt-20">
+
+                        <p class="max-w-[300px] text-[10px] leading-[1.6] text-white/35">
+                            Genom att skicka formuläret godkänner du att vi kontaktar dig angående din förfrågan.
+                        </p>
+
+                        <button
+                            type="submit"
+                            class="group inline-flex items-center gap-6 border-b border-white/30 pb-3 text-[10px] font-medium uppercase tracking-[0.22em] transition-colors duration-500 hover:border-white"
+                        >
+                            <span>
+                                Skicka
+                            </span>
+
+                            <span class="transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
+                                →
+                            </span>
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DIRECT CONTACT
+================================================== -->
+
+<section class="contact-section contact-direct-section overflow-hidden bg-white px-5 py-28 text-[#181818] md:px-8 md:py-48">
+
+    <div class="mx-auto max-w-[1440px]">
+
+        <div class="grid grid-cols-1 md:grid-cols-12">
+
+            <!-- LABEL -->
+            <div class="min-w-0 md:col-span-3 md:col-start-1">
+
+                <p class="contact-section-label section-label text-black/35">
+                    Direktkontakt
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="min-w-0 md:col-span-8 md:col-start-5">
+
+                <div class="contact-direct-grid grid grid-cols-1 gap-16 md:grid-cols-2">
+
+
+                    <!-- EMAIL -->
+                    <div class="contact-direct-item">
+
+                        <p class="mb-5 text-[9px] font-medium uppercase tracking-[0.25em] text-black/35">
+                            E-post
+                        </p>
+
+                        <a
+                            href="mailto:hello@studio.se"
+                            class="group inline-flex items-center gap-4 text-[clamp(1.5rem,2.8vw,3rem)] font-medium leading-none tracking-[-0.045em]"
+                        >
+                            <span>
+                                hello@studio.se
+                            </span>
+
+                            <span class="text-black/30 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
+                                →
+                            </span>
+                        </a>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="contact-direct-item">
+
+                        <p class="mb-5 text-[9px] font-medium uppercase tracking-[0.25em] text-black/35">
+                            Telefon
+                        </p>
+
+                        <a
+                            href="tel:+46000000000"
+                            class="group inline-flex items-center gap-4 text-[clamp(1.5rem,2.8vw,3rem)] font-medium leading-none tracking-[-0.045em]"
+                        >
+                            <span>
+                                +46 00 000 00 00
+                            </span>
+
+                            <span class="text-black/30 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
+                                →
+                            </span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+                <div class="contact-address mt-20 border-t border-black/10 pt-6 md:mt-32">
+
+                    <div class="grid grid-cols-1 md:grid-cols-12">
+
+                        <div class="md:col-span-3">
+
+                            <p class="text-[9px] font-medium uppercase tracking-[0.25em] text-black/35">
+                                Studio
+                            </p>
+
+                        </div>
+
+                        <div class="md:col-span-5 md:col-start-5">
+
+                            <p class="text-[15px] leading-[1.7] text-black/55 md:text-[17px]">
+                                Stockamöllan, Skåne
+                                <br>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CONTACT ANIMATIONS
+================================================== -->
+
+<style>
+
+/* =========================================================
+   GLOBAL SECTION LABEL
+   ========================================================= */
+
+.section-label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+}
+
+@media (min-width: 768px) {
+    .section-label {
+        padding-top: 2px;
+    }
+}
+
+
+/* =========================================================
+   CONTACT — HERO
+   ========================================================= */
+
+.contact-hero-label {
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 800ms cubic-bezier(.16, 1, .3, 1),
+        transform 800ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-hero-label.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.contact-hero-title {
+    opacity: 0;
+    transform: translateY(80px);
+
+    transition:
+        opacity 1100ms cubic-bezier(.16, 1, .3, 1) 100ms,
+        transform 1100ms cubic-bezier(.16, 1, .3, 1) 100ms;
+}
+
+.contact-hero-title.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.contact-hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 900ms cubic-bezier(.16, 1, .3, 1),
+        transform 900ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-hero-content.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CONTACT — SECTIONS
+   ========================================================= */
+
+.contact-section-label {
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 800ms cubic-bezier(.16, 1, .3, 1),
+        transform 800ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-section-label.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.contact-section-title {
+    opacity: 0;
+    transform: translateY(70px);
+
+    transition:
+        opacity 1100ms cubic-bezier(.16, 1, .3, 1),
+        transform 1100ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-section-title.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CONTACT — FORM
+   ========================================================= */
+
+.contact-form-field {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 800ms cubic-bezier(.16, 1, .3, 1),
+        transform 800ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-form-field.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.contact-form-submit {
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 700ms cubic-bezier(.16, 1, .3, 1),
+        transform 700ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-form-submit.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CONTACT — DIRECT CONTACT
+   ========================================================= */
+
+.contact-direct-item {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 850ms cubic-bezier(.16, 1, .3, 1),
+        transform 850ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-direct-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.contact-address {
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 750ms cubic-bezier(.16, 1, .3, 1),
+        transform 750ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-address.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .contact-hero-title {
+        transform: translateY(50px);
+    }
+
+    .contact-section-title {
+        transform: translateY(50px);
+    }
+
+    .contact-form-field {
+        transform: translateY(30px);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-hero-label,
+    .contact-hero-title,
+    .contact-hero-content,
+    .contact-section-label,
+    .contact-section-title,
+    .contact-form-field,
+    .contact-form-submit,
+    .contact-direct-item,
+    .contact-address {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+}
+
+</style>
+
+
+
+<script>
+
+(function () {
+
+    function initContactAnimations() {
+
+        /* =========================================
+           HERO
+           ========================================= */
+
+        const heroLabel =
+            document.querySelector('.contact-hero-label');
+
+        const heroTitle =
+            document.querySelector('.contact-hero-title');
+
+        const heroContent =
+            document.querySelector('.contact-hero-content');
+
+
+        if (heroLabel) {
+
+            setTimeout(function () {
+                heroLabel.classList.add('is-visible');
+            }, 100);
+
+        }
+
+
+        if (heroTitle) {
+
+            setTimeout(function () {
+                heroTitle.classList.add('is-visible');
+            }, 220);
+
+        }
+
+
+        if (heroContent) {
+
+            setTimeout(function () {
+                heroContent.classList.add('is-visible');
+            }, 650);
+
+        }
+
+
+        /* =========================================
+           SCROLL SECTIONS
+           ========================================= */
+
+        const sections =
+            document.querySelectorAll('.contact-section');
+
+        if (!sections.length) return;
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(function (entry) {
+
+                        if (!entry.isIntersecting) return;
+
+                        const section =
+                            entry.target;
+
+
+                        /* LABEL */
+
+                        const label =
+                            section.querySelector(
+                                '.contact-section-label'
+                            );
+
+                        if (label) {
+
+                            setTimeout(function () {
+
+                                label.classList.add(
+                                    'is-visible'
+                                );
+
+                            }, 100);
+
+                        }
+
+
+                        /* TITLE */
+
+                        const title =
+                            section.querySelector(
+                                '.contact-section-title'
+                            );
+
+                        if (title) {
+
+                            setTimeout(function () {
+
+                                title.classList.add(
+                                    'is-visible'
+                                );
+
+                            }, 220);
+
+                        }
+
+
+                        /* FORM FIELDS */
+
+                        const fields =
+                            section.querySelectorAll(
+                                '.contact-form-field'
+                            );
+
+                        fields.forEach(
+                            function (field, index) {
+
+                                setTimeout(function () {
+
+                                    field.classList.add(
+                                        'is-visible'
+                                    );
+
+                                }, 450 + (index * 100));
+
+                            }
+                        );
+
+
+                        /* FORM SUBMIT */
+
+                        const submit =
+                            section.querySelector(
+                                '.contact-form-submit'
+                            );
+
+                        if (submit) {
+
+                            setTimeout(function () {
+
+                                submit.classList.add(
+                                    'is-visible'
+                                );
+
+                            }, 950);
+
+                        }
+
+
+                        /* DIRECT CONTACT */
+
+                        const directItems =
+                            section.querySelectorAll(
+                                '.contact-direct-item'
+                            );
+
+                        directItems.forEach(
+                            function (item, index) {
+
+                                setTimeout(function () {
+
+                                    item.classList.add(
+                                        'is-visible'
+                                    );
+
+                                }, 350 + (index * 120));
+
+                            }
+                        );
+
+
+                        /* ADDRESS */
+
+                        const address =
+                            section.querySelector(
+                                '.contact-address'
+                            );
+
+                        if (address) {
+
+                            setTimeout(function () {
+
+                                address.classList.add(
+                                    'is-visible'
+                                );
+
+                            }, 650);
+
+                        }
+
+
+                        /* ONLY ONCE */
+
+                        observer.unobserve(section);
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -10% 0px'
+                }
+
+            );
+
+
+        sections.forEach(function (section) {
+            observer.observe(section);
+        });
+
+    }
+
+
+    /* =========================================
+       INIT
+       ========================================= */
+
+    if (document.readyState === 'loading') {
+
+        document.addEventListener(
+            'DOMContentLoaded',
+            initContactAnimations
+        );
+
+    } else {
+
+        initContactAnimations();
+
+    }
+
+})();
+
+</script>

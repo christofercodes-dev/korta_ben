@@ -1,0 +1,368 @@
+{{ partial:components/navbar }}
+
+<section class="overflow-hidden bg-white px-5 pb-16 pt-20 text-[#181818] md:px-8 md:pb-24 md:pt-32">
+    <div class="mx-auto max-w-[1440px]">
+
+        {{ if category }}
+            <p class="mb-5 text-[9px] font-semibold uppercase tracking-[0.25em] text-black/40">
+                {{ category }}
+            </p>
+        {{ /if }}
+
+        <h1 class="max-w-[1100px] text-[clamp(3.5rem,8vw,9rem)] font-medium leading-[0.88] tracking-[-0.06em]">
+            {{ title }}
+        </h1>
+
+    </div>
+</section>
+
+
+<!-- ========================================================= -->
+<!-- PROJECT CONTENT                                            -->
+<!-- ========================================================= -->
+
+<section class="overflow-hidden bg-white px-5 pb-24 text-[#181818] md:px-8 md:pb-40">
+    <div class="mx-auto max-w-[1440px]">
+
+        {{ project_content }}
+
+            <!-- ================================================= -->
+            <!-- TEXT                                               -->
+            <!-- ================================================= -->
+
+            {{ if type == "text" }}
+
+                <div class="max-w-[700px] py-16 md:py-24">
+
+                    {{ if heading }}
+                        <h2 class="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[0.95] tracking-[-0.05em]">
+                            {{ heading }}
+                        </h2>
+                    {{ /if }}
+
+                    {{ if body }}
+                        <div class="mt-8 text-base font-light leading-[1.4] md:text-xl">
+                            {{ body }}
+                        </div>
+                    {{ /if }}
+
+                </div>
+
+
+            <!-- ================================================= -->
+            <!-- STOR BILD                                          -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "image" }}
+
+                {{ if image }}
+
+                    <figure class="py-8 md:py-12">
+
+                        <div class="overflow-hidden bg-[#e8e6e1]">
+
+                            {{ image }}
+
+                                <img
+                                    src="{{ url }}"
+                                    alt="{{ alt ?? title }}"
+                                    class="block h-auto w-full"
+                                    loading="lazy"
+                                >
+
+                            {{ /image }}
+
+                        </div>
+
+                    </figure>
+
+                {{ /if }}
+
+
+            <!-- ================================================= -->
+            <!-- TVÅ BILDER                                         -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "two_images" }}
+
+                <div class="grid grid-cols-1 gap-3 py-8 md:grid-cols-2 md:gap-5 md:py-12">
+
+                    <!-- LEFT IMAGE -->
+
+                    <div class="overflow-hidden bg-[#e8e6e1]">
+
+                        {{ if image_left }}
+
+                            {{ image_left }}
+
+                                <img
+                                    src="{{ url }}"
+                                    alt="{{ alt ?? title }}"
+                                    class="block h-auto w-full"
+                                    loading="lazy"
+                                >
+
+                            {{ /image_left }}
+
+                        {{ /if }}
+
+                    </div>
+
+
+                    <!-- RIGHT IMAGE -->
+
+                    <div class="overflow-hidden bg-[#e8e6e1]">
+
+                        {{ if image_right }}
+
+                            {{ image_right }}
+
+                                <img
+                                    src="{{ url }}"
+                                    alt="{{ alt ?? title }}"
+                                    class="block h-auto w-full"
+                                    loading="lazy"
+                                >
+
+                            {{ /image_right }}
+
+                        {{ /if }}
+
+                    </div>
+
+                </div>
+
+
+            <!-- ================================================= -->
+            <!-- BILD + TEXT                                        -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "image_text" }}
+
+                <div class="grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-2 md:gap-20 md:py-24">
+
+                    <div>
+
+                        {{ if image }}
+
+                            {{ image }}
+
+                                <figure class="overflow-hidden bg-[#e8e6e1]">
+
+                                    <img
+                                        src="{{ url }}"
+                                        alt="{{ alt ?? title }}"
+                                        class="block h-auto w-full"
+                                        loading="lazy"
+                                    >
+
+                                </figure>
+
+                            {{ /image }}
+
+                        {{ /if }}
+
+                    </div>
+
+
+                    <div class="max-w-[600px]">
+
+                        {{ if heading }}
+
+                            <h2 class="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[0.95] tracking-[-0.05em]">
+                                {{ heading }}
+                            </h2>
+
+                        {{ /if }}
+
+                        {{ if body }}
+
+                            <div class="mt-8 text-base font-light leading-[1.4] md:text-xl">
+                                {{ body }}
+                            </div>
+
+                        {{ /if }}
+
+                    </div>
+
+                </div>
+
+
+            <!-- ================================================= -->
+            <!-- BILD + VIDEO                                       -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "image_video" }}
+
+                <div class="grid grid-cols-1 gap-3 py-8 md:grid-cols-2 md:gap-5 md:py-12">
+
+                    <div>
+
+                        {{ if image }}
+
+                            {{ image }}
+
+                                <figure class="overflow-hidden bg-[#e8e6e1]">
+
+                                    <img
+                                        src="{{ url }}"
+                                        alt="{{ alt ?? title }}"
+                                        class="block h-auto w-full"
+                                        loading="lazy"
+                                    >
+
+                                </figure>
+
+                            {{ /image }}
+
+                        {{ /if }}
+
+                    </div>
+
+
+                    <div class="overflow-hidden bg-black">
+
+                        {{ video }}
+
+                    </div>
+
+                </div>
+
+
+            <!-- ================================================= -->
+            <!-- VIDEO                                               -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "video" }}
+
+                <div class="py-8 md:py-12">
+
+                    <div class="overflow-hidden bg-black">
+
+                        {{ video }}
+
+                    </div>
+
+                </div>
+
+
+            <!-- ================================================= -->
+            <!-- BILD + TEXT + BILD                                 -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "image_text_image" }}
+
+                <div class="grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-12 md:gap-8 md:py-24">
+
+                    <!-- LEFT IMAGE -->
+
+                    <div class="md:col-span-4">
+
+                        {{ if image_left }}
+
+                            {{ image_left }}
+
+                                <figure class="overflow-hidden bg-[#e8e6e1]">
+
+                                    <img
+                                        src="{{ url }}"
+                                        alt="{{ alt ?? title }}"
+                                        class="block h-auto w-full"
+                                        loading="lazy"
+                                    >
+
+                                </figure>
+
+                            {{ /image_left }}
+
+                        {{ /if }}
+
+                    </div>
+
+
+                    <!-- TEXT -->
+
+                    <div class="md:col-span-4">
+
+                        {{ if heading }}
+
+                            <h2 class="text-[clamp(2rem,4vw,4rem)] font-medium leading-[0.95] tracking-[-0.05em]">
+                                {{ heading }}
+                            </h2>
+
+                        {{ /if }}
+
+                        {{ if body }}
+
+                            <div class="mt-6 text-base font-light leading-[1.4] md:text-lg">
+                                {{ body }}
+                            </div>
+
+                        {{ /if }}
+
+                    </div>
+
+
+                    <!-- RIGHT IMAGE -->
+
+                    <div class="md:col-span-4">
+
+                        {{ if image_right }}
+
+                            {{ image_right }}
+
+                                <figure class="overflow-hidden bg-[#e8e6e1]">
+
+                                    <img
+                                        src="{{ url }}"
+                                        alt="{{ alt ?? title }}"
+                                        class="block h-auto w-full"
+                                        loading="lazy"
+                                    >
+
+                                </figure>
+
+                            {{ /image_right }}
+
+                        {{ /if }}
+
+                    </div>
+
+                </div>
+
+            {{ /if }}
+
+        {{ /project_content }}
+
+    </div>
+</section>
+
+
+<!-- ========================================================= -->
+<!-- BACK TO PROJECTS                                          -->
+<!-- ========================================================= -->
+
+<section class="bg-white px-5 pb-24 md:px-8 md:pb-40">
+
+    <div class="mx-auto max-w-[1440px] border-t border-black/10 pt-10">
+
+        <a
+            href="/projekt"
+            class="group inline-flex items-center gap-5 text-[10px] font-semibold uppercase tracking-[0.2em]"
+        >
+
+            <span>
+                ← Alla projekt
+            </span>
+
+            <span
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-black/15 transition-all duration-500 group-hover:-translate-x-1 group-hover:border-black"
+            >
+                ←
+            </span>
+
+        </a>
+
+    </div>
+
+</section>

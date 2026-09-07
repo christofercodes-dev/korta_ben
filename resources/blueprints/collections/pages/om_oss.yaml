@@ -1,0 +1,92 @@
+title: 'om oss'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: section_title
+            field:
+              type: text
+              validate:
+                - required
+              display: Title
+          -
+            handle: template
+            field:
+              type: template
+              display: template
+      -
+        display: 'om oss'
+        fields:
+          -
+            handle: small_title
+            field:
+              type: text
+              display: 'small title'
+          -
+            handle: big_title
+            field:
+              type: text
+              display: 'big title'
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: textarea
+              display: content
+          -
+            handle: about_title
+            field:
+              type: text
+              display: 'about title'
+          -
+            handle: about_content
+            field:
+              type: textarea
+              display: 'about content'
+      -
+        display: 'Vi som jobbar här'
+        fields:
+          -
+            handle: team
+            field:
+              type: replicator
+              display: team
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    person:
+                      display: person
+                      fields:
+                        -
+                          handle: name
+                          field:
+                            type: text
+                            display: name
+                        -
+                          handle: role
+                          field:
+                            type: text
+                            display: role
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

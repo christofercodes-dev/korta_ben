@@ -67,6 +67,128 @@ tabs:
               container: assets
               type: assets
               display: image
+      -
+        display: 'Project content'
+        fields:
+          -
+            handle: project_content
+            field:
+              type: replicator
+              display: 'Projekt innehåll'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    text:
+                      display: Text
+                      fields:
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: body
+                          field:
+                            container: assets
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Body
+                    image:
+                      display: 'Stor bild'
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: Image
+                    two_images:
+                      display: 'Två bilder'
+                      fields:
+                        -
+                          handle: image_left
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'Image left'
+                        -
+                          handle: image_right
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'Image right'
+                    image_text:
+                      display: 'Bild + text'
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: Image
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: body
+                          field:
+                            container: assets
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Body
+                    image_video:
+                      display: 'Bild + video'
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: Image
+                        -
+                          handle: video
+                          field:
+                            type: video
+                            display: Video
+                    video:
+                      display: Video
+                      fields:
+                        -
+                          handle: video
+                          field:
+                            container: assets
+                            type: assets
+                            display: Video
+                    image_text_image:
+                      display: 'Bild + text + bild'
+                      fields:
+                        -
+                          handle: image_left
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'Image left'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: body
+                          field:
+                            container: assets
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Body
+                        -
+                          handle: image_right
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'Image right'
   sidebar:
     display: Sidebar
     sections:
