@@ -1,21 +1,34 @@
 <section id="hero" class="relative bg-white text-[#181818]">
 
-    <div id="hero-scroll" class="relative h-[180vh]">
+    <!-- ==================================================
+         DESKTOP HERO
+         ================================================== -->
+
+    <div
+        id="hero-scroll"
+        class="relative hidden h-[180vh] md:block"
+    >
 
         <div class="sticky top-0 h-screen overflow-hidden">
 
-            <!-- ==================================================
-     TITLE
-================================================== -->
-            <div id="hero-title"
-                class="hero-intro-title absolute left-5 top-55 z-10 origin-top-left md:left-30 md:top-62">
+            <!-- TITLE -->
+
+            <div
+                id="hero-title"
+                class="hero-intro-title absolute left-30 top-62 z-10 origin-top-left"
+            >
+
                 <h1
-                    class="max-w-[90vw] text-[11vw] font-light leading-[0.9] tracking-[-0.06em] md:max-w-[1200px] md:text-[5.5vw] md:leading-[0.93] md:tracking-[-0.065em]">
+                    class="max-w-[1200px] text-[5.5vw] font-light leading-[0.93] tracking-[-0.065em]"
+                >
+
                     <span class="hero-line hero-line-1">
                         {{ hero_title }}
                     </span>
 
-                    <span class="hero-line hero-line-2 font-serif italic font-normal text-black/45">
+                    <span
+                        class="hero-line hero-line-2 font-serif italic font-normal text-black/45"
+                    >
                         {{ hero_title_italic }}
                     </span>
 
@@ -24,105 +37,66 @@
                     <span class="hero-line hero-line-3">
                         {{ hero_subtitle }}
                     </span>
+
                 </h1>
+
             </div>
 
 
-            <!-- ==================================================
-                 IMAGE GRID
-            ================================================== -->
+            <!-- IMAGE GRID -->
 
-            <div id="hero-images"
-                class="absolute bottom-10 left-5 right-5 z-10 grid grid-cols-1 gap-2 sm:bottom-0 sm:grid-cols-2 md:left-8 md:right-8 md:gap-3">
+            <div
+                id="hero-images"
+                class="absolute bottom-0 left-8 right-8 z-10 grid grid-cols-2 gap-3"
+            >
 
+                <!-- HERO CARD 01 -->
 
-                <!-- ==================================================
-                     HERO CARD 01
-                ================================================== -->
+                <a
+                    href="#work"
+                    class="hero-card group relative hidden overflow-hidden sm:block"
+                >
 
-                <a href="#work" class="hero-card group relative hidden overflow-hidden sm:block">
-
-                    <div class="hero-image relative aspect-[1.15] h-full w-full overflow-hidden bg-[#e8e6e1]">
+                    <div
+                        class="hero-image relative aspect-[1.15] h-full w-full overflow-hidden bg-[#e8e6e1]"
+                    >
 
                         {{ hero_image_1 }}
 
-                        <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover">
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt }}"
+                                class="h-full w-full object-cover"
+                            >
 
                         {{ /hero_image_1 }}
-
-
-                        <!-- OVERLAY -->
-
-                        <div
-                            class="hero-overlay absolute inset-0 flex flex-col justify-between bg-black/0 p-5 text-white opacity-0 backdrop-blur-0 transition-all duration-700 ease-[cubic-bezier(.16,1,.3,1)] md:p-7">
-
-
-                            <!-- CENTER -->
-
-                            <div
-                                class="mt-auto max-w-[500px] translate-y-4 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0">
-
-                                <h2
-                                    class="text-[7vw] font-medium uppercase leading-[0.85] tracking-[-0.045em] md:text-[4vw]">
-                                    {{ hero_image_1_title}}
-                                </h2>
-
-                                <p class="mt-5 max-w-[340px] text-[11px] leading-[1.6] text-white/65 md:text-[13px]">
-                                    {{hero_label_1}}
-                                </p>
-
-                            </div>
-
-
-
-                        </div>
+          
 
                     </div>
 
                 </a>
 
 
+                <!-- HERO CARD 02 -->
 
-                <!-- ==================================================
-                     HERO CARD 02
-                ================================================== -->
+                <a
+                    href="#work"
+                    class="hero-card group relative block overflow-hidden"
+                >
 
-                <a href="#work" class="hero-card group relative block overflow-hidden">
-
-                    <div class="hero-image relative aspect-[1.15] h-full w-full overflow-hidden bg-[#e8e6e1]">
+                    <div
+                        class="hero-image relative aspect-[1.15] h-full w-full overflow-hidden bg-[#e8e6e1]"
+                    >
 
                         {{ hero_image_2 }}
 
-                        <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover">
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt }}"
+                                class="h-full w-full object-cover"
+                            >
 
                         {{ /hero_image_2 }}
-
-
-                        <!-- OVERLAY -->
-
-                        <div
-                            class="hero-overlay absolute inset-0 flex flex-col justify-between bg-black/0 p-5 text-white opacity-0 backdrop-blur-0 transition-all duration-700 ease-[cubic-bezier(.16,1,.3,1)] md:p-7">
-
-
-
-
-                            <!-- CENTER -->
-
-                            <div
-                                class="mt-auto max-w-[500px] translate-y-4 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0">
-
-                                <h2
-                                    class="text-[7vw] font-medium uppercase leading-[0.85] tracking-[-0.045em] md:text-[4vw]">
-                                    {{ hero_image_2_title }}
-                                </h2>
-
-                                <p class="mt-5 max-w-[340px] text-[11px] leading-[1.6] text-white/65 md:text-[13px]">
-                                    {{ hero_label_2 }}
-                                </p>
-
-                            </div>
-
-
 
                         </div>
 
@@ -133,15 +107,224 @@
             </div>
 
 
+            <!-- CASE LABELS -->
+
+            <div
+                id="hero-meta"
+                class="absolute bottom-5 left-8 right-8 z-20 flex justify-between"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MOBILE HERO
+         ================================================== -->
+
+    <div
+        class="mobile-hero relative flex h-[100svh] min-h-[600px] w-full flex-col overflow-hidden bg-[#181818] md:hidden"
+    >
+
+        <!-- ==================================================
+             BACKGROUND IMAGE
+             ================================================== -->
+
+             <div class="absolute inset-0 z-0">
+
+                {{ if mobile_image }}
+                    {{ mobile_image }}
+                        <img
+                            src="{{ url }}"
+                            alt="{{ alt ?? '' }}"
+                            class="mobile-hero-image absolute inset-0 h-full w-full object-cover"
+                        >
+                    {{ /mobile_image }}
+                {{ else }}
+                    {{ hero_image_1 }}
+                        <img
+                            src="{{ url }}"
+                            alt="{{ alt ?? '' }}"
+                            class="mobile-hero-image absolute inset-0 h-full w-full object-cover"
+                        >
+                    {{ /hero_image_1 }}
+                {{ /if }}
+            
+            </div>
+
+
+        <!-- ==================================================
+             IMAGE OVERLAY
+             ================================================== -->
+
+        <!-- subtle overall darkening -->
+
+        <div
+            class="absolute inset-0 z-[1] bg-black/[0.10]"
+        ></div>
+
+
+        <!-- top contrast -->
+
+        <div
+            class="absolute inset-x-0 top-0 z-[2] h-[35%] bg-gradient-to-b from-black/30 via-black/5 to-transparent"
+        ></div>
+
+
+        <!-- bottom cinematic gradient -->
+
+        <div
+            class="absolute inset-x-0 bottom-0 z-[2] h-[70%] bg-gradient-to-t from-black/80 via-black/35 to-transparent"
+        ></div>
+
+
+
+        <!-- ==================================================
+             TOP RIGHT INFORMATION
+             ================================================== -->
+
+<!--         <div
+            class="absolute right-5 top-[88px] z-10 text-right"
+        >
+
+            <div class="flex items-center justify-end gap-2">
+
+                <span
+                    class="h-1 w-1 rounded-full bg-white/70"
+                ></span>
+
+                <span
+                    class="text-[8px] font-medium uppercase tracking-[0.24em] text-white/75"
+                >
+                    Kreativ studio
+                </span>
+
+            </div>
+
+            <p
+                class="mt-1 text-[8px] uppercase tracking-[0.24em] text-white/40"
+            >
+                Sverige
+            </p>
+
+        </div> -->
+
+
+
+        <!-- ==================================================
+             BOTTOM CONTENT
+             ================================================== -->
+
+        <div
+            class="absolute inset-x-5 bottom-0 z-10"
+            style="padding-bottom: calc(env(safe-area-inset-bottom) + 24px);"
+        >
+
+            <!-- small label -->
+
+        <!--     <div
+                class="mb-5 flex items-center gap-3"
+            >
+
+                <span
+                    class="h-px w-7 bg-white/50"
+                ></span>
+
+                <span
+                    class="text-[8px] font-medium uppercase tracking-[0.25em] text-white/60"
+                >
+                    Selected work
+                </span>
+
+            </div> -->
+
+
+
             <!-- ==================================================
-                 CASE LABELS
-            ================================================== -->
+                 MOBILE TITLE
+                 ================================================== -->
 
-            <div id="hero-meta" class="absolute bottom-5 left-5 right-5 z-20 flex justify-between md:left-8 md:right-8">
+            <h1
+                class="mobile-hero-title max-w-[95vw] text-white"
+            >
+
+                <span
+                    class="mobile-hero-title-line block"
+                >
+                    {{ hero_title }}
+                </span>
+
+                <span
+                    class="mobile-hero-title-line mobile-hero-title-italic block font-serif italic font-normal"
+                >
+                    {{ hero_title_italic }}
+                </span>
+
+                <span
+                    class="mobile-hero-title-line block"
+                >
+                    {{ hero_subtitle }}
+                </span>
+
+            </h1>
 
 
 
+            <!-- ==================================================
+                 CTA + SCROLL
+                 ================================================== -->
 
+            <div
+                class="mt-7 flex items-center justify-between"
+            >
+
+                <!-- CTA -->
+
+<!--                 <a
+                    href="/kontakt"
+                    class="mobile-hero-button group inline-flex items-center gap-6 rounded-full border border-white/20 bg-white px-5 py-2 text-black"
+                >
+
+                    <span
+                        class="text-[9px] font-medium uppercase tracking-[0.18em]"
+                    >
+                        Kontakta oss
+                    </span>
+
+                    <span
+                        class="mobile-hero-button-arrow flex h-9 w-9 items-center justify-center rounded-full bg-[#181818] text-[12px] text-white"
+                    >
+                        ↗
+                    </span>
+
+                </a> -->
+
+
+                <!-- SCROLL INDICATOR -->
+<!-- 
+                <div
+                    class="flex items-center gap-3"
+                >
+
+                    <span
+                        class="text-[7px] font-medium uppercase tracking-[0.22em] text-white/45"
+                    >
+                        Scrolla
+                    </span>
+
+                    <span
+                        class="mobile-hero-scroll-line relative block h-8 w-px overflow-hidden bg-white/20"
+                    >
+
+                        <span
+                            class="absolute left-0 top-0 h-3 w-px bg-white/70"
+                        ></span>
+
+                    </span>
+
+                </div> -->
 
             </div>
 
@@ -152,111 +335,216 @@
 </section>
 
 
+
 <style>
-    /* ==================================================
-       HERO TEXT
-    ================================================== */
 
-    .hero-line {
-        display: inline-block;
-        cursor: default;
+/* =========================================================
+   HERO BASE
+   ========================================================= */
+
+.hero-line {
+    display: inline-block;
+    cursor: default;
+}
+
+.hero-letter {
+    display: inline-block;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+/* =========================================================
+   DESKTOP HERO
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .hero-card {
+        position: relative;
     }
 
-    .hero-letter {
-        display: inline-block;
+    .hero-image {
+        position: relative;
+    }
+
+    .hero-card img {
+        transition:
+            transform 1200ms cubic-bezier(.16,1,.3,1);
+    }
+
+    .hero-card:hover img {
+        transform: scale(1.025);
+    }
+
+    .hero-card:hover .hero-overlay {
+        background: rgba(0,0,0,.28);
+        opacity: 1;
+        backdrop-filter: blur(2px);
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE HERO
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .mobile-hero {
+        isolation: isolate;
+    }
+
+
+    /* IMAGE */
+
+    .mobile-hero-image {
+        transform: scale(1.055);
         will-change: transform;
-        transform: translate3d(0, 0, 0);
+        animation:
+            mobileHeroImageIn
+            1800ms
+            cubic-bezier(.16,1,.3,1)
+            forwards;
     }
 
-    /* ==================================================
-       WAVE
-    ================================================== */
 
-    @keyframes hero-wave {
+    /* TITLE */
+
+    .mobile-hero-title {
+        font-size: clamp(
+            3.4rem,
+            15.5vw,
+            6.5rem
+        );
+
+        font-weight: 300;
+        line-height: .84;
+        letter-spacing: -.065em;
+    }
+
+
+    .mobile-hero-title-line {
+        display: block;
+    }
+
+
+    .mobile-hero-title-italic {
+        color: rgba(255,255,255,.68);
+    }
+
+
+    /* BUTTON */
+
+    .mobile-hero-button {
+        min-height: 52px;
+        padding-left: 20px;
+        padding-right: 8px;
+
+        box-shadow:
+            0 10px 35px rgba(0,0,0,.16);
+
+        transition:
+            transform 450ms cubic-bezier(.16,1,.3,1),
+            box-shadow 450ms ease;
+    }
+
+
+    .mobile-hero-button-arrow {
+        transition:
+            transform 450ms cubic-bezier(.16,1,.3,1);
+    }
+
+
+    .mobile-hero-button:active {
+        transform: scale(.97);
+
+        box-shadow:
+            0 5px 20px rgba(0,0,0,.12);
+    }
+
+
+    .mobile-hero-button:active
+    .mobile-hero-button-arrow {
+        transform: translate(2px,-2px);
+    }
+
+
+    /* SCROLL */
+
+    .mobile-hero-scroll-line span {
+        animation:
+            mobileScrollIndicator
+            1800ms
+            cubic-bezier(.76,0,.24,1)
+            infinite;
+    }
+
+
+    /* IMAGE INTRO */
+
+    @keyframes mobileHeroImageIn {
+
+        from {
+            opacity: 0;
+            transform: scale(1.09);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1.055);
+        }
+
+    }
+
+
+    /* SCROLL ANIMATION */
+
+    @keyframes mobileScrollIndicator {
 
         0% {
-            transform: translate3d(0, 0, 0);
+            transform: translateY(-100%);
+            opacity: 0;
         }
 
         25% {
-            transform: translate3d(0, -8px, 0);
-        }
-
-        50% {
-            transform: translate3d(0, 5px, 0);
+            opacity: 1;
         }
 
         75% {
-            transform: translate3d(0, -3px, 0);
+            opacity: 1;
         }
 
         100% {
-            transform: translate3d(0, 0, 0);
+            transform: translateY(300%);
+            opacity: 0;
         }
 
     }
 
+}
 
-    /* ==================================================
-       HERO IMAGE HOVER
-    ================================================== */
 
-    @media (min-width: 768px) {
 
-        .hero-card {
-            position: relative;
-        }
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 
-        .hero-image {
-            position: relative;
-        }
+@media (prefers-reduced-motion: reduce) {
 
-        .hero-card img {
-            transition:
-                transform 1200ms cubic-bezier(.16, 1, .3, 1);
-        }
-
-        .hero-card:hover img {
-            transform: scale(1.025);
-        }
-
+    .hero-letter {
+        animation: none !important;
+        transform: none !important;
     }
 
-
-    /* ==================================================
-       MOBILE
-    ================================================== */
-
-    @media (max-width: 767px) {
-
-        .hero-overlay {
-            display: none;
-        }
-
-        .hero-card img {
-            transition:
-                transform 800ms cubic-bezier(.16, 1, .3, 1);
-        }
-
-        .hero-card:active img {
-            transform: scale(1.02);
-        }
-
+    .mobile-hero-image,
+    .mobile-hero-scroll-line span {
+        animation: none !important;
     }
 
+}
 
-    /* ==================================================
-       REDUCED MOTION
-    ================================================== */
-
-    @media (prefers-reduced-motion: reduce) {
-
-        .hero-letter {
-            animation: none !important;
-            transform: none !important;
-        }
-
-    }
 </style>
-
-

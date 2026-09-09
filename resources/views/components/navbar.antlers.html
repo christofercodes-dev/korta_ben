@@ -1,17 +1,14 @@
-<header class="fixed left-0 right-0 top-0 z-[9999] pointer-events-none">
-
-    <!-- ==================================================
-         NAVBAR
-    ================================================== -->
-
+<header
+    id="site-header"
+    class="fixed left-0 right-0 top-0 z-[9999] pointer-events-none"
+>
     <nav
-        class="pointer-events-auto relative z-[110] flex h-[64px] items-center border-b border-black/10 bg-white px-5 text-black sm:px-6 md:h-[50px] md:px-6"
+        id="site-nav"
+        class="pointer-events-auto relative z-[100] flex h-[64px] items-center justify-between px-5 sm:px-6 md:h-[50px] md:px-6"
     >
-
-        <!-- LOGO -->
         <a
             href="/"
-            class="relative z-[120] block"
+            class="site-logo relative z-[120] block"
             aria-label="Hem"
         >
             <img
@@ -21,666 +18,1618 @@
             >
         </a>
 
-
-        <!-- ==================================================
-             DESKTOP NAVIGATION
-        ================================================== -->
-
-        <div class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 md:flex">
-
-            <!-- PROJEKT -->
+        <!-- DESKTOP NAV -->
+        <div
+            class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 md:flex"
+        >
             <a
                 href="/projekt"
-                class="group relative text-[11px] font-medium uppercase tracking-[0.2em] text-black"
+                class="desktop-nav-link group relative text-[11px] font-medium uppercase tracking-[0.2em]"
             >
                 Projekt
 
                 <span
-                    class="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-px w-0 bg-current transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
                 ></span>
             </a>
 
-
-            <!-- OM OSS -->
             <a
                 href="/om-oss"
-                class="group relative text-[11px] font-medium uppercase tracking-[0.2em] text-black"
+                class="desktop-nav-link group relative text-[11px] font-medium uppercase tracking-[0.2em]"
             >
                 Om oss
 
                 <span
-                    class="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-px w-0 bg-current transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
                 ></span>
             </a>
 
-
-            <!-- TJÄNSTER -->
             <a
                 href="/vara-tjanster"
-                class="group relative text-[11px] font-medium uppercase tracking-[0.2em] text-black"
+                class="desktop-nav-link group relative text-[11px] font-medium uppercase tracking-[0.2em]"
             >
                 Tjänster
 
                 <span
-                    class="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-px w-0 bg-current transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
                 ></span>
             </a>
-
         </div>
 
+        <!-- DESKTOP CONTACT -->
+        <a
+            href="/kontakt"
+            class="desktop-contact group relative ml-auto hidden text-[11px] font-medium uppercase tracking-[0.2em] md:block"
+        >
+            Kontakt
 
-        <!-- ==================================================
-             DESKTOP CONTACT
-        ================================================== -->
+            <span
+                class="absolute -bottom-1 left-0 h-px w-0 bg-current transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
+            ></span>
+        </a>
 
-        <div class="ml-auto hidden md:block">
-
-            <a
-                href="/kontakt"
-                class="group relative text-[11px] font-medium uppercase tracking-[0.2em] text-black"
-            >
-                Kontakt
-
-                <span
-                    class="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:w-full"
-                ></span>
-            </a>
-
-        </div>
-
-
-        <!-- ==================================================
-             MOBILE MENU BUTTON
-        ================================================== -->
-
+        <!-- MOBILE MENU BUTTON -->
         <button
             type="button"
             id="mobile-menu-button"
             aria-label="Öppna meny"
             aria-expanded="false"
-            class="group ml-auto flex h-11 w-11 items-center justify-center md:hidden"
+            class="mobile-menu-button relative z-[200] flex h-10 items-center justify-center md:hidden"
         >
-
-            <span class="relative block h-[14px] w-[20px]">
-
-                <span
-                    id="menu-line-top"
-                    class="absolute left-0 top-0 h-px w-full bg-black"
-                ></span>
-
-                <span
-                    id="menu-line-bottom"
-                    class="absolute bottom-0 left-0 h-px w-full bg-black"
-                ></span>
-
+            <span class="mobile-menu-button-label">
+                <span class="menu-label-open">MENY</span>
+                <span class="menu-label-close">STÄNG</span>
             </span>
-
         </button>
-
     </nav>
 
 
-    <!-- ==================================================
-         MOBILE MENU
-    ================================================== -->
-
+    <!-- MOBILE MENU -->
     <div
         id="mobile-menu"
-        class="fixed inset-0 z-[9999] flex flex-col bg-[#181818] text-white md:hidden"
+        class="pointer-events-none fixed inset-0 z-[90] overflow-hidden text-white md:hidden"
     >
+        <div class="mobile-menu-glass"></div>
 
-        <!-- TOP SPACING -->
-        <div class="h-[64px] shrink-0 border-b border-white/10"></div>
+        <div class="mobile-menu-inner">
 
-
-        <!-- MENU CONTENT -->
-        <div class="flex flex-1 flex-col px-5 pb-8 pt-10 sm:px-6">
-
-            <div class="flex flex-1 flex-col justify-between">
+         
 
 
-                <!-- ==================================================
-                     LINKS
-                ================================================== -->
+            <!-- LINKS -->
+            <nav class="mobile-menu-nav">
 
-                <nav class="flex flex-col">
+                <a
+                    href="/projekt"
+                    class="mobile-menu-link"
+                >
+                    <span class="mobile-menu-title">
+                        Projekt
+                    </span>
+                </a>
 
-                    <a
-                        href="/projekt"
-                        class="mobile-menu-link group flex items-baseline justify-between border-b border-white/10 py-5"
-                    >
-                        <span class="mobile-menu-link-text text-[clamp(2.5rem,12vw,5rem)] font-light leading-none tracking-[-0.06em]">
-                            Projekt
-                        </span>
+                <a
+                    href="/vara-tjanster"
+                    class="mobile-menu-link"
+                >
+                    <span class="mobile-menu-title">
+                        Tjänster
+                    </span>
+                </a>
 
-                        <span class="mobile-menu-link-number text-[10px] font-medium uppercase tracking-[0.2em] text-white/30">
-                            01
-                        </span>
-                    </a>
+                <a
+                    href="/om-oss"
+                    class="mobile-menu-link"
+                >
+                    <span class="mobile-menu-title">
+                        Om oss
+                    </span>
+                </a>
 
+                <a
+                    href="/kontakt"
+                    class="mobile-menu-link"
+                >
+                    <span class="mobile-menu-title">
+                        Kontakt
+                    </span>
+                </a>
 
-                    <a
-                        href="/om-oss"
-                        class="mobile-menu-link group flex items-baseline justify-between border-b border-white/10 py-5"
-                    >
-                        <span class="mobile-menu-link-text text-[clamp(2.5rem,12vw,5rem)] font-light leading-none tracking-[-0.06em]">
-                            Om oss
-                        </span>
-
-                        <span class="mobile-menu-link-number text-[10px] font-medium uppercase tracking-[0.2em] text-white/30">
-                            02
-                        </span>
-                    </a>
-
-
-                    <a
-                        href="/vara-tjanster"
-                        class="mobile-menu-link group flex items-baseline justify-between border-b border-white/10 py-5"
-                    >
-                        <span class="mobile-menu-link-text text-[clamp(2.5rem,12vw,5rem)] font-light leading-none tracking-[-0.06em]">
-                            Tjänster
-                        </span>
-
-                        <span class="mobile-menu-link-number text-[10px] font-medium uppercase tracking-[0.2em] text-white/30">
-                            03
-                        </span>
-                    </a>
+            </nav>
 
 
-                    <a
-                        href="/kontakt"
-                        class="mobile-menu-link group flex items-baseline justify-between border-b border-white/10 py-5"
-                    >
-                        <span class="mobile-menu-link-text text-[clamp(2.5rem,12vw,5rem)] font-light leading-none tracking-[-0.06em]">
-                            Kontakt
-                        </span>
+            <!-- BOTTOM -->
+            <div class="mobile-menu-bottom">
 
-                        <span class="mobile-menu-link-number text-[10px] font-medium uppercase tracking-[0.2em] text-white/30">
-                            04
-                        </span>
-                    </a>
+                <div class="mobile-menu-column">
 
-                </nav>
+                    <span class="mobile-menu-meta-label">
+                        Följ oss
+                    </span>
 
+                    <div class="mobile-menu-socials">
 
-                <!-- ==================================================
-                     FOOTER
-                ================================================== -->
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mobile-menu-social-link"
+                        >
+                            Instagram
+                        </a>
 
-                <div class="mobile-menu-footer flex items-end justify-between pt-12">
-
-                    <div>
-
-                        <p class="mb-3 text-[8px] font-medium uppercase tracking-[0.25em] text-white/30">
-                            Studio
-                        </p>
-
-                        <p class="text-[12px] leading-[1.6] text-white/55">
-                            Kreativ studio
-                            <br>
-                            Sverige
-                        </p>
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mobile-menu-social-link"
+                        >
+                            LinkedIn
+                        </a>
 
                     </div>
 
+                </div>
 
-                    <a
-                        href="mailto:hello@studio.se"
-                        class="text-[9px] font-medium uppercase tracking-[0.2em] text-white/60 transition-colors duration-300 hover:text-white"
-                    >
-                        hello@studio.se
-                    </a>
+
+                <div
+                    class="mobile-menu-column mobile-menu-location"
+                >
+
+                    <span class="mobile-menu-meta-label">
+                        Vart vi finns
+                    </span>
+
+                    <span>
+                        Stockamöllan
+                    </span>
+
+                    <span>
+                        Skåne
+                    </span>
 
                 </div>
+
+
+                <a
+                    href="/kontakt"
+                    class="mobile-menu-contact"
+                >
+                    <span>
+                        Starta ett projekt
+                    </span>
+                </a>
 
             </div>
 
         </div>
-
     </div>
-
 </header>
 
 
 <style>
 
-/* =========================================================
-   MOBILE MENU
+    /* =========================================================
+       BASE NAVBAR
+       ========================================================= */
+    
+    #site-nav {
+        color: #181818;
+        background-color: rgba(255,255,255,.94);
+        border-bottom: 1px solid rgba(0,0,0,.07);
+        box-shadow: 0 8px 35px rgba(0,0,0,.045);
+    
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    
+        transition:
+            background-color 700ms cubic-bezier(.16,1,.3,1),
+            color 500ms cubic-bezier(.16,1,.3,1),
+            border-color 600ms cubic-bezier(.16,1,.3,1),
+            box-shadow 700ms cubic-bezier(.16,1,.3,1);
+    }
+    
+    
+    /* =========================================================
+       LOGO
+       ========================================================= */
+    
+    .site-logo img {
+        filter: brightness(0);
+    
+        transition:
+            filter 650ms cubic-bezier(.16,1,.3,1);
+    }
+    
+    
+    /* =========================================================
+       DESKTOP
+       ========================================================= */
+    
+    @media (min-width: 768px) {
+    
+        #site-header .site-logo img {
+            filter: brightness(0) !important;
+        }
+    
+        #site-header #site-nav {
+            color: #181818;
+            background-color: rgba(255,255,255,.94);
+            border-bottom-color: rgba(0,0,0,.07);
+            box-shadow: 0 8px 35px rgba(0,0,0,.045);
+        }
+    
+        .mobile-menu-button,
+        #mobile-menu {
+            display: none;
+        }
+    
+    }
+    
+    
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+    
+    @media (max-width: 767px) {
+    
+    
+        /* =====================================================
+           HOMEPAGE TOP
+           ===================================================== */
+    
+        #site-header:not(.is-scrolled):not(.menu-open)
+        #site-nav {
+    
+            color: white;
+    
+            background-color: rgba(255,255,255,0);
+    
+            border-bottom-color: rgba(255,255,255,0);
+    
+            box-shadow: none;
+    
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+    
+    
+        #site-header:not(.is-scrolled):not(.menu-open)
+        .site-logo img {
+    
+            filter: brightness(0) invert(1);
+        }
+    
+    
+        /* =====================================================
+           SCROLLED / SUBPAGE
+           ===================================================== */
+    
+        #site-header.is-scrolled #site-nav {
+    
+            color: #181818;
+    
+            background-color: rgba(255,255,255,.94);
+    
+            border-bottom: 1px solid rgba(0,0,0,.07);
+    
+            box-shadow: 0 8px 35px rgba(0,0,0,.045);
+    
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    
+    
+        #site-header.is-scrolled .site-logo img {
+    
+            filter: brightness(0);
+        }
+    
+    
+        /* =====================================================
+           MENU OPEN
+           ===================================================== */
+    
+        #site-header.menu-open #site-nav {
+    
+            color: white;
+    
+            background-color: transparent;
+    
+            border-bottom-color: transparent;
+    
+            box-shadow: none;
+    
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+    
+    
+        #site-header.menu-open .site-logo img {
+    
+            filter: brightness(0) invert(1);
+        }
+    
+    
+        /* =====================================================
+           MOBILE MENU
+           ===================================================== */
+    
+        #mobile-menu {
+    
+            opacity: 0;
+    
+            visibility: hidden;
+    
+            pointer-events: none;
+    
+            transition:
+                opacity 450ms cubic-bezier(.16,1,.3,1),
+                visibility 0s linear 550ms;
+        }
+    
+    
+        #mobile-menu.is-open {
+    
+            opacity: 1;
+    
+            visibility: visible;
+    
+            pointer-events: auto;
+    
+            background-color: #181818;
+    
+            transition:
+                opacity 450ms cubic-bezier(.16,1,.3,1),
+                visibility 0s;
+        }
+    
+    
+        /* =====================================================
+           IMPORTANT:
+           PRE-RENDER STATE ON NEW PAGE
+           
+           This is what prevents the flash.
+           ===================================================== */
+    
+        html.menu-transition-page #mobile-menu {
+    
+            opacity: 1;
+    
+            visibility: visible;
+    
+            pointer-events: auto;
+    
+            background-color: #181818;
+    
+            transition: none;
+        }
+    
+    
+        html.menu-transition-page
+        #site-header {
+    
+            pointer-events: none;
+        }
+    
+    
+        html.menu-transition-page
+        #site-header #site-nav {
+    
+            color: white;
+    
+            background-color: transparent;
+    
+            border-bottom-color: transparent;
+    
+            box-shadow: none;
+    
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+    
+    
+        html.menu-transition-page
+        #site-header .site-logo img {
+    
+            filter: brightness(0) invert(1);
+        }
+    
+    
+        /* =====================================================
+           GLASS
+           ===================================================== */
+    
+        .mobile-menu-glass {
+    
+            position: absolute;
+    
+            inset: 0;
+    
+            z-index: 0;
+    
+            background:
+                rgba(18,18,18,.96);
+    
+            backdrop-filter:
+                blur(26px) saturate(110%);
+    
+            -webkit-backdrop-filter:
+                blur(26px) saturate(110%);
+    
+            opacity: 0;
+    
+            transform: scale(1.02);
+    
+            transition:
+                opacity 700ms cubic-bezier(.16,1,.3,1),
+                transform 900ms cubic-bezier(.16,1,.3,1);
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-glass {
+    
+            opacity: 1;
+    
+            transform: scale(1);
+        }
+    
+    
+        /*
+         * During page transition the background must
+         * already be completely rendered.
+         */
+    
+        html.menu-transition-page
+        #mobile-menu
+        .mobile-menu-glass {
+    
+            opacity: 1;
+    
+            transform: scale(1);
+    
+            transition: none;
+        }
+    
+    
+        #mobile-menu.is-closing
+        .mobile-menu-glass {
+    
+            opacity: 0;
+    
+            transform: scale(1.01);
+    
+            transition:
+                opacity 400ms cubic-bezier(.76,0,.24,1),
+                transform 550ms cubic-bezier(.76,0,.24,1);
+        }
+    
+    
+        /* =====================================================
+           INNER
+           ===================================================== */
+    
+        .mobile-menu-inner {
+    
+            position: relative;
+    
+            z-index: 2;
+    
+            width: 100%;
+    
+            height: 100svh;
+    
+            min-height: 100svh;
+    
+            display: flex;
+    
+            flex-direction: column;
+    
+            padding:
+                88px 20px 24px;
+    
+            opacity: 0;
+    
+            transform: translateY(12px);
+    
+            transition:
+                opacity 500ms cubic-bezier(.16,1,.3,1),
+                transform 700ms cubic-bezier(.16,1,.3,1);
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-inner {
+    
+            opacity: 1;
+    
+            transform: translateY(0);
+    
+            transition-delay: 60ms;
+        }
+    
+    
+        /*
+         * New page:
+         * content is visible immediately.
+         */
+    
+        html.menu-transition-page
+        #mobile-menu
+        .mobile-menu-inner {
+    
+            opacity: 1;
+    
+            transform: translateY(0);
+    
+            transition: none;
+        }
+    
+    
+        #mobile-menu.is-closing
+        .mobile-menu-inner {
+    
+            opacity: 0;
+    
+            transform: translateY(-6px);
+    
+            transition:
+                opacity 280ms cubic-bezier(.76,0,.24,1),
+                transform 400ms cubic-bezier(.76,0,.24,1);
+        }
+    
+    
+        /* =====================================================
+           MAIN NAVIGATION
+           ===================================================== */
+    
+        .mobile-menu-nav {
+    
+            width: 100%;
+    
+            display: flex;
+    
+            flex-direction: column;
+    
+            justify-content: center;
+    
+            align-items: center;
+    
+            flex: 1;
+    
+            padding:
+                20px 0 30px;
+        }
+    
+    
+        .mobile-menu-link {
+    
+            position: relative;
+    
+            display: flex;
+    
+            align-items: center;
+    
+            justify-content: center;
+    
+            width: 100%;
+    
+            padding:
+                20px 0;
+    
+            color:
+                rgba(255,255,255,.96);
+    
+            text-decoration: none;
+    
+            opacity: 0;
+    
+            transform: translateY(24px);
+    
+            transition:
+                opacity 600ms cubic-bezier(.16,1,.3,1),
+                transform 700ms cubic-bezier(.16,1,.3,1);
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-link {
+    
+            opacity: 1;
+    
+            transform: translateY(0);
+        }
+    
+    
+        /*
+         * New page:
+         * links are already visible before paint.
+         */
+    
+        html.menu-transition-page
+        #mobile-menu
+        .mobile-menu-link {
+    
+            opacity: 1;
+    
+            transform: translateY(0);
+    
+            transition: none;
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-link:nth-child(1) {
+            transition-delay: 120ms;
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-link:nth-child(2) {
+            transition-delay: 175ms;
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-link:nth-child(3) {
+            transition-delay: 230ms;
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-link:nth-child(4) {
+            transition-delay: 285ms;
+        }
+    
+    
+        /* =====================================================
+           TITLES
+           ===================================================== */
+    
+        .mobile-menu-title {
+    
+            display: block;
+    
+            width: 100%;
+    
+            text-align: center;
+    
+            font-size:
+                clamp(3.35rem, 15.5vw, 6rem);
+    
+            line-height: .82;
+    
+            font-weight: 300;
+    
+            letter-spacing: -.07em;
+    
+            text-transform: uppercase;
+    
+            transition:
+                transform 600ms cubic-bezier(.16,1,.3,1),
+                opacity 300ms ease;
+        }
+    
+    
+        .mobile-menu-link:hover
+        .mobile-menu-title {
+    
+            transform:
+                translateY(-2px);
+        }
+    
+    
+        /* =====================================================
+           BOTTOM
+           ===================================================== */
+    
+        .mobile-menu-bottom {
+    
+            display: grid;
+    
+            grid-template-columns:
+                1fr 1fr;
+    
+            column-gap: 20px;
+    
+            row-gap: 18px;
+    
+            padding-top: 18px;
+    
+            border-top:
+                1px solid rgba(255,255,255,.14);
+    
+            opacity: 0;
+    
+            transform: translateY(8px);
+    
+            transition:
+                opacity 500ms cubic-bezier(.16,1,.3,1),
+                transform 600ms cubic-bezier(.16,1,.3,1);
+        }
+    
+    
+        #mobile-menu.is-open
+        .mobile-menu-bottom {
+    
+            opacity: 1;
+    
+            transform: translateY(0);
+    
+            transition-delay: 340ms;
+        }
+    
+    
+        /*
+         * New page:
+         * bottom content also already visible.
+         */
+    
+        html.menu-transition-page
+        #mobile-menu
+        .mobile-menu-bottom {
+    
+            opacity: 1;
+    
+            transform: translateY(0);
+    
+            transition: none;
+        }
+    
+    
+        .mobile-menu-column {
+    
+            display: flex;
+    
+            flex-direction: column;
+    
+            gap: 6px;
+    
+            color:
+                rgba(255,255,255,.55);
+    
+            font-size: 14px;
+    
+            line-height: 1.35;
+    
+            letter-spacing: .10em;
+    
+            text-transform: uppercase;
+        }
+    
+    
+        .mobile-menu-location {
+    
+            align-items: flex-end;
+    
+            text-align: right;
+        }
+    
+    
+        .mobile-menu-meta-label {
+    
+            margin-bottom: 3px;
+    
+            color:
+                rgba(255,255,255,.25);
+    
+            font-size: 7px;
+    
+            line-height: 1;
+    
+            font-weight: 500;
+    
+            letter-spacing: .18em;
+    
+            text-transform: uppercase;
+        }
+    
+    
+        /* =====================================================
+           SOCIAL
+           ===================================================== */
+    
+        .mobile-menu-socials {
+    
+            display: flex;
+    
+            flex-direction: column;
+    
+            gap: 4px;
+        }
+    
+    
+        .mobile-menu-social-link {
+    
+            width: fit-content;
+    
+            color:
+                rgba(255,255,255,.58);
+    
+            font-size: 14px;
+    
+            line-height: 1.4;
+    
+            letter-spacing: .08em;
+    
+            text-decoration: none;
+    
+            transition:
+                color 250ms ease;
+        }
+    
+    
+        .mobile-menu-social-link:hover {
+    
+            color: white;
+        }
+    
+    
+        /* =====================================================
+           CONTACT
+           ===================================================== */
+    
+        .mobile-menu-contact {
+    
+            position: relative;
+    
+            grid-column:
+                1 / -1;
+    
+            display: flex;
+    
+            align-items: center;
+    
+            justify-content: space-between;
+    
+            padding:
+                16px 0 2px;
+    
+            color: white;
+    
+            text-decoration: none;
+    
+            font-size: 12px;
+    
+            line-height: 1;
+    
+            font-weight: 500;
+    
+            letter-spacing: .15em;
+    
+            text-transform: uppercase;
+        }
+    
+    
+        .mobile-menu-contact::before {
+    
+            content: "";
+    
+            position: absolute;
+    
+            left: 0;
+    
+            right: 0;
+    
+            top: 0;
+    
+            height: 1px;
+    
+            background:
+                rgba(255,255,255,.14);
+        }
+    
+    
+        /* =====================================================
+           BUTTON
+           ===================================================== */
+    
+        .mobile-menu-button {
+    
+            padding: 0;
+    
+            color: currentColor;
+    
+            transition:
+                color 500ms cubic-bezier(.16,1,.3,1);
+        }
+    
+    
+        .mobile-menu-button-label {
+    
+            display: block;
+    
+            font-size: 17px;
+    
+            line-height: 1;
+    
+            font-weight: 500;
+    
+            letter-spacing: .14em;
+        }
+    
+    
+        .menu-label-close {
+    
+            display: none;
+        }
+    
+    
+        #site-header.menu-open
+        .menu-label-open {
+    
+            display: none;
+        }
+    
+    
+        #site-header.menu-open
+        .menu-label-close {
+    
+            display: inline;
+        }
+    
+    
+        #site-header.menu-open
+        .mobile-menu-button {
+    
+            color: white;
+        }
+    
+    
+        /* =====================================================
+           PAGE LOCK
+           ===================================================== */
+    
+        body.menu-is-open {
+    
+            overflow: hidden;
+        }
+    
+    
+        /* =====================================================
+           CLOSING
+           ===================================================== */
+    
+        #mobile-menu.is-closing {
+    
+            opacity: 0;
+    
+            visibility: visible;
+    
+            pointer-events: none;
+    
+            transition:
+                opacity 400ms cubic-bezier(.76,0,.24,1);
+        }
+    
+    
+        /*
+         * During the actual page transition we don't want
+         * the closing class to accidentally create a flash.
+         */
+    
+        html.menu-transition-page
+        #mobile-menu.is-closing {
+    
+            opacity: 0;
+        }
+    
+    }
+
+    /* =========================================================
+   PAGE NAVIGATION TRANSITION
    ========================================================= */
 
-#mobile-menu {
+@media (max-width: 767px) {
 
-    /*
-     * Menyn ligger ovanför viewporten från början.
-     */
+/*
+ * The class is applied in <head> BEFORE the page
+ * gets painted. This prevents the underlying page
+ * from flashing through.
+ */
 
-    transform: translateY(-100%);
+html.menu-transition-page #mobile-menu {
+
+    opacity: 1;
 
     visibility: visible;
+
     pointer-events: none;
 
-    /*
-     * Viktigt:
-     * Vi låter transform sköta själva panelen.
-     */
+    background-color: #181818;
 
-    transition:
-        transform 900ms cubic-bezier(.76, 0, .24, 1);
-
+    transition: none;
 }
 
 
-/* =========================================================
-   MENU OPEN
-   ========================================================= */
+/*
+ * Keep the navigation/header visually identical
+ * to the open menu while the new page loads.
+ */
 
-#mobile-menu.is-open {
+html.menu-transition-page #site-nav {
+
+    color: white;
+
+    background-color: transparent;
+
+    border-bottom-color: transparent;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+}
+
+
+html.menu-transition-page
+#site-header .site-logo img {
+
+    filter: brightness(0) invert(1);
+}
+
+
+/*
+ * Everything inside the menu is already visible.
+ * No second fade-in.
+ */
+
+html.menu-transition-page
+#mobile-menu .mobile-menu-inner {
+
+    opacity: 1;
 
     transform: translateY(0);
 
-    pointer-events: auto;
-
+    transition: none;
 }
 
 
-/* =========================================================
-   HAMBURGER
-   ========================================================= */
-
-#menu-line-top,
-#menu-line-bottom {
-
-    transition:
-        transform 600ms cubic-bezier(.16, 1, .3, 1),
-        opacity 400ms ease;
-
-}
-
-
-/* TOP → X */
-
-#menu-line-top.is-open {
-
-    transform:
-        translateY(6px)
-        rotate(45deg);
-
-}
-
-
-/* BOTTOM → X */
-
-#menu-line-bottom.is-open {
-
-    transform:
-        translateY(-6px)
-        rotate(-45deg);
-
-}
-
-
-/* =========================================================
-   MENU LINKS – INITIAL STATE
-   ========================================================= */
-
-.mobile-menu-link {
-
-    opacity: 0;
-
-    transform:
-        translateY(35px);
-
-    transition:
-        opacity 650ms cubic-bezier(.16, 1, .3, 1),
-        transform 750ms cubic-bezier(.16, 1, .3, 1);
-
-}
-
-
-/* =========================================================
-   MENU LINKS – OPEN
-   ========================================================= */
-
-#mobile-menu.is-open .mobile-menu-link {
+html.menu-transition-page
+#mobile-menu .mobile-menu-link {
 
     opacity: 1;
 
-    transform:
-        translateY(0);
+    transform: translateY(0);
 
+    transition: none;
 }
 
 
-/* STAGGER */
-
-#mobile-menu.is-open .mobile-menu-link:nth-child(1) {
-    transition-delay: 220ms;
-}
-
-#mobile-menu.is-open .mobile-menu-link:nth-child(2) {
-    transition-delay: 290ms;
-}
-
-#mobile-menu.is-open .mobile-menu-link:nth-child(3) {
-    transition-delay: 360ms;
-}
-
-#mobile-menu.is-open .mobile-menu-link:nth-child(4) {
-    transition-delay: 430ms;
-}
-
-
-/* =========================================================
-   LINK TEXT
-   ========================================================= */
-
-.mobile-menu-link-text {
-
-    transition:
-        transform 600ms cubic-bezier(.16, 1, .3, 1);
-
-}
-
-
-/* Hover */
-
-.mobile-menu-link:hover .mobile-menu-link-text {
-
-    transform:
-        translateX(8px);
-
-}
-
-
-/* =========================================================
-   NUMBERS
-   ========================================================= */
-
-.mobile-menu-link-number {
-
-    transition:
-        opacity 500ms ease,
-        transform 500ms cubic-bezier(.16, 1, .3, 1);
-
-}
-
-.mobile-menu-link:hover .mobile-menu-link-number {
+html.menu-transition-page
+#mobile-menu .mobile-menu-bottom {
 
     opacity: 1;
 
-    transform:
-        translateX(-4px);
+    transform: translateY(0);
 
+    transition: none;
 }
 
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.mobile-menu-footer {
-
-    opacity: 0;
-
-    transform:
-        translateY(20px);
-
-    transition:
-        opacity 700ms cubic-bezier(.16, 1, .3, 1),
-        transform 700ms cubic-bezier(.16, 1, .3, 1);
-
-}
-
-
-/* FOOTER OPEN */
-
-#mobile-menu.is-open .mobile-menu-footer {
+html.menu-transition-page
+#mobile-menu .mobile-menu-glass {
 
     opacity: 1;
 
-    transform:
-        translateY(0);
+    transform: scale(1);
 
-    transition-delay: 500ms;
-
+    transition: none;
 }
 
-
-/* =========================================================
-   BODY LOCK
-   ========================================================= */
-
-body.menu-is-open {
-
-    overflow: hidden;
-
-}
-
-
-/* =========================================================
-   MOBILE CLOSE ANIMATION
-   ========================================================= */
 
 /*
- * När menyn STÄNGS:
+ * =====================================================
+ * REVEAL
+ * =====================================================
  *
- * 1. Länkarna dras nedåt och försvinner
- * 2. Footer försvinner
- * 3. Därefter åker hela menypanelen upp
- *
- * Eftersom .is-open tas bort börjar länkarna
- * automatiskt gå tillbaka till sitt initiala state.
+ * Once the new page has painted, we smoothly remove
+ * the menu layer.
  */
 
+html.menu-transition-page.menu-transition-ready
+#mobile-menu {
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+    opacity: 0;
 
-@media (prefers-reduced-motion: reduce) {
+    visibility: visible;
 
-    #mobile-menu,
-    #menu-line-top,
-    #menu-line-bottom,
-    .mobile-menu-link,
-    .mobile-menu-footer,
-    .mobile-menu-link-text,
-    .mobile-menu-link-number {
+    pointer-events: none;
 
-        transition: none !important;
-
-    }
-
+    transition:
+        opacity 600ms cubic-bezier(.76,0,.24,1);
 }
 
-</style>
+
+html.menu-transition-page.menu-transition-ready
+#mobile-menu .mobile-menu-glass {
+
+    opacity: 0;
+
+    transform: scale(1);
+
+    transition:
+        opacity 600ms cubic-bezier(.76,0,.24,1);
+}
 
 
-<!-- =========================================================
-     MOBILE MENU SCRIPT
-     ========================================================= -->
+html.menu-transition-page.menu-transition-ready
+#mobile-menu .mobile-menu-inner {
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 450ms cubic-bezier(.76,0,.24,1),
+        transform 600ms cubic-bezier(.76,0,.24,1);
+}
+
+}
+    
+    </style>
+
 
 <script>
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    const button =
-        document.getElementById('mobile-menu-button');
-
-    const menu =
-        document.getElementById('mobile-menu');
-
-    const topLine =
-        document.getElementById('menu-line-top');
-
-    const bottomLine =
-        document.getElementById('menu-line-bottom');
-
-    const links =
-        document.querySelectorAll('.mobile-menu-link');
-
-
-    if (!button || !menu) {
-        return;
-    }
-
-
-    /* =====================================================
-       OPEN MENU
-       ===================================================== */
-
-    function openMenu() {
-
-        menu.classList.add('is-open');
-
-        button.setAttribute(
-            'aria-expanded',
-            'true'
-        );
-
-        button.setAttribute(
-            'aria-label',
-            'Stäng meny'
-        );
-
-
-        if (topLine) {
-            topLine.classList.add('is-open');
-        }
-
-        if (bottomLine) {
-            bottomLine.classList.add('is-open');
-        }
-
-
-        document.body.classList.add(
-            'menu-is-open'
-        );
-
-    }
-
-
-    /* =====================================================
-       CLOSE MENU
-       ===================================================== */
-
-    function closeMenu() {
-
-        /*
-         * Ta bort open-state.
-         *
-         * CSS-animationen börjar då automatiskt
-         * spela baklänges.
-         */
-
-        menu.classList.remove('is-open');
-
-
-        button.setAttribute(
-            'aria-expanded',
-            'false'
-        );
-
-        button.setAttribute(
-            'aria-label',
-            'Öppna meny'
-        );
-
-
-        if (topLine) {
-            topLine.classList.remove('is-open');
-        }
-
-        if (bottomLine) {
-            bottomLine.classList.remove('is-open');
-        }
-
-
-        /*
-         * Behåll body lock tills panelen nästan
-         * är borta. Det gör stängningen stabilare
-         * på mobil.
-         */
-
-        setTimeout(function () {
-
-            document.body.classList.remove(
-                'menu-is-open'
-            );
-
-        }, 700);
-
-    }
-
-
-    /* =====================================================
-       BUTTON
-       ===================================================== */
-
-    button.addEventListener(
-        'click',
-        function (event) {
-
-            event.preventDefault();
-
-            event.stopPropagation();
-
-
-            const isOpen =
-                button.getAttribute(
-                    'aria-expanded'
-                ) === 'true';
-
-
-            if (isOpen) {
-
-                closeMenu();
-
-            } else {
-
-                openMenu();
-
-            }
-
-        }
-    );
-
-
-    /* =====================================================
-       LINKS
-       ===================================================== */
-
-    links.forEach(function (link) {
-
-        link.addEventListener(
-            'click',
-            function () {
-
-                closeMenu();
-
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       RESIZE
-       ===================================================== */
-
-    window.addEventListener(
-        'resize',
+    document.addEventListener(
+        'DOMContentLoaded',
         function () {
-
-            if (window.innerWidth >= 768) {
-
-                closeMenu();
-
+    
+            const header =
+                document.getElementById(
+                    'site-header'
+                );
+    
+            const button =
+                document.getElementById(
+                    'mobile-menu-button'
+                );
+    
+            const menu =
+                document.getElementById(
+                    'mobile-menu'
+                );
+    
+            const links =
+                document.querySelectorAll(
+                    '.mobile-menu-link'
+                );
+    
+            if (!header || !button || !menu) {
+                return;
             }
-
+    
+    
+            /* =================================================
+               PAGE
+               ================================================= */
+    
+            const isHomePage =
+                window.location.pathname === '/' ||
+                window.location.pathname === '';
+    
+    
+            let ticking = false;
+    
+    
+            /* =================================================
+               NAVBAR
+               ================================================= */
+    
+            function updateNavbar() {
+    
+                if (!isHomePage) {
+    
+                    header.classList.add(
+                        'is-scrolled'
+                    );
+    
+                    ticking = false;
+    
+                    return;
+                }
+    
+    
+                if (
+                    window.scrollY > 40 &&
+                    !header.classList.contains(
+                        'menu-open'
+                    )
+                ) {
+    
+                    header.classList.add(
+                        'is-scrolled'
+                    );
+    
+                } else if (
+                    !header.classList.contains(
+                        'menu-open'
+                    )
+                ) {
+    
+                    header.classList.remove(
+                        'is-scrolled'
+                    );
+                }
+    
+    
+                ticking = false;
+            }
+    
+    
+            window.addEventListener(
+                'scroll',
+                function () {
+    
+                    if (!ticking) {
+    
+                        window.requestAnimationFrame(
+                            updateNavbar
+                        );
+    
+                        ticking = true;
+                    }
+    
+                },
+                {
+                    passive: true
+                }
+            );
+    
+    
+            /* =================================================
+               NORMAL MENU OPEN
+               ================================================= */
+    
+            function openMenu() {
+    
+                menu.classList.remove(
+                    'is-closing'
+                );
+    
+                header.classList.add(
+                    'menu-open'
+                );
+    
+                menu.classList.add(
+                    'is-open'
+                );
+    
+                button.setAttribute(
+                    'aria-expanded',
+                    'true'
+                );
+    
+                button.setAttribute(
+                    'aria-label',
+                    'Stäng meny'
+                );
+    
+                document.body.classList.add(
+                    'menu-is-open'
+                );
+            }
+    
+    
+            /* =================================================
+               NORMAL MENU CLOSE
+               ================================================= */
+    
+            function closeMenu() {
+    
+                menu.classList.add(
+                    'is-closing'
+                );
+    
+                menu.classList.remove(
+                    'is-open'
+                );
+    
+                header.classList.remove(
+                    'menu-open'
+                );
+    
+                button.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+    
+                button.setAttribute(
+                    'aria-label',
+                    'Öppna meny'
+                );
+    
+    
+                window.setTimeout(
+                    function () {
+    
+                        menu.classList.remove(
+                            'is-closing'
+                        );
+    
+                        document.body.classList.remove(
+                            'menu-is-open'
+                        );
+    
+                        updateNavbar();
+    
+                    },
+                    550
+                );
+            }
+    
+    
+            /* =================================================
+               MENU BUTTON
+               ================================================= */
+    
+            button.addEventListener(
+                'click',
+                function (event) {
+    
+                    event.preventDefault();
+    
+    
+                    const isOpen =
+                        button.getAttribute(
+                            'aria-expanded'
+                        ) === 'true';
+    
+    
+                    if (isOpen) {
+    
+                        closeMenu();
+    
+                    } else {
+    
+                        openMenu();
+    
+                    }
+    
+                }
+            );
+    
+    
+            /* =================================================
+               NAVIGATION
+               
+               IMPORTANT:
+               We do NOT close the menu here.
+               We do NOT add/remove menu-open.
+               We simply navigate.
+               ================================================= */
+    
+            links.forEach(
+                function (link) {
+    
+                    link.addEventListener(
+                        'click',
+                        function (event) {
+    
+                            if (
+                                event.metaKey ||
+                                event.ctrlKey ||
+                                event.shiftKey ||
+                                event.altKey
+                            ) {
+                                return;
+                            }
+    
+    
+                            if (
+                                event.button !== 0
+                            ) {
+                                return;
+                            }
+    
+    
+                            const href =
+                                link.getAttribute(
+                                    'href'
+                                );
+    
+    
+                            if (!href) {
+                                return;
+                            }
+    
+    
+                            event.preventDefault();
+    
+    
+                            /*
+                             * Tell the next page that it should
+                             * begin with the menu transition.
+                             */
+    
+                            try {
+    
+                                sessionStorage.setItem(
+                                    'menu-navigation',
+                                    'true'
+                                );
+    
+                            } catch (e) {}
+    
+    
+                            /*
+                             * Navigate immediately.
+                             *
+                             * Nothing on the current page is
+                             * animated or removed.
+                             */
+    
+                            window.location.href =
+                                href;
+    
+                        }
+                    );
+    
+                }
+            );
+    
+    
+            /* =================================================
+               ARRIVAL FROM MENU
+               ================================================= */
+    
+            let arrivedFromMenu = false;
+    
+    
+            try {
+    
+                arrivedFromMenu =
+                    sessionStorage.getItem(
+                        'menu-navigation'
+                    ) === 'true';
+    
+            } catch (e) {
+    
+                arrivedFromMenu = false;
+            }
+    
+    
+            if (arrivedFromMenu) {
+    
+                /*
+                 * Remove immediately so refresh will not
+                 * trigger the transition again.
+                 */
+    
+                try {
+    
+                    sessionStorage.removeItem(
+                        'menu-navigation'
+                    );
+    
+                } catch (e) {}
+    
+    
+                /*
+                 * IMPORTANT:
+                 *
+                 * We do NOT add .is-open.
+                 * We do NOT add .menu-open.
+                 *
+                 * The <head> class is already controlling
+                 * the visual state.
+                 */
+    
+    
+                /*
+                 * Lock scrolling while the transition
+                 * is running.
+                 */
+    
+                document.body.classList.add(
+                    'menu-is-open'
+                );
+    
+    
+                /*
+                 * Allow the new document to render once.
+                 */
+    
+                requestAnimationFrame(
+                    function () {
+    
+                        requestAnimationFrame(
+                            function () {
+    
+                                /*
+                                 * Tell CSS:
+                                 *
+                                 * "The new page is ready.
+                                 * Start revealing it."
+                                 */
+    
+                                document.documentElement.classList.add(
+                                    'menu-transition-ready'
+                                );
+    
+    
+                                /*
+                                 * After the CSS transition,
+                                 * completely reset everything.
+                                 */
+    
+                                window.setTimeout(
+                                    function () {
+    
+                                        document.documentElement.classList.remove(
+                                            'menu-transition-page',
+                                            'menu-transition-ready'
+                                        );
+    
+                                        document.body.classList.remove(
+                                            'menu-is-open'
+                                        );
+    
+                                        updateNavbar();
+    
+                                    },
+                                    650
+                                );
+    
+                            }
+                        );
+    
+                    }
+                );
+    
+            } else {
+    
+                /*
+                 * Normal page load.
+                 */
+    
+                updateNavbar();
+            }
+    
+    
+            /* =================================================
+               RESIZE
+               ================================================= */
+    
+            window.addEventListener(
+                'resize',
+                function () {
+    
+                    if (
+                        window.innerWidth >= 768
+                    ) {
+    
+                        menu.classList.remove(
+                            'is-open',
+                            'is-closing'
+                        );
+    
+                        header.classList.remove(
+                            'menu-open'
+                        );
+    
+                        button.setAttribute(
+                            'aria-expanded',
+                            'false'
+                        );
+    
+                        document.body.classList.remove(
+                            'menu-is-open'
+                        );
+    
+                        document.documentElement.classList.remove(
+                            'menu-transition-page',
+                            'menu-transition-ready'
+                        );
+    
+                        updateNavbar();
+                    }
+    
+                }
+            );
+    
         }
     );
-
-});
-
-</script>
+    </script>

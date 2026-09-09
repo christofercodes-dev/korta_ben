@@ -2,6 +2,20 @@
 <html lang="{{ site:short_locale }}">
 
 <head>
+    <script>
+        (function () {
+            try {
+                if (
+                    sessionStorage.getItem('menu-navigation') === 'true'
+                ) {
+                    document.documentElement.classList.add(
+                        'menu-transition-page'
+                    );
+                }
+            } catch (e) {}
+        })();
+        </script>
+        
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">

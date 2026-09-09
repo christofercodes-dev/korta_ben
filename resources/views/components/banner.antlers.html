@@ -1,91 +1,180 @@
-<section class="relative overflow-hidden border-y border-white/10 bg-[#f5f5f7] text-[#181818]">
-    <div class="marquee-track flex w-max items-center py-5 md:py-0.5">
+{{ collection:pages slug="rullande-banner" limit="1" }}
+    {{ marquee }}
+        {{ if type == "banner" }}
 
-        <!-- LOOP 1 -->
-        <div class="marquee-content flex shrink-0 items-center">
-            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
-                Make good work
-            </span>
+            <section
+                class="relative hidden overflow-hidden border-y border-white/10 bg-[#f5f5f7] text-[#181818] md:block"
+            >
+                <div
+                    class="marquee"
+                    data-marquee
+                >
+                    <div
+                        class="marquee-track"
+                        data-marquee-track
+                    >
+                        <!-- ORIGINAL -->
+                        <div
+                            class="marquee-content flex shrink-0 items-center"
+                            data-marquee-content
+                        >
+                            <span class="mx-10 text-[9px] uppercase tracking-[0.28em]">
+                                {{ text_1 }}
+                            </span>
 
-            <span class="text-xs text-[#181818]/30">✦</span>
+                            <span class="text-xs text-[#181818]/30">
+                                {{ symbol }}
+                            </span>
 
-            <span class="mx-6 font-serif text-xl text-[#181818] md:mx-10 md:text-2xl">
-                Korta ben
-            </span>
+                            <span class="mx-10 font-serif text-2xl">
+                                {{ text_2 }}
+                            </span>
 
-            <span class="text-xs text-[#181818]/30">✦</span>
+                            <span class="text-xs text-[#181818]/30">
+                                {{ symbol }}
+                            </span>
 
-            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
-                Film · Content · Branding
-            </span>
+                            <span class="mx-10 text-[9px] uppercase tracking-[0.28em]">
+                                {{ text_3 }}
+                            </span>
 
-            <span class="text-xs text-[#181818]/30">✦</span>
+                            <span class="text-xs text-[#181818]/30">
+                                {{ symbol }}
+                            </span>
 
-            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
-                From idea to image
-            </span>
+                            <span class="mx-10 text-[9px] uppercase tracking-[0.28em]">
+                                {{ text_4 }}
+                            </span>
 
-            <span class="text-xs text-[#181818]/30">✦</span>
-        </div>
+                            <span class="mx-10 text-xs text-[#181818]/30">
+                                {{ symbol }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-
-        <!-- LOOP 2 — EXAKT SAMMA SOM LOOP 1 -->
-        <div class="marquee-content flex shrink-0 items-center" aria-hidden="true">
-            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
-                Make good work
-            </span>
-
-            <span class="text-xs text-[#181818]/30">✦</span>
-
-            <span class="mx-6 font-serif text-xl text-[#181818] md:mx-10 md:text-2xl">
-                Korta ben
-            </span>
-
-            <span class="text-xs text-[#181818]/30">✦</span>
-
-            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
-                Film · Content · Branding
-            </span>
-
-            <span class="text-xs text-[#181818]/30">✦</span>
-
-            <span class="mx-6 text-[9px] uppercase tracking-[0.28em] text-[#181818] md:mx-10">
-                From idea to image
-            </span>
-
-            <span class="text-xs text-[#181818]/30">✦</span>
-        </div>
-
-    </div>
-</section>
+        {{ /if }}
+    {{ /marquee }}
+{{ /collection:pages }}
 
 
 <style>
+    .marquee {
+        width: 100%;
+        overflow: hidden;
+    }
+
     .marquee-track {
-        animation: marquee-scroll 28s linear infinite;
+        display: flex;
+        width: max-content;
         will-change: transform;
+        animation: none;
+    }
+
+    .marquee-content {
+        flex-shrink: 0;
+    }
+
+    .marquee-content.clone {
+        margin-left: 0;
     }
 
     @keyframes marquee-scroll {
         from {
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
         }
 
         to {
-            transform: translateX(-50%);
+            transform: translate3d(var(--marquee-distance), 0, 0);
         }
     }
 
-    @media (min-width: 768px) {
-        .marquee-track {
-            animation-duration: 36s;
-        }
+    .marquee-track.is-ready {
+        animation: marquee-scroll var(--marquee-duration) linear infinite;
     }
 
     @media (prefers-reduced-motion: reduce) {
-        .marquee-track {
+        .marquee-track.is-ready {
             animation: none;
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
         }
     }
 </style>
+
+
+<script>
+    (() => {
+        const marquee = document.querySelector("[data-marquee]");
+        const track = document.querySelector("[data-marquee-track]");
+        const original = document.querySelector("[data-marquee-content]");
+
+        if (!marquee || !track || !original) return;
+
+        let resizeTimer;
+
+        function setupMarquee() {
+            track.classList.remove("is-ready");
+            track.style.removeProperty("--marquee-distance");
+            track.style.removeProperty("--marquee-duration");
+
+            track
+                .querySelectorAll(".marquee-content.clone")
+                .forEach((el) => {
+                    el.remove();
+                });
+
+            const width = original.getBoundingClientRect().width;
+
+            if (!width) return;
+
+            const viewportWidth =
+                marquee.getBoundingClientRect().width;
+
+            const copiesNeeded =
+                Math.ceil(viewportWidth / width) + 2;
+
+            for (let i = 0; i < copiesNeeded; i++) {
+                const clone = original.cloneNode(true);
+
+                clone.classList.add("clone");
+                clone.setAttribute("aria-hidden", "true");
+
+                track.appendChild(clone);
+            }
+
+            track.style.setProperty(
+                "--marquee-distance",
+                `-${width}px`
+            );
+
+            const speed = 70;
+            const duration = width / speed;
+
+            track.style.setProperty(
+                "--marquee-duration",
+                `${duration}s`
+            );
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    track.classList.add("is-ready");
+                });
+            });
+        }
+
+        setupMarquee();
+
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+
+            resizeTimer = setTimeout(() => {
+                setupMarquee();
+            }, 150);
+        });
+
+        document.fonts?.ready.then(() => {
+            setupMarquee();
+        });
+    })();
+</script>
