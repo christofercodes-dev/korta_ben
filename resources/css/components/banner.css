@@ -1,0 +1,40 @@
+.marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: none;
+}
+
+.marquee-content {
+    flex-shrink: 0;
+}
+
+.marquee-content.clone {
+    margin-left: 0;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(var(--marquee-distance), 0, 0);
+    }
+}
+
+.marquee-track.is-ready {
+    animation: marquee-scroll var(--marquee-duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track.is-ready {
+        animation: none;
+        transform: translate3d(0, 0, 0);
+    }
+}

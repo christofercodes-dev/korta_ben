@@ -64,7 +64,9 @@
                         {{ hero_image_1 }}
 
                             <img
-                                src="{{ url }}"
+                                src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
+                                srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                                sizes="(min-width: 768px) 50vw, 100vw"
                                 alt="{{ alt }}"
                                 class="h-full w-full object-cover"
                             >
@@ -91,7 +93,9 @@
                         {{ hero_image_2 }}
 
                             <img
-                                src="{{ url }}"
+                                src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
+                                srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                                sizes="(min-width: 768px) 50vw, 100vw"
                                 alt="{{ alt }}"
                                 class="h-full w-full object-cover"
                             >
@@ -137,7 +141,9 @@
                 {{ if mobile_image }}
                     {{ mobile_image }}
                         <img
-                            src="{{ url }}"
+                            src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
+                            srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                            sizes="100vw"
                             alt="{{ alt ?? '' }}"
                             class="mobile-hero-image absolute inset-0 h-full w-full object-cover"
                         >
@@ -145,7 +151,9 @@
                 {{ else }}
                     {{ hero_image_1 }}
                         <img
-                            src="{{ url }}"
+                            src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
+                            srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                            sizes="100vw"
                             alt="{{ alt ?? '' }}"
                             class="mobile-hero-image absolute inset-0 h-full w-full object-cover"
                         >
@@ -333,218 +341,3 @@
     </div>
 
 </section>
-
-
-
-<style>
-
-/* =========================================================
-   HERO BASE
-   ========================================================= */
-
-.hero-line {
-    display: inline-block;
-    cursor: default;
-}
-
-.hero-letter {
-    display: inline-block;
-    will-change: transform;
-    transform: translate3d(0, 0, 0);
-}
-
-
-
-/* =========================================================
-   DESKTOP HERO
-   ========================================================= */
-
-@media (min-width: 768px) {
-
-    .hero-card {
-        position: relative;
-    }
-
-    .hero-image {
-        position: relative;
-    }
-
-    .hero-card img {
-        transition:
-            transform 1200ms cubic-bezier(.16,1,.3,1);
-    }
-
-    .hero-card:hover img {
-        transform: scale(1.025);
-    }
-
-    .hero-card:hover .hero-overlay {
-        background: rgba(0,0,0,.28);
-        opacity: 1;
-        backdrop-filter: blur(2px);
-    }
-
-}
-
-
-
-/* =========================================================
-   MOBILE HERO
-   ========================================================= */
-
-@media (max-width: 767px) {
-
-    .mobile-hero {
-        isolation: isolate;
-    }
-
-
-    /* IMAGE */
-
-    .mobile-hero-image {
-        transform: scale(1.055);
-        will-change: transform;
-        animation:
-            mobileHeroImageIn
-            1800ms
-            cubic-bezier(.16,1,.3,1)
-            forwards;
-    }
-
-
-    /* TITLE */
-
-    .mobile-hero-title {
-        font-size: clamp(
-            3.4rem,
-            15.5vw,
-            6.5rem
-        );
-
-        font-weight: 300;
-        line-height: .84;
-        letter-spacing: -.065em;
-    }
-
-
-    .mobile-hero-title-line {
-        display: block;
-    }
-
-
-    .mobile-hero-title-italic {
-        color: rgba(255,255,255,.68);
-    }
-
-
-    /* BUTTON */
-
-    .mobile-hero-button {
-        min-height: 52px;
-        padding-left: 20px;
-        padding-right: 8px;
-
-        box-shadow:
-            0 10px 35px rgba(0,0,0,.16);
-
-        transition:
-            transform 450ms cubic-bezier(.16,1,.3,1),
-            box-shadow 450ms ease;
-    }
-
-
-    .mobile-hero-button-arrow {
-        transition:
-            transform 450ms cubic-bezier(.16,1,.3,1);
-    }
-
-
-    .mobile-hero-button:active {
-        transform: scale(.97);
-
-        box-shadow:
-            0 5px 20px rgba(0,0,0,.12);
-    }
-
-
-    .mobile-hero-button:active
-    .mobile-hero-button-arrow {
-        transform: translate(2px,-2px);
-    }
-
-
-    /* SCROLL */
-
-    .mobile-hero-scroll-line span {
-        animation:
-            mobileScrollIndicator
-            1800ms
-            cubic-bezier(.76,0,.24,1)
-            infinite;
-    }
-
-
-    /* IMAGE INTRO */
-
-    @keyframes mobileHeroImageIn {
-
-        from {
-            opacity: 0;
-            transform: scale(1.09);
-        }
-
-        to {
-            opacity: 1;
-            transform: scale(1.055);
-        }
-
-    }
-
-
-    /* SCROLL ANIMATION */
-
-    @keyframes mobileScrollIndicator {
-
-        0% {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-
-        25% {
-            opacity: 1;
-        }
-
-        75% {
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateY(300%);
-            opacity: 0;
-        }
-
-    }
-
-}
-
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .hero-letter {
-        animation: none !important;
-        transform: none !important;
-    }
-
-    .mobile-hero-image,
-    .mobile-hero-scroll-line span {
-        animation: none !important;
-    }
-
-}
-
-</style>

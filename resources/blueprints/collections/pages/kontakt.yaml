@@ -1,7 +1,7 @@
-title: kontakt
+title: Kontakt
 tabs:
   main:
-    display: Main
+    display: Kontakt
     sections:
       -
         fields:
@@ -9,47 +9,21 @@ tabs:
             handle: title
             field:
               type: text
+              display: Titel
               required: true
               validate:
                 - required
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-          -
-            handle: author
-            field:
-              type: users
-              display: Author
-      -
-        display: kontakt
-        fields:
+
           -
             handle: big_title
             field:
               type: text
-              display: Titel
+              display: Stor rubrik
           -
             handle: content
             field:
               type: textarea
-              display: content
-          -
-            handle: email
-            field:
-              type: text
-              display: email
-          -
-            handle: phone
-            field:
-              type: text
-              display: phone
-          -
-            handle: adress
-            field:
-              type: text
-              display: adress
+              display: Text
   sidebar:
     display: Sidebar
     sections:
@@ -59,5 +33,7 @@ tabs:
             handle: slug
             field:
               type: slug
+              display: Slug
               localizable: true
               validate: 'max:200'
+

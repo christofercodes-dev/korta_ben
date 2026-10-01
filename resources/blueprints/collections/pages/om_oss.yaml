@@ -9,21 +9,10 @@ tabs:
             handle: title
             field:
               type: text
+              display: Titel
               required: true
               validate:
                 - required
-          -
-            handle: section_title
-            field:
-              type: text
-              validate:
-                - required
-              display: Title
-          -
-            handle: template
-            field:
-              type: template
-              display: template
       -
         display: 'om oss'
         fields:
@@ -31,29 +20,29 @@ tabs:
             handle: small_title
             field:
               type: text
-              display: 'small title'
+              display: 'Liten rubrik'
           -
             handle: big_title
             field:
               type: text
-              display: 'big title'
+              display: 'Stor rubrik'
               validate:
                 - required
           -
             handle: content
             field:
               type: textarea
-              display: content
+              display: Text
           -
             handle: about_title
             field:
               type: text
-              display: 'about title'
+              display: 'Rubrik (om oss)'
           -
             handle: about_content
             field:
               type: textarea
-              display: 'about content'
+              display: 'Text (om oss)'
       -
         display: 'Vi som jobbar här'
         fields:
@@ -61,24 +50,24 @@ tabs:
             handle: team
             field:
               type: replicator
-              display: team
+              display: Team
               sets:
                 new_set_group:
                   display: 'New Set Group'
                   sets:
                     person:
-                      display: person
+                      display: Person
                       fields:
                         -
                           handle: name
                           field:
                             type: text
-                            display: name
+                            display: Namn
                         -
                           handle: role
                           field:
                             type: text
-                            display: role
+                            display: Roll
   sidebar:
     display: Sidebar
     sections:

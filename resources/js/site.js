@@ -1,3 +1,12 @@
+import initAboutPage from './components/about-page.js';
+import initAbout from './components/about.js';
+import initBanner from './components/banner.js';
+import initContactPage from './components/contact-page.js';
+import initNavbar from './components/navbar.js';
+import initProjectsGrid from './components/projects-grid.js';
+import initProjects from './components/projects.js';
+import initServicesPage from './components/services-page.js';
+
 const aboutSection = document.querySelector('.about-section');
 
 if (aboutSection) {
@@ -275,3 +284,31 @@ const observer = new IntersectionObserver(
 
 aboutElements.forEach((element) => observer.observe(element));
 
+
+/* ==================================================
+   COMPONENTS
+   One failing component should not stop the others.
+================================================== */
+
+[
+    initAboutPage,
+    initAbout,
+    initBanner,
+    initContactPage,
+    initNavbar,
+    initProjectsGrid,
+    initProjects,
+    initServicesPage,
+].forEach((init) => {
+
+    try {
+
+        init();
+
+    } catch (error) {
+
+        console.error(error);
+
+    }
+
+});

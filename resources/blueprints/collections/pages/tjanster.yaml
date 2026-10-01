@@ -4,13 +4,6 @@ tabs:
     display: Main
     sections:
       -
-        fields:
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-      -
         display: Tjänster
         fields:
           -
@@ -25,34 +18,34 @@ tabs:
             handle: content
             field:
               type: textarea
-              display: content
+              display: Text
           -
             handle: services
             field:
               type: replicator
-              display: services
+              display: Tjänster
               sets:
                 new_set_group:
                   display: 'New Set Group'
                   sets:
                     services:
-                      display: services
+                      display: Tjänster
                       fields:
                         -
                           handle: title
                           field:
                             type: text
-                            display: titel
+                            display: Titel
                         -
                           handle: description
                           field:
                             type: textarea
-                            display: description
+                            display: Beskrivning
           -
             handle: approach_content
             field:
               type: textarea
-              display: 'approach content'
+              display: 'Text om arbetssätt'
   sidebar:
     display: Sidebar
     sections:

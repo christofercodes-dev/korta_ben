@@ -1,207 +1,18 @@
-title: projekt
+title: Projektsida
 tabs:
   main:
-    display: Main
+    display: Sida
     sections:
       -
-        display: projects
         fields:
           -
             handle: title
             field:
               type: text
+              display: Titel
               required: true
               validate:
                 - required
-          -
-            handle: projects
-            field:
-              type: replicator
-              display: projects
-              sets:
-                new_set_group:
-                  display: 'New Set Group'
-                  sets:
-                    project:
-                      display: project
-                      fields:
-                        -
-                          handle: project_title
-                          field:
-                            type: text
-                            display: 'project title'
-                        -
-                          handle: category
-                          field:
-                            options:
-                              - key: foto
-                                value: Foto
-                              - key: video
-                                value: Video
-                              - key: campaign
-                                value: Campaign
-                              - key: web
-                                value: Webb
-                            type: select
-                            display: category
-                        -
-                          handle: description
-                          field:
-                            type: textarea
-                            display: description
-                        -
-                          handle: image
-                          field:
-                            container: assets
-                            type: assets
-                            display: image
-                        -
-                          handle: image_hover
-                          field:
-                            container: assets
-                            type: assets
-                            display: 'image hover'
-                        -
-                          handle: content
-                          field:
-                            container: assets
-                            remove_empty_nodes: false
-                            type: bard
-                            display: content
-      -
-        display: 'project content'
-        fields:
-          -
-            handle: project_content
-            field:
-              type: replicator
-              display: projektinnehåll
-              instructions: 'Bygg projektet genom att lägga till sektioner.'
-              sets:
-                new_set_group:
-                  display: 'New Set Group'
-                  sets:
-                    text:
-                      display: text
-                      fields:
-                        -
-                          handle: heading
-                          field:
-                            type: text
-                            display: Rubrik
-                        -
-                          handle: body
-                          field:
-                            buttons:
-                              - h2
-                              - h3
-                              - unorderedlist
-                              - orderedlist
-                              - removeformat
-                              - quote
-                              - image
-                              - table
-                            container: assets
-                            remove_empty_nodes: false
-                            type: bard
-                            display: Text
-                    'big image':
-                      display: 'Stor bild'
-                      fields:
-                        -
-                          handle: image
-                          field:
-                            container: assets
-                            max_files: 1
-                            type: assets
-                            display: Bild
-                    two_images:
-                      display: 'Två bilder'
-                      instructions: 'Här kan du lägga två bilder bredvid varandra'
-                      fields:
-                        -
-                          handle: image_left
-                          field:
-                            container: assets
-                            mode: grid
-                            max_files: 1
-                            min_files: 1
-                            type: assets
-                            display: 'Vänster bild'
-                        -
-                          handle: image_right
-                          field:
-                            container: assets
-                            mode: grid
-                            max_files: 1
-                            min_files: 1
-                            type: assets
-                            display: 'Höger bild'
-                    bild_video:
-                      display: 'Bild & video'
-                      fields:
-                        -
-                          handle: image
-                          field:
-                            container: assets
-                            max_files: 1
-                            min_files: 1
-                            type: assets
-                            display: Bild
-                        -
-                          handle: video
-                          field:
-                            type: video
-                            display: Video
-                    video:
-                      display: Video
-                      instructions: 'Lägg till en video'
-                      fields:
-                        -
-                          handle: video
-                          field:
-                            type: video
-                            display: Video
-                    bild_text_bild:
-                      display: 'Bild + text + bild'
-                      fields:
-                        -
-                          handle: image_top
-                          field:
-                            container: assets
-                            max_files: 1
-                            min_files: 1
-                            type: assets
-                            display: 'Topp bild'
-                        -
-                          handle: heading
-                          field:
-                            type: text
-                            display: Rubrik
-                        -
-                          handle: text
-                          field:
-                            buttons:
-                              - h2
-                              - h3
-                              - unorderedlist
-                              - orderedlist
-                              - removeformat
-                              - quote
-                              - image
-                              - table
-                            container: assets
-                            remove_empty_nodes: false
-                            type: bard
-                            display: Text
-                        -
-                          handle: image_bottom
-                          field:
-                            container: assets
-                            max_files: 1
-                            min_files: 1
-                            type: assets
-                            display: 'Botten bild'
   sidebar:
     display: Sidebar
     sections:
@@ -211,5 +22,7 @@ tabs:
             handle: slug
             field:
               type: slug
+              display: Slug
               localizable: true
               validate: 'max:200'
+

@@ -60,14 +60,14 @@
 
             <div class="flex flex-col gap-3">
 
-                <a href="mailto:hej@kortaben.se"
+                <a href="mailto:{{ company:email }}"
                     class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
-                    hej@kortaben.se
+                    {{ company:email }}
                 </a>
 
-                <a href="tel:+46700000000"
+                <a href="tel:{{ company:phone_link }}"
                     class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
-                    +46 70 000 00 00
+                    {{ company:phone }}
                 </a>
 
             </div>
@@ -85,7 +85,7 @@
 
             <div class="flex flex-col gap-3">
 
-                <a href="#" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
+                <a href="{{ company:instagram ?? '#' }}" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
                     Instagram
                 </a>
 
@@ -108,7 +108,7 @@
         class="flex flex-col gap-3 pt-6 text-[7px] uppercase tracking-[0.25em] text-white/25 md:flex-row md:items-center md:justify-between">
 
         <p>
-            © {{ hero_year }} Korta Ben
+            © {{ now format="Y" }} Korta Ben
         </p>
 
         <p>

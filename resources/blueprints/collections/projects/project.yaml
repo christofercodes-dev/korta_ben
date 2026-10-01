@@ -1,7 +1,7 @@
-title: Project
+title: Projekt
 tabs:
   main:
-    display: Main
+    display: Projekt
     sections:
       -
         fields:
@@ -9,42 +9,16 @@ tabs:
             handle: title
             field:
               type: text
+              display: Titel
               required: true
               validate:
                 - required
           -
-            handle: content
+            handle: category
             field:
-              type: markdown
-              display: Content
-              localizable: true
-              escape_markup: true
-          -
-            handle: author
-            field:
-              type: users
-              display: Author
-              default: current
-              localizable: true
-              max_items: 1
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-              localizable: true
-          -
-            handle: image_hover
-            field:
-              container: assets
-              type: assets
-              display: 'image hover'
-      -
-        display: Projects
-        fields:
-          -
-            handle: select_field
-            field:
+              type: select
+              display: Kategori
+              instructions: 'Visas ovanför projektnamnet.'
               options:
                 - key: foto
                   value: Foto
@@ -54,141 +28,139 @@ tabs:
                   value: Campaign
                 - key: web
                   value: Webb
-              type: select
-              display: 'Select Field'
+              validate:
+                - required
+          -
+            handle: image
+            field:
+              type: assets
+              container: assets
+              display: Omslagsbild
+              instructions: 'Visas i projektlistan och på startsidan.'
+              max_files: 1
+              min_files: 1
+              mode: grid
+              validate:
+                - required
+          -
+            handle: image_hover
+            field:
+              type: assets
+              container: assets
+              display: Hover-bild
+              instructions: 'Valfri. Tonas in när man håller muspekaren över omslagsbilden.'
+              max_files: 1
+              mode: grid
           -
             handle: description
             field:
               type: textarea
-              display: description
-          -
-            handle: image
-            field:
-              container: assets
-              type: assets
-              display: image
+              display: 'Kort beskrivning'
+              instructions: 'Valfri. Visas under rubriken på projektsidan och används som beskrivning i sökmotorer.'
+              character_limit: 300
+  innehall:
+    display: Innehåll
+    sections:
       -
-        display: 'Project content'
         fields:
           -
             handle: project_content
             field:
               type: replicator
-              display: 'Projekt innehåll'
+              display: Innehåll
+              instructions: 'Bygg projektsidan genom att lägga till block i den ordning de ska visas.'
+              button_label: 'Lägg till block'
               sets:
-                new_set_group:
-                  display: 'New Set Group'
+                blocks:
+                  display: Block
                   sets:
                     text:
                       display: Text
+                      icon: text
                       fields:
                         -
                           handle: heading
                           field:
                             type: text
-                            display: Heading
+                            display: Rubrik
                         -
                           handle: body
                           field:
-                            container: assets
-                            remove_empty_nodes: false
                             type: bard
-                            display: Body
-                    image:
-                      display: 'Stor bild'
+                            display: Text
+                            remove_empty_nodes: false
+                            buttons:
+                              - h2
+                              - h3
+                              - unorderedlist
+                              - orderedlist
+                              - bold
+                              - italic
+                              - link
+                              - quote
+                              - removeformat
+                    images:
+                      display: Bilder
+                      icon: image
+                      instructions: 'Välj 1–3 bilder. En bild visas stor, två eller tre visas bredvid varandra.'
                       fields:
                         -
-                          handle: image
+                          handle: images
                           field:
-                            container: assets
                             type: assets
-                            display: Image
-                    two_images:
-                      display: 'Två bilder'
-                      fields:
-                        -
-                          handle: image_left
-                          field:
                             container: assets
-                            type: assets
-                            display: 'Image left'
-                        -
-                          handle: image_right
-                          field:
-                            container: assets
-                            type: assets
-                            display: 'Image right'
+                            display: Bilder
+                            mode: grid
+                            min_files: 1
+                            max_files: 3
+                            validate:
+                              - required
                     image_text:
                       display: 'Bild + text'
+                      icon: layout-split
                       fields:
                         -
                           handle: image
                           field:
-                            container: assets
                             type: assets
-                            display: Image
+                            container: assets
+                            display: Bild
+                            mode: grid
+                            min_files: 1
+                            max_files: 1
                         -
                           handle: heading
                           field:
                             type: text
-                            display: Heading
+                            display: Rubrik
                         -
                           handle: body
                           field:
-                            container: assets
-                            remove_empty_nodes: false
                             type: bard
-                            display: Body
-                    image_video:
-                      display: 'Bild + video'
+                            display: Text
+                            remove_empty_nodes: false
+                            buttons:
+                              - h2
+                              - h3
+                              - unorderedlist
+                              - orderedlist
+                              - bold
+                              - italic
+                              - link
+                              - quote
+                              - removeformat
+                    video:
+                      display: Video
+                      icon: video
+                      instructions: 'Klistra in en länk till YouTube, Vimeo eller en .mp4-fil.'
                       fields:
-                        -
-                          handle: image
-                          field:
-                            container: assets
-                            type: assets
-                            display: Image
                         -
                           handle: video
                           field:
                             type: video
-                            display: Video
-                    video:
-                      display: Video
-                      fields:
-                        -
-                          handle: video
-                          field:
-                            container: assets
-                            type: assets
-                            display: Video
-                    image_text_image:
-                      display: 'Bild + text + bild'
-                      fields:
-                        -
-                          handle: image_left
-                          field:
-                            container: assets
-                            type: assets
-                            display: 'Image left'
-                        -
-                          handle: heading
-                          field:
-                            type: text
-                            display: Heading
-                        -
-                          handle: body
-                          field:
-                            container: assets
-                            remove_empty_nodes: false
-                            type: bard
-                            display: Body
-                        -
-                          handle: image_right
-                          field:
-                            container: assets
-                            type: assets
-                            display: 'Image right'
+                            display: Videolänk
+                            validate:
+                              - required
   sidebar:
     display: Sidebar
     sections:
@@ -198,5 +170,6 @@ tabs:
             handle: slug
             field:
               type: slug
+              display: Slug
               localizable: true
               validate: 'max:200'
