@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ (title ?? site:name) | sanitize }}</title>
-    {{ if description }}<meta name="description" content="{{ description | sanitize }}">{{ /if }}
+    {{ if description }}<meta name="description" content="{{ description | truncate:160 | sanitize }}">{{ /if }}
 
     {{ vite src="resources/js/site.js|resources/css/site.css" }}
     <!-- Sora -->

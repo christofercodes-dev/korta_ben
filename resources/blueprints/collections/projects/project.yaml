@@ -65,9 +65,8 @@ tabs:
             handle: description
             field:
               type: textarea
-              display: 'Kort beskrivning'
-              instructions: 'Valfri. Visas under rubriken på projektsidan och används som beskrivning i sökmotorer.'
-              character_limit: 300
+              display: Beskrivning
+              instructions: 'Valfri. Visas till höger om rubriken på projektsidan. Radbrytningar och tomma rader blir stycken. De första tecknen används som beskrivning i sökmotorer.'
   innehall:
     display: Innehåll
     sections:

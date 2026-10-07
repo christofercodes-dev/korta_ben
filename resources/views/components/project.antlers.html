@@ -15,22 +15,24 @@
 {{ /if }}
 
 <section class="overflow-hidden bg-white px-5 pb-16 text-[#181818] md:px-8 md:pb-24 {{ if hero_image }}pt-12 md:pt-20{{ else }}pt-20 md:pt-32{{ /if }}">
-    <div class="mx-auto max-w-[1440px]">
+    <div class="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
 
-        {{ if category }}
-            <p class="mb-5 text-[9px] font-semibold uppercase tracking-[0.25em] text-black/40">
-                {{ category }}{{ label }}{{ unless last }} · {{ /unless }}{{ /category }}
-            </p>
-        {{ /if }}
+        <div>
 
-        <h1 class="max-w-[1100px] text-[clamp(3.5rem,8vw,9rem)] font-medium leading-[0.88] tracking-[-0.06em]">
-            {{ title }}
-        </h1>
+            {{ if category }}
+                <p class="mb-5 text-[9px] font-semibold uppercase tracking-[0.25em] text-black/40">
+                    {{ category }}{{ label }}{{ unless last }} · {{ /unless }}{{ /category }}
+                </p>
+            {{ /if }}
+
+            <h1 class="text-[clamp(3.5rem,8vw,9rem)] font-medium leading-[0.88] tracking-[-0.06em]">
+                {{ title }}
+            </h1>
+
+        </div>
 
         {{ if description }}
-            <p class="mt-8 max-w-[700px] text-base font-light leading-[1.4] text-black/60 md:mt-12 md:text-xl">
-                {{ description }}
-            </p>
+            <div class="max-w-[700px] whitespace-pre-line text-base font-light leading-[1.4] md:pt-2 md:text-xl">{{ description }}</div>
         {{ /if }}
 
     </div>
@@ -61,7 +63,7 @@
                     {{ /if }}
 
                     {{ if body }}
-                        <div class="mt-8 text-base font-light leading-[1.4] md:text-xl">
+                        <div class="rich-text mt-8 text-base font-light leading-[1.4] md:text-xl">
                             {{ body }}
                         </div>
                     {{ /if }}
@@ -131,7 +133,7 @@
                         {{ /if }}
 
                         {{ if body }}
-                            <div class="mt-8 text-base font-light leading-[1.4] md:text-xl">
+                            <div class="rich-text mt-8 text-base font-light leading-[1.4] md:text-xl">
                                 {{ body }}
                             </div>
                         {{ /if }}
