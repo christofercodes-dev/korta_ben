@@ -1,0 +1,58 @@
+/* =========================================================
+   RULLANDE BILDBAND
+   Två identiska grupper efter varandra. Spåret flyttas exakt
+   en grupp åt vänster och börjar sedan om, så rörelsen går i
+   en oändlig loop utan hopp.
+   ========================================================= */
+
+.image-band {
+    --image-band-height: 320px;
+    --image-band-gap: 12px;
+    --image-band-seconds-per-image: 7s;
+}
+
+@media (min-width: 768px) {
+    .image-band {
+        --image-band-height: 560px;
+        --image-band-gap: 30px;
+    }
+}
+
+.image-band-track {
+    display: flex;
+    width: max-content;
+
+    animation: image-band-scroll
+        calc(var(--image-band-count, 6) * var(--image-band-seconds-per-image))
+        linear infinite;
+
+    will-change: transform;
+}
+
+.image-band-group {
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--image-band-gap);
+    padding-right: var(--image-band-gap);
+}
+
+.image-band-item {
+    height: var(--image-band-height);
+    flex-shrink: 0;
+}
+
+@keyframes image-band-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .image-band-track {
+        animation: none;
+    }
+}

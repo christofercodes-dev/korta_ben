@@ -17,8 +17,9 @@ tabs:
             handle: category
             field:
               type: select
-              display: Kategori
-              instructions: 'Visas ovanför projektnamnet.'
+              multiple: true
+              display: Kategorier
+              instructions: 'Välj en eller flera. Visas ovanför projektnamnet.'
               options:
                 - key: foto
                   value: Foto
@@ -49,6 +50,15 @@ tabs:
               container: assets
               display: Hover-bild
               instructions: 'Valfri. Tonas in när man håller muspekaren över omslagsbilden.'
+              max_files: 1
+              mode: grid
+          -
+            handle: hero_image
+            field:
+              type: assets
+              container: assets
+              display: Helbild
+              instructions: 'Valfri. Fullbredd och hela skärmhöjden högst upp på projektsidan, ovanför rubriken. Allt annat hamnar under den.'
               max_files: 1
               mode: grid
           -
@@ -149,6 +159,48 @@ tabs:
                               - link
                               - quote
                               - removeformat
+                    image_grid:
+                      display: 'Rutnät (8 bilder)'
+                      icon: layout-grid
+                      instructions: 'Fullbredd med egen bakgrundsfärg och 8 kvadratiska bilder i 4 × 2 rutor. Bilderna beskärs till kvadrat. Dra för att ändra ordning.'
+                      fields:
+                        -
+                          handle: background
+                          field:
+                            type: color
+                            display: Bakgrundsfärg
+                            default_color_mode: hex
+                            color_modes:
+                              - hex
+                            default: '#181818'
+                        -
+                          handle: images
+                          field:
+                            type: assets
+                            container: assets
+                            display: Bilder
+                            instructions: 'Exakt 8 bilder.'
+                            mode: grid
+                            min_files: 8
+                            max_files: 8
+                            validate:
+                              - required
+                    image_band:
+                      display: 'Rullande bildband'
+                      icon: image
+                      instructions: 'Bilder som rullar långsamt i sidled, fullbredd. Alla bilder får samma höjd men får ha olika bredd, så beskär dem inte till kvadrat.'
+                      fields:
+                        -
+                          handle: images
+                          field:
+                            type: assets
+                            container: assets
+                            display: Bilder
+                            instructions: 'Minst 6 bilder. Dra för att ändra ordning.'
+                            mode: grid
+                            min_files: 6
+                            validate:
+                              - required
                     video:
                       display: Video
                       icon: video

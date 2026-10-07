@@ -6,6 +6,7 @@
 @import "./components/contact-page.css";
 @import "./components/hero.css";
 @import "./components/navbar.css";
+@import "./components/project.css";
 @import "./components/projects-grid.css";
 @import "./components/services-page.css";
 @source "../views";

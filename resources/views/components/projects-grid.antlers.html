@@ -66,7 +66,7 @@
                             srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
                             sizes="(min-width: 768px) 50vw, 100vw"
                             alt="{{ alt ?? title }}"
-                            class="project-image absolute inset-0 h-full w-full object-cover transition-opacity duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] {{ if image_hover }}group-hover:opacity-0{{ /if }}"
+                            class="project-image absolute inset-0 h-full w-full object-cover transition-opacity duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)]"
                         >
 
                     {{ /image }}
@@ -100,7 +100,7 @@
                             <p
                                 class="project-category mb-2 text-[8px] font-medium uppercase tracking-[0.25em] text-black/35"
                             >
-                                {{ category:label }}
+                                {{ category }}{{ label }}{{ unless last }} · {{ /unless }}{{ /category }}
                             </p>
 
                         {{ /if }}

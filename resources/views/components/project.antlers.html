@@ -1,11 +1,25 @@
 {{ partial:components/navbar }}
 
-<section class="overflow-hidden bg-white px-5 pb-16 pt-20 text-[#181818] md:px-8 md:pb-24 md:pt-32">
+{{ if hero_image }}
+    <section class="h-svh w-full overflow-hidden bg-[#e8e6e1]">
+        {{ hero_image }}
+            <img
+                src="{{ glide:url width="2000" fit="max" format="webp" quality="80" }}"
+                srcset="{{ glide:url width="1000" fit="max" format="webp" quality="80" }} 1000w, {{ glide:url width="2000" fit="max" format="webp" quality="80" }} 2000w, {{ glide:url width="3000" fit="max" format="webp" quality="80" }} 3000w"
+                sizes="100vw"
+                alt="{{ alt }}"
+                class="h-full w-full object-cover"
+            >
+        {{ /hero_image }}
+    </section>
+{{ /if }}
+
+<section class="overflow-hidden bg-white px-5 pb-16 text-[#181818] md:px-8 md:pb-24 {{ if hero_image }}pt-12 md:pt-20{{ else }}pt-20 md:pt-32{{ /if }}">
     <div class="mx-auto max-w-[1440px]">
 
         {{ if category }}
             <p class="mb-5 text-[9px] font-semibold uppercase tracking-[0.25em] text-black/40">
-                {{ category:label }}
+                {{ category }}{{ label }}{{ unless last }} · {{ /unless }}{{ /category }}
             </p>
         {{ /if }}
 
@@ -121,6 +135,82 @@
                                 {{ body }}
                             </div>
                         {{ /if }}
+
+                    </div>
+
+                </div>
+
+
+            <!-- ================================================= -->
+            <!-- RUTNÄT (8 bilder, egen bakgrundsfärg)              -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "image_grid" }}
+
+                <div
+                    class="relative left-1/2 my-8 w-screen -translate-x-1/2 px-5 py-10 md:my-12 md:px-8 md:py-16"
+                    style="background-color: {{ background | sanitize }}"
+                >
+
+                    <div class="mx-auto grid max-w-[1440px] grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+
+                        {{ images }}
+
+                            <figure class="aspect-square min-w-0 overflow-hidden">
+                                <img
+                                    src="{{ glide:url width="900" height="900" fit="crop_focal" format="webp" quality="80" }}"
+                                    srcset="{{ glide:url width="500" height="500" fit="crop_focal" format="webp" quality="80" }} 500w, {{ glide:url width="900" height="900" fit="crop_focal" format="webp" quality="80" }} 900w, {{ glide:url width="1400" height="1400" fit="crop_focal" format="webp" quality="80" }} 1400w"
+                                    sizes="(min-width: 768px) 25vw, 50vw"
+                                    alt="{{ alt }}"
+                                    class="block h-full w-full object-cover"
+                                    loading="lazy"
+                                >
+                            </figure>
+
+                        {{ /images }}
+
+                    </div>
+
+                </div>
+
+
+            <!-- ================================================= -->
+            <!-- RULLANDE BILDBAND                                  -->
+            <!-- ================================================= -->
+
+            {{ elseif type == "image_band" }}
+
+                <div class="image-band pointer-events-none relative left-1/2 my-8 w-screen -translate-x-1/2 overflow-hidden py-8 md:my-12 md:py-12">
+
+                    <div class="image-band-track" style="--image-band-count: {{ images | length }}">
+
+                        <div class="image-band-group">
+                            {{ images }}
+                                <div class="image-band-item">
+                                    <img
+                                    src="{{ glide:url height="900" fit="max" format="webp" quality="80" }}"
+                                    width="{{ width }}"
+                                    height="{{ height }}"
+                                    alt="{{ alt }}"
+                                    class="image-band-img h-full w-auto max-w-none"
+                                >
+                                </div>
+                            {{ /images }}
+                        </div>
+
+                        <div class="image-band-group" aria-hidden="true">
+                            {{ images }}
+                                <div class="image-band-item">
+                                    <img
+                                    src="{{ glide:url height="900" fit="max" format="webp" quality="80" }}"
+                                    width="{{ width }}"
+                                    height="{{ height }}"
+                                    alt=""
+                                    class="image-band-img h-full w-auto max-w-none"
+                                >
+                                </div>
+                            {{ /images }}
+                        </div>
 
                     </div>
 
