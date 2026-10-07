@@ -1,9 +1,9 @@
 ---
 id: 72bbae39-74e3-49d8-b42a-34a3f2383eb6
 blueprint: om_oss
-title: 'om oss'
-updated_by: 8cce3c2a-81f7-466f-82d2-a84d4fe56c01
-updated_at: 1787837116
+title: 'Om oss'
+updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
+updated_at: 1791279869
 template: about
 about_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 section_title: 'om oss'

@@ -2,3 +2,9 @@ name: Marcus
 super: true
 id: 0db83eba-c4e9-4f20-be54-8d4583a19011
 password_hash: $2y$12$/Ogc9YO18Oj/jiKVyHxfdONlb5GYOhoDUxwwtVxlR3iH1MEOV.azi
+preferences:
+  collections:
+    pages:
+      view: tree
+    projects:
+      view: list

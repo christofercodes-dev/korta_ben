@@ -41,5 +41,6 @@ project_content:
   enabled: true
 updated_by: 8cce3c2a-81f7-466f-82d2-a84d4fe56c01
 updated_at: 1788637749
-category: campaign
+category:
+  - campaign
 ---
