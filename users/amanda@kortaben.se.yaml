@@ -2,3 +2,7 @@ name: 'Amanda Ricciardi'
 super: true
 id: 11553726-99a7-47ab-9700-9ae359dd6102
 password_hash: $2y$12$0bKWIemmTQYMYQug1B0IlO5Fm37QzKC.Cuz8NCQXVXE1swUEMJTnW
+preferences:
+  collections:
+    projects:
+      view: list
