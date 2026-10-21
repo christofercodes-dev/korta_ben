@@ -95,8 +95,17 @@ return [
         |
         */
 
+        // Alla presets nedan skapas automatiskt som WebP när en bild laddas upp,
+        // och mallarna hänvisar till dem med preset="namn" så att inga bilder
+        // behöver genereras första gången en besökare tittar på sidan.
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            'w800' => ['w' => 800, 'fit' => 'max', 'fm' => 'webp', 'q' => 80],
+            'w1600' => ['w' => 1600, 'fit' => 'max', 'fm' => 'webp', 'q' => 80],
+            'w2400' => ['w' => 2400, 'fit' => 'max', 'fm' => 'webp', 'q' => 80],
+            'h900' => ['h' => 900, 'fit' => 'max', 'fm' => 'webp', 'q' => 80],
+            'sq500' => ['w' => 500, 'h' => 500, 'fit' => 'crop_focal', 'fm' => 'webp', 'q' => 80],
+            'sq900' => ['w' => 900, 'h' => 900, 'fit' => 'crop_focal', 'fm' => 'webp', 'q' => 80],
+            'sq1400' => ['w' => 1400, 'h' => 1400, 'fit' => 'crop_focal', 'fm' => 'webp', 'q' => 80],
         ],
 
         /*

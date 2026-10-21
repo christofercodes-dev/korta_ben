@@ -64,8 +64,8 @@
                         {{ hero_image_1 }}
 
                             <img
-                                src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
-                                srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                                src="{{ glide:url preset="w1600" }}"
+                                srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                                 sizes="(min-width: 768px) 50vw, 100vw"
                                 alt="{{ alt }}"
                                 class="h-full w-full object-cover"
@@ -93,8 +93,8 @@
                         {{ hero_image_2 }}
 
                             <img
-                                src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
-                                srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                                src="{{ glide:url preset="w1600" }}"
+                                srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                                 sizes="(min-width: 768px) 50vw, 100vw"
                                 alt="{{ alt }}"
                                 class="h-full w-full object-cover"
@@ -141,8 +141,8 @@
                 {{ if mobile_image }}
                     {{ mobile_image }}
                         <img
-                            src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
-                            srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                            src="{{ glide:url preset="w1600" }}"
+                            srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                             sizes="100vw"
                             alt="{{ alt ?? '' }}"
                             class="mobile-hero-image absolute inset-0 h-full w-full object-cover"
@@ -151,8 +151,8 @@
                 {{ else }}
                     {{ hero_image_1 }}
                         <img
-                            src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
-                            srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                            src="{{ glide:url preset="w1600" }}"
+                            srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                             sizes="100vw"
                             alt="{{ alt ?? '' }}"
                             class="mobile-hero-image absolute inset-0 h-full w-full object-cover"

@@ -4,8 +4,8 @@
     <section class="h-svh w-full overflow-hidden bg-[#e8e6e1]">
         {{ hero_image }}
             <img
-                src="{{ glide:url width="2000" fit="max" format="webp" quality="80" }}"
-                srcset="{{ glide:url width="1000" fit="max" format="webp" quality="80" }} 1000w, {{ glide:url width="2000" fit="max" format="webp" quality="80" }} 2000w, {{ glide:url width="3000" fit="max" format="webp" quality="80" }} 3000w"
+                src="{{ glide:url preset="w1600" }}"
+                srcset="{{ glide:url preset="w800" }} 1000w, {{ glide:url preset="w1600" }} 2000w, {{ glide:url preset="w2400" }} 3000w"
                 sizes="100vw"
                 alt="{{ alt }}"
                 class="h-full w-full object-cover"
@@ -83,8 +83,8 @@
 
                         <figure class="min-w-0 overflow-hidden bg-[#e8e6e1] md:flex-1">
                             <img
-                                src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
-                                srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                                src="{{ glide:url preset="w1600" }}"
+                                srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                                 sizes="(min-width: 1440px) 1440px, 100vw"
                                 alt="{{ alt }}"
                                 class="block h-auto w-full"
@@ -111,8 +111,8 @@
 
                             <figure class="overflow-hidden bg-[#e8e6e1]">
                                 <img
-                                    src="{{ glide:url width="1600" fit="max" format="webp" quality="80" }}"
-                                    srcset="{{ glide:url width="800" fit="max" format="webp" quality="80" }} 800w, {{ glide:url width="1600" fit="max" format="webp" quality="80" }} 1600w, {{ glide:url width="2400" fit="max" format="webp" quality="80" }} 2400w"
+                                    src="{{ glide:url preset="w1600" }}"
+                                    srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                                     sizes="(min-width: 1440px) 1440px, 100vw"
                                     alt="{{ alt }}"
                                     class="block h-auto w-full"
@@ -160,8 +160,8 @@
 
                             <figure class="aspect-square min-w-0 overflow-hidden">
                                 <img
-                                    src="{{ glide:url width="900" height="900" fit="crop_focal" format="webp" quality="80" }}"
-                                    srcset="{{ glide:url width="500" height="500" fit="crop_focal" format="webp" quality="80" }} 500w, {{ glide:url width="900" height="900" fit="crop_focal" format="webp" quality="80" }} 900w, {{ glide:url width="1400" height="1400" fit="crop_focal" format="webp" quality="80" }} 1400w"
+                                    src="{{ glide:url preset="sq900" }}"
+                                    srcset="{{ glide:url preset="sq500" }} 500w, {{ glide:url preset="sq900" }} 900w, {{ glide:url preset="sq1400" }} 1400w"
                                     sizes="(min-width: 768px) 25vw, 50vw"
                                     alt="{{ alt }}"
                                     class="block h-full w-full object-cover"
@@ -190,7 +190,7 @@
                             {{ images }}
                                 <div class="image-band-item">
                                     <img
-                                    src="{{ glide:url height="900" fit="max" format="webp" quality="80" }}"
+                                    src="{{ glide:url preset="h900" }}"
                                     width="{{ width }}"
                                     height="{{ height }}"
                                     alt="{{ alt }}"
@@ -204,7 +204,7 @@
                             {{ images }}
                                 <div class="image-band-item">
                                     <img
-                                    src="{{ glide:url height="900" fit="max" format="webp" quality="80" }}"
+                                    src="{{ glide:url preset="h900" }}"
                                     width="{{ width }}"
                                     height="{{ height }}"
                                     alt=""
