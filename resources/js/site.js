@@ -2,6 +2,7 @@ import initAboutPage from './components/about-page.js';
 import initAbout from './components/about.js';
 import initBanner from './components/banner.js';
 import initContactPage from './components/contact-page.js';
+import initLottie from './components/lottie.js';
 import initNavbar from './components/navbar.js';
 import initProjectsGrid from './components/projects-grid.js';
 import initProjects from './components/projects.js';
@@ -295,6 +296,7 @@ aboutElements.forEach((element) => observer.observe(element));
     initAbout,
     initBanner,
     initContactPage,
+    initLottie,
     initNavbar,
     initProjectsGrid,
     initProjects,

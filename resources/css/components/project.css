@@ -119,3 +119,21 @@
     padding-left: 1em;
     font-style: italic;
 }
+
+
+/* =========================================================
+   LOTTIE
+   Animationer får samma plats som bilder. Proportionerna
+   sätts av animationen själv när den har laddats.
+   ========================================================= */
+
+.lottie {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.lottie svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

@@ -3,13 +3,17 @@
 {{ if hero_image }}
     <section class="h-svh w-full overflow-hidden bg-[#e8e6e1]">
         {{ hero_image }}
-            <img
-                src="{{ glide:url preset="w1600" }}"
-                srcset="{{ glide:url preset="w800" }} 1000w, {{ glide:url preset="w1600" }} 2000w, {{ glide:url preset="w2400" }} 3000w"
-                sizes="100vw"
-                alt="{{ alt }}"
-                class="h-full w-full object-cover"
-            >
+            {{ if extension == "json" }}
+                {{ partial:components/lottie :file="url" :alt="alt" class="h-full w-full" fit="cover" }}
+            {{ else }}
+                <img
+                    src="{{ glide:url preset="w1600" }}"
+                    srcset="{{ glide:url preset="w800" }} 1000w, {{ glide:url preset="w1600" }} 2000w, {{ glide:url preset="w2400" }} 3000w"
+                    sizes="100vw"
+                    alt="{{ alt }}"
+                    class="h-full w-full object-cover"
+                >
+            {{ /if }}
         {{ /hero_image }}
     </section>
 {{ /if }}
@@ -82,14 +86,18 @@
                     {{ images }}
 
                         <figure class="min-w-0 overflow-hidden bg-[#e8e6e1] md:flex-1">
-                            <img
-                                src="{{ glide:url preset="w1600" }}"
-                                srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
-                                sizes="(min-width: 1440px) 1440px, 100vw"
-                                alt="{{ alt }}"
-                                class="block h-auto w-full"
-                                loading="lazy"
-                            >
+                            {{ if extension == "json" }}
+                                {{ partial:components/lottie :file="url" :alt="alt" class="w-full" fit="contain" }}
+                            {{ else }}
+                                <img
+                                    src="{{ glide:url preset="w1600" }}"
+                                    srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
+                                    sizes="(min-width: 1440px) 1440px, 100vw"
+                                    alt="{{ alt }}"
+                                    class="block h-auto w-full"
+                                    loading="lazy"
+                                >
+                            {{ /if }}
                         </figure>
 
                     {{ /images }}
@@ -110,14 +118,18 @@
                         {{ image }}
 
                             <figure class="overflow-hidden bg-[#e8e6e1]">
-                                <img
-                                    src="{{ glide:url preset="w1600" }}"
-                                    srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
-                                    sizes="(min-width: 1440px) 1440px, 100vw"
-                                    alt="{{ alt }}"
-                                    class="block h-auto w-full"
-                                    loading="lazy"
-                                >
+                                {{ if extension == "json" }}
+                                    {{ partial:components/lottie :file="url" :alt="alt" class="w-full" fit="contain" }}
+                                {{ else }}
+                                    <img
+                                        src="{{ glide:url preset="w1600" }}"
+                                        srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
+                                        sizes="(min-width: 1440px) 1440px, 100vw"
+                                        alt="{{ alt }}"
+                                        class="block h-auto w-full"
+                                        loading="lazy"
+                                    >
+                                {{ /if }}
                             </figure>
 
                         {{ /image }}
@@ -159,14 +171,18 @@
                         {{ images }}
 
                             <figure class="aspect-square min-w-0 overflow-hidden">
-                                <img
-                                    src="{{ glide:url preset="sq900" }}"
-                                    srcset="{{ glide:url preset="sq500" }} 500w, {{ glide:url preset="sq900" }} 900w, {{ glide:url preset="sq1400" }} 1400w"
-                                    sizes="(min-width: 768px) 25vw, 50vw"
-                                    alt="{{ alt }}"
-                                    class="block h-full w-full object-cover"
-                                    loading="lazy"
-                                >
+                                {{ if extension == "json" }}
+                                    {{ partial:components/lottie :file="url" :alt="alt" class="h-full w-full" fit="cover" }}
+                                {{ else }}
+                                    <img
+                                        src="{{ glide:url preset="sq900" }}"
+                                        srcset="{{ glide:url preset="sq500" }} 500w, {{ glide:url preset="sq900" }} 900w, {{ glide:url preset="sq1400" }} 1400w"
+                                        sizes="(min-width: 768px) 25vw, 50vw"
+                                        alt="{{ alt }}"
+                                        class="block h-full w-full object-cover"
+                                        loading="lazy"
+                                    >
+                                {{ /if }}
                             </figure>
 
                         {{ /images }}
@@ -189,13 +205,17 @@
                         <div class="image-band-group">
                             {{ images }}
                                 <div class="image-band-item">
-                                    <img
-                                    src="{{ glide:url preset="h900" }}"
-                                    width="{{ width }}"
-                                    height="{{ height }}"
-                                    alt="{{ alt }}"
-                                    class="image-band-img h-full w-auto max-w-none"
-                                >
+                                    {{ if extension == "json" }}
+                                        {{ partial:components/lottie :file="url" :alt="alt" class="h-full" fit="contain" }}
+                                    {{ else }}
+                                        <img
+                                        src="{{ glide:url preset="h900" }}"
+                                        width="{{ width }}"
+                                        height="{{ height }}"
+                                        alt="{{ alt }}"
+                                        class="image-band-img h-full w-auto max-w-none"
+                                    >
+                                    {{ /if }}
                                 </div>
                             {{ /images }}
                         </div>
@@ -203,13 +223,17 @@
                         <div class="image-band-group" aria-hidden="true">
                             {{ images }}
                                 <div class="image-band-item">
-                                    <img
-                                    src="{{ glide:url preset="h900" }}"
-                                    width="{{ width }}"
-                                    height="{{ height }}"
-                                    alt=""
-                                    class="image-band-img h-full w-auto max-w-none"
-                                >
+                                    {{ if extension == "json" }}
+                                        {{ partial:components/lottie :file="url" :alt="alt" class="h-full" fit="contain" }}
+                                    {{ else }}
+                                        <img
+                                        src="{{ glide:url preset="h900" }}"
+                                        width="{{ width }}"
+                                        height="{{ height }}"
+                                        alt=""
+                                        class="image-band-img h-full w-auto max-w-none"
+                                    >
+                                    {{ /if }}
                                 </div>
                             {{ /images }}
                         </div>
