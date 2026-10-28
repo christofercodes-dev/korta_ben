@@ -12,7 +12,7 @@ project_content:
   -
     id: N_EGs1voSX55Y9qVAr38e
     images:
-      - 6ce88e7d-1fac-41bc-a235-536569615f0f-1.jpg
+      - computerold.jpg
       - stickers.jpg
     type: images
     enabled: true
@@ -76,5 +76,5 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793185609
+updated_at: 1793185933
 ---
