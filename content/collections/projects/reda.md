@@ -51,6 +51,36 @@ project_content:
       - andreas-reda_0725.jpg
     type: image_band
     enabled: true
-updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
-updated_at: 1791533584
+  -
+    id: G0S8pi7jOYxOaEs7m-xR0
+    images:
+      - reda-card-web.jpg
+      - reda-banner-web.jpg
+    type: images
+    enabled: true
+  -
+    id: 4zJFRVEBapcJj-0yCInyE
+    images:
+      - web-presentation-template.jpg
+    type: images
+    enabled: true
+  -
+    id: 7LzXpYqXo9Fq3VWZYRXTU
+    images:
+      - web-presentation-template3.jpg
+    type: images
+    enabled: true
+  - id: I35XrHbyZx7az0rZvBtwU
+    video: 'https://kortaben.slack.com/archives/D8R7BDZL0/p1793280334196799'
+    type: video
+    enabled: true
+  -
+    id: gIBWd94eVX4lrfb2S6tlk
+    images:
+      - phone.jpg
+      - reda-a5-flyer-mockup-03.jpg
+    type: images
+    enabled: true
+updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
+updated_at: 1793280754
 ---
