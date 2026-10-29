@@ -5,9 +5,9 @@ title: Edd
 category:
   - foto
   - video
-image: edd-kortaben-.jpg
+image: edd-presentation-template.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793270340
+updated_at: 1793277936
 project_content:
   -
     id: 7DLmo7ZE6C1XZbHjtVrtm
@@ -60,11 +60,11 @@ project_content:
     images:
       - edd_hats_scarves_3894.jpg
       - edd_kortaben_.jpg
-      - edd_kortaben_2274.png
-      - edd_kortaben_9848.png
       - edd_kortaben_9859.jpg
+      - edd_kortaben_2271.jpg
+      - edd_kortaben_9848.jpg
       - edd_kortaben_9698.jpg
-      - edd_kortaben_2271.png
+      - edd_kortaben_2274.jpg
       - hats-edd-kba_9501.jpg
     type: image_grid
     enabled: true
