@@ -71,7 +71,7 @@ project_content:
     type: images
     enabled: true
   - id: I35XrHbyZx7az0rZvBtwU
-    video: 'https://kortaben.slack.com/archives/D8R7BDZL0/p1793280334196799'
+    video: 'https://vimeo.com/1170278782?fl=ls&fe=ec&share=copy'
     type: video
     enabled: true
   -
@@ -82,5 +82,5 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793280754
+updated_at: 1793280846
 ---
