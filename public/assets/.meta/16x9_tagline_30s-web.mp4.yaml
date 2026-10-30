@@ -1,4 +1,5 @@
-data: {}
+data:
+  has_sound: false
 size: 8396996
 last_modified: 1793356881
 width: 1920
