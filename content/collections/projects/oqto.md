@@ -76,6 +76,13 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793347664
+updated_at: 1793347863
 hero_image: oqto-presentation-template.jpg
+description: |-
+  Din högra hand.
+  Gånger åtta.
+
+  Oqto är nästa generations ekonomisystem, skapat för att ge ekonomer superkrafter. Smart automation och ett modernt gränssnitt minskar administration och onödiga klick, så mer tid går till analys och beslut som driver verksamheten framåt.
+
+  Ett ekonomisystem som jobbar för dig, inte emot dig.
 ---
