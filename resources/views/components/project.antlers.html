@@ -261,6 +261,59 @@
             <!-- VIDEO                                              -->
             <!-- ================================================= -->
 
+            {{ elseif type == "image_pair_logo" }}
+
+                <div class="relative left-1/2 flex w-screen -translate-x-1/2 px-5 md:px-8">
+
+                        <div class="relative aspect-[4/5] min-w-0 flex-1 overflow-hidden bg-[#e8e6e1]">
+                            {{ left }}
+                                {{ if extension == "json" }}
+                                    {{ partial:components/lottie :file="url" :alt="alt" class="h-full w-full" fit="cover" }}
+                                {{ elseif is_video }}
+                                    {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-full w-full" fit="cover" }}
+                                {{ else }}
+                                    <img
+                                        src="{{ glide:url preset="w1600" }}"
+                                        srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
+                                        sizes="50vw"
+                                        alt="{{ alt }}"
+                                        class="block h-full w-full object-cover"
+                                        loading="lazy"
+                                    >
+                                {{ /if }}
+                            {{ /left }}
+                        </div>
+
+                        <div class="relative aspect-[4/5] min-w-0 flex-1 overflow-hidden bg-[#e8e6e1]">
+                            {{ right }}
+                                {{ if extension == "json" }}
+                                    {{ partial:components/lottie :file="url" :alt="alt" class="h-full w-full" fit="cover" }}
+                                {{ elseif is_video }}
+                                    {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-full w-full" fit="cover" }}
+                                {{ else }}
+                                    <img
+                                        src="{{ glide:url preset="w1600" }}"
+                                        srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
+                                        sizes="50vw"
+                                        alt="{{ alt }}"
+                                        class="block h-full w-full object-cover"
+                                        loading="lazy"
+                                    >
+                                {{ /if }}
+                            {{ /right }}
+                        </div>
+
+                    {{ overlay }}
+                        <img
+                            src="{{ url }}"
+                            alt="{{ alt }}"
+                            class="pointer-events-none absolute left-1/2 top-1/2 z-10 h-auto -translate-x-1/2 -translate-y-1/2 {{ if overlay_size == 'small' }}w-[20%] md:w-[10%]{{ elseif overlay_size == 'large' }}w-[40%] md:w-[24%]{{ else }}w-[30%] md:w-[16%]{{ /if }}"
+                            loading="lazy"
+                        >
+                    {{ /overlay }}
+
+                </div>
+
             {{ elseif type == "video" }}
 
                 {{ if video_file }}

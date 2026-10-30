@@ -200,6 +200,60 @@ tabs:
                             min_files: 6
                             validate:
                               - required
+                    image_pair_logo:
+                      display: 'Två bilder + logga'
+                      icon: image
+                      instructions: 'Två bilder eller filmer kant i kant med en logga eller grafik (SVG eller PNG) centrerad ovanpå.'
+                      fields:
+                        -
+                          handle: left
+                          field:
+                            type: assets
+                            container: assets
+                            display: Vänster
+                            instructions: 'Bild, film (.mp4) eller Lottie (.json).'
+                            mode: grid
+                            min_files: 1
+                            max_files: 1
+                            validate:
+                              - required
+                        -
+                          handle: right
+                          field:
+                            type: assets
+                            container: assets
+                            display: Höger
+                            instructions: 'Bild, film (.mp4) eller Lottie (.json).'
+                            mode: grid
+                            min_files: 1
+                            max_files: 1
+                            validate:
+                              - required
+                        -
+                          handle: overlay
+                          field:
+                            type: assets
+                            container: assets
+                            display: 'Logga / grafik'
+                            instructions: 'SVG eller PNG med genomskinlig bakgrund. Läggs mitt över de två bilderna.'
+                            mode: grid
+                            min_files: 1
+                            max_files: 1
+                            validate:
+                              - required
+                        -
+                          handle: overlay_size
+                          field:
+                            type: button_group
+                            display: 'Storlek på loggan'
+                            default: medium
+                            options:
+                              - key: small
+                                value: Liten
+                              - key: medium
+                                value: Mellan
+                              - key: large
+                                value: Stor
                     video:
                       display: Film
                       icon: video
