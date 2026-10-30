@@ -7,14 +7,21 @@ category:
   - video
 image: edd-presentation-template.jpg
 updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
-updated_at: 1793356904
+updated_at: 1793357715
 project_content:
+  - id: c5_-iFCmjjzAz2jyOHdEo
+    left: edd-var26_kortaben-9767.jpg
+    right: edd_bag_campaign_1013-2511022_video_2_20260323_v1.mp4
+    overlay: edd_logo_kontur_vit.svg
+    overlay_size: medium
+    type: image_pair_logo
+    enabled: true
   -
     id: 7DLmo7ZE6C1XZbHjtVrtm
     images:
       - edd-presentation-template2.jpg
     type: images
-    enabled: true
+    enabled: false
   - id: '-GC3AtSzbWdEssxgGF5sz'
     video: 'https://vimeo.com/1240698095/028848b816?fl=tl&fe=ec&share=copy'
     type: video
