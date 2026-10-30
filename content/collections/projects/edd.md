@@ -7,7 +7,7 @@ category:
   - video
 image: edd-presentation-template.jpg
 updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
-updated_at: 1793359678
+updated_at: 1793359702
 project_content:
   - id: c5_-iFCmjjzAz2jyOHdEo
     left: edd-var26_kortaben-9767.jpg
@@ -43,6 +43,7 @@ project_content:
     id: 4bvDHsZkFZ4p_oZzzp7rQ
     images:
       - edd-var26_kortaben-0110.jpg
+      - edd_bag_campaign_1013-2511022_video_2_20260323_v1.mp4
       - edd-var26_kortaben-9879.jpg
       - edd-var26_kortaben-0020.jpg
       - edd-var26_kortaben-2.jpg
@@ -53,7 +54,6 @@ project_content:
       - edd-var26_kortaben-0411.jpg
       - edd-var26_kortaben-0401.jpg
       - edd-var26_kortaben-9140.jpg
-      - edd_bag_campaign_1013-2511022_video_2_20260323_v1.mp4
     type: image_band
     enabled: true
   -
