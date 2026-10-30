@@ -29,7 +29,7 @@ tabs:
               type: assets
               container: assets
               display: 'Hero-bild 1'
-              instructions: 'Bilden som visas till vänster på startsidan.'
+              instructions: 'Bilden som visas till vänster på startsidan. Kan vara en film (.mp4), som då spelas utan ljud och loopar.'
               max_files: 1
               min_files: 1
               mode: grid
@@ -39,7 +39,7 @@ tabs:
               type: assets
               container: assets
               display: 'Hero-bild 2'
-              instructions: 'Bilden som visas till höger på startsidan.'
+              instructions: 'Bilden som visas till höger på startsidan. Kan vara en film (.mp4), som då spelas utan ljud och loopar.'
               max_files: 1
               min_files: 1
               mode: grid

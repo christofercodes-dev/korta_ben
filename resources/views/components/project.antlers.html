@@ -6,6 +6,8 @@
         {{ hero_image }}
             {{ if extension == "json" }}
                 {{ partial:components/lottie :file="url" :alt="alt" class="h-full w-full" fit="cover" }}
+            {{ elseif is_video }}
+                {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-full w-full" fit="cover" }}
             {{ else }}
                 <img
                     src="{{ glide:url preset="w1600" }}"
@@ -90,6 +92,8 @@
                         <figure class="min-w-0 overflow-hidden bg-[#e8e6e1] md:flex-1 {{ if images | count > 1 }}aspect-[4/5]{{ /if }}">
                             {{ if extension == "json" }}
                                 {{ partial:components/lottie :file="url" :alt="alt" class="w-full" fit="contain" }}
+                            {{ elseif is_video }}
+                                {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-auto w-full" fit="contain" }}
                             {{ else }}
                                 <img
                                     src="{{ glide:url preset="w1600" }}"
@@ -122,6 +126,8 @@
                             <figure class="overflow-hidden bg-[#e8e6e1]">
                                 {{ if extension == "json" }}
                                     {{ partial:components/lottie :file="url" :alt="alt" class="w-full" fit="contain" }}
+                                {{ elseif is_video }}
+                                    {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-auto w-full" fit="contain" }}
                                 {{ else }}
                                     <img
                                         src="{{ glide:url preset="w1600" }}"
@@ -175,6 +181,8 @@
                             <figure class="aspect-square min-w-0 overflow-hidden">
                                 {{ if extension == "json" }}
                                     {{ partial:components/lottie :file="url" :alt="alt" class="h-full w-full" fit="cover" }}
+                                {{ elseif is_video }}
+                                    {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-full w-full" fit="cover" }}
                                 {{ else }}
                                     <img
                                         src="{{ glide:url preset="sq900" }}"
@@ -209,6 +217,8 @@
                                 <div class="image-band-item">
                                     {{ if extension == "json" }}
                                         {{ partial:components/lottie :file="url" :alt="alt" class="h-full" fit="contain" }}
+                                    {{ elseif is_video }}
+                                        {{ partial:components/video :file="url" :sound="false" :poster="poster" :alt="alt" class="image-band-img h-full w-auto max-w-none" fit="contain" }}
                                     {{ else }}
                                         <img
                                         src="{{ glide:url preset="h900" }}"
@@ -227,6 +237,8 @@
                                 <div class="image-band-item">
                                     {{ if extension == "json" }}
                                         {{ partial:components/lottie :file="url" :alt="alt" class="h-full" fit="contain" }}
+                                    {{ elseif is_video }}
+                                        {{ partial:components/video :file="url" :sound="false" :poster="poster" :alt="alt" class="image-band-img h-full w-auto max-w-none" fit="contain" }}
                                     {{ else }}
                                         <img
                                         src="{{ glide:url preset="h900" }}"
@@ -251,19 +263,15 @@
 
             {{ elseif type == "video" }}
 
-                <div class="py-8 md:py-12">
-
-                    <div class="aspect-video overflow-hidden bg-black">
-                        <iframe
-                            src="{{ video | embed_url }}"
-                            class="h-full w-full"
-                            loading="lazy"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
+                {{ if video_file }}
+                    <div class="py-8 md:py-12">
+                        <div class="overflow-hidden bg-[#e8e6e1]">
+                            {{ video_file }}
+                                {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-auto w-full" fit="contain" }}
+                            {{ /video_file }}
+                        </div>
                     </div>
-
-                </div>
+                {{ /if }}
 
             {{ /if }}
 

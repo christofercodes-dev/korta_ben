@@ -1,0 +1,32 @@
+{{# Självhostad film. Utan ljud: spelas automatiskt och loopar. Med ljud: pausad från start med play/paus-knapp. #}}
+{{ if sound }}
+    <div class="video-player {{ wrapper_class }}" data-video-player>
+        <video
+            src="{{ file }}{{ unless poster }}#t=0.1{{ /unless }}"
+            class="video-player-media {{ class }}"
+            style="object-fit: {{ fit ?? 'cover' }};"
+            playsinline
+            preload="metadata"
+            {{ poster }}poster="{{ glide:url preset="w1600" }}"{{ /poster }}
+            aria-label="{{ alt }}"
+        ></video>
+        <button type="button" class="video-player-button" data-video-toggle aria-label="Spela film">
+            <svg class="video-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a.5.5 0 0 0 .77.42l10-6.5a.5.5 0 0 0 0-.84l-10-6.5A.5.5 0 0 0 8 5.5Z" fill="currentColor"/></svg>
+            <svg class="video-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="13.5" y="5" width="4" height="14" rx="1" fill="currentColor"/></svg>
+        </button>
+    </div>
+{{ else }}
+    <video
+        src="{{ file }}"
+        class="video-loop {{ class }}"
+        style="object-fit: {{ fit ?? 'cover' }};"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        {{ poster }}poster="{{ glide:url preset="w1600" }}"{{ /poster }}
+        data-video-loop
+        aria-label="{{ alt }}"
+    ></video>
+{{ /if }}

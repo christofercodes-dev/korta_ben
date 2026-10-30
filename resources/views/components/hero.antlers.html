@@ -55,14 +55,17 @@
                     >
 
                         {{ hero_image_1 }}
-
-                            <img
+{{ if is_video }}
+<video src="{{ url }}" class="h-full w-full object-cover" style="object-fit: cover;" autoplay muted loop playsinline preload="auto" data-video-loop aria-label="{{ alt }}"></video>
+{{ else }}
+<img
                                 src="{{ glide:url preset="w1600" }}"
                                 srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                                 sizes="(min-width: 768px) 50vw, 100vw"
                                 alt="{{ alt }}"
                                 class="h-full w-full object-cover"
                             >
+{{ /if }}
 
                         {{ /hero_image_1 }}
           
@@ -84,14 +87,17 @@
                     >
 
                         {{ hero_image_2 }}
-
-                            <img
+{{ if is_video }}
+<video src="{{ url }}" class="h-full w-full object-cover" style="object-fit: cover;" autoplay muted loop playsinline preload="auto" data-video-loop aria-label="{{ alt }}"></video>
+{{ else }}
+<img
                                 src="{{ glide:url preset="w1600" }}"
                                 srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                                 sizes="(min-width: 768px) 50vw, 100vw"
                                 alt="{{ alt }}"
                                 class="h-full w-full object-cover"
                             >
+{{ /if }}
 
                         {{ /hero_image_2 }}
 
@@ -143,13 +149,17 @@
                     {{ /mobile_image }}
                 {{ else }}
                     {{ hero_image_1 }}
-                        <img
+{{ if is_video }}
+<video src="{{ url }}" class="mobile-hero-image absolute inset-0 h-full w-full object-cover" style="object-fit: cover;" autoplay muted loop playsinline preload="auto" data-video-loop aria-label="{{ alt }}"></video>
+{{ else }}
+<img
                             src="{{ glide:url preset="w1600" }}"
                             srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                             sizes="100vw"
                             alt="{{ alt ?? '' }}"
                             class="mobile-hero-image absolute inset-0 h-full w-full object-cover"
                         >
+{{ /if }}
                     {{ /hero_image_1 }}
                 {{ /if }}
             

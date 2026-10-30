@@ -7,6 +7,7 @@ import initNavbar from './components/navbar.js';
 import initProjectsGrid from './components/projects-grid.js';
 import initProjects from './components/projects.js';
 import initServicesPage from './components/services-page.js';
+import initVideo from './components/video.js';
 
 const aboutSection = document.querySelector('.about-section');
 
@@ -301,6 +302,7 @@ aboutElements.forEach((element) => observer.observe(element));
     initProjectsGrid,
     initProjects,
     initServicesPage,
+    initVideo,
 ].forEach((init) => {
 
     try {

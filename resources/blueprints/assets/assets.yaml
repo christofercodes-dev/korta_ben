@@ -3,6 +3,22 @@ fields:
   -
     handle: alt
     field:
-      display: 'Alt Text'
+      display: 'Alt-text'
       type: text
-      instructions: 'Description of the image'
+      instructions: 'Kort beskrivning av bilden eller filmen. Hjälper sökmotorer och skärmläsare.'
+  -
+    handle: has_sound
+    field:
+      display: 'Filmen har ljud'
+      type: toggle
+      default: false
+      instructions: 'Bara för film. Av: filmen spelas upp automatiskt, loopar och är ljudlös. På: filmen startar pausad med en play-knapp.'
+  -
+    handle: poster
+    field:
+      type: assets
+      container: assets
+      display: 'Omslagsbild (film)'
+      instructions: 'Bara för film. Bilden som visas innan filmen spelas. Lämna tom för att visa filmens första bild.'
+      max_files: 1
+      mode: grid
