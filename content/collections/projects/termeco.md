@@ -7,7 +7,7 @@ category:
   - web
 image: termeco-presentation-template.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793278682
+updated_at: 1793348200
 project_content:
   -
     id: miL6QtVjMsutoiJFXwZwg
@@ -65,4 +65,11 @@ project_content:
       - sk974mc-termeco-0826.png
     type: image_grid
     enabled: true
+hero_image: termeco-presentation-template.jpg
+description: |-
+  Sveriges snabbaste
+  golvvärmeleverantör
+  Vi gör bara vattenburen golvvärme. Och det gör vi riktigt bra.
+
+  Blixtsnabb projektering och offert inom 24 timmar, skräddarsydd logistik till hela Sverige och förstklassig support när du behöver den.
 ---
