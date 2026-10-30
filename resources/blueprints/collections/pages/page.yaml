@@ -87,6 +87,17 @@ tabs:
               display: Knappens länk
               placeholder: /kontakt
       -
+        display: Påstående
+        fields:
+          -
+            handle: statement_text
+            field:
+              type: textarea
+              display: Text
+              instructions: 'Stor text mellan bandet och projekten. Håll den till en eller två meningar.'
+              rows: 3
+              placeholder: 'Vi är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt.'
+      -
         display: 'Utvalda projekt'
         fields:
           -
