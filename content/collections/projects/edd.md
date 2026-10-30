@@ -6,8 +6,8 @@ category:
   - foto
   - video
 image: edd-presentation-template.jpg
-updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793348028
+updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
+updated_at: 1793356904
 project_content:
   -
     id: 7DLmo7ZE6C1XZbHjtVrtm
@@ -19,6 +19,7 @@ project_content:
     video: 'https://vimeo.com/1240698095/028848b816?fl=tl&fe=ec&share=copy'
     type: video
     enabled: true
+    video_file: 16x9_tagline_30s-web.mp4
   -
     id: p3Xe3DWSaWyUckARcW-PI
     images:
@@ -84,4 +85,5 @@ description: |-
   Ett armband runt handleden, en scarf över axlarna eller en keps som fulländar uttrycket.
 
   För edd-mannen handlar stil inte om att sticka ut – utan om att vara trygg i sitt uttryck. En modern klassiker med rötterna i en tidlös livsstil.
+seo_noindex: false
 ---
