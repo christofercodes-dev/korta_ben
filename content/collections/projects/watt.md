@@ -7,7 +7,7 @@ category:
   - video
   - campaign
   - web
-image: watt-presentation-template.jpg
+image: watt-presentation-template8.jpg
 project_content:
   -
     id: pvNlYy5TolqSof4FBAaYW
@@ -92,5 +92,12 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793191344
+updated_at: 1793348339
+hero_image: watt-presentation-template.jpg
+description: |-
+  Det var ambitionen när vi startade Watt Heating AB 2009 och har idag blivit något av vårt signum. Med ett brinnande engagemang för produkter till vattenburen värme fokuserar vi på att erbjuda marknadens bästa pris på våra typer av produkter.
+
+  Vi strävar alltid efter utveckling genom intensiv global bevakning av branschen och levererar det senaste inom vår produktkategori.
+
+  Våra ägare har stor erfarenhet inom området och bidrar med sin kompetens på olika positioner i företaget.
 ---
