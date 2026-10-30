@@ -7,7 +7,7 @@ category:
   - video
 image: edd-presentation-template.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793277936
+updated_at: 1793348028
 project_content:
   -
     id: 7DLmo7ZE6C1XZbHjtVrtm
@@ -74,4 +74,14 @@ project_content:
       - edd-presentation-template3.jpg
     type: images
     enabled: true
+hero_image: edd-presentation-template.jpg
+description: |-
+  Vem är edd?
+  edd-mannen är en karaktär hämtad från en tid då stil var självklar och detaljer hade betydelse. Inspirerad av 50-talets elegans lever han ett liv i balans – aktivt, hälsosamt och med en naturlig känsla för kvalitet.
+
+  Han tror på enkelhet. På morgnar som börjar tidigt, på promenader genom staden och på att de små detaljerna gör helheten.
+
+  Ett armband runt handleden, en scarf över axlarna eller en keps som fulländar uttrycket.
+
+  För edd-mannen handlar stil inte om att sticka ut – utan om att vara trygg i sitt uttryck. En modern klassiker med rötterna i en tidlös livsstil.
 ---
