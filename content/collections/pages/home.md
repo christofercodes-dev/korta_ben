@@ -5,8 +5,7 @@ title: Home
 template: home
 updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
 updated_at: 1793355320
-hero_title: 'Vi är en kreativ byrå som gillar bra idéer,'
-hero_subtitle: 'enkelt språk och saker som känns på riktigt.'
+hero_title: 'Vi är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt.'
 featured_projects:
   - 2c58b9de-67e5-4578-8eb9-b2f37bd1144b
   - a93213c8-dbb9-455c-9e2d-7ca362688224

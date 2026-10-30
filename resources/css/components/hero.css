@@ -206,3 +206,31 @@
     }
 
 }
+
+
+/* =========================================================
+   HERO TEXT: storlek efter textens längd (s/m/l/xl sätts i hero.antlers.html)
+   ========================================================= */
+
+.hero-heading {
+    font-size: 5.5vw;
+    line-height: .93;
+    text-wrap: balance;
+}
+
+.hero-heading-m  { font-size: 4.4vw; line-height: .98; }
+.hero-heading-l  { font-size: 3.5vw; line-height: 1.02; }
+.hero-heading-xl { font-size: 2.8vw; line-height: 1.05; }
+
+@media (min-width: 768px) {
+    .hero-heading-l,
+    .hero-heading-xl {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile-hero-title-m  { font-size: clamp(2.6rem, 11.5vw, 5rem); line-height: .92; }
+    .mobile-hero-title-l  { font-size: clamp(2.1rem, 9vw, 4rem);    line-height: .96; }
+    .mobile-hero-title-xl { font-size: clamp(1.7rem, 7.2vw, 3rem);  line-height: 1; }
+}

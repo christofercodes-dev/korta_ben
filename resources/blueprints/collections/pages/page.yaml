@@ -19,20 +19,10 @@ tabs:
           -
             handle: hero_title
             field:
-              type: text
-              display: Rubrik
-              instructions: 'Första textraden.'
-          -
-            handle: hero_title_italic
-            field:
-              type: text
-              display: Rubrik (kursiv)
-              instructions: 'Kursiv text på andra raden.'
-          -
-            handle: hero_subtitle
-            field:
-              type: text
-              display: Underrubrik
+              type: textarea
+              display: Text
+              instructions: 'Skriv hela texten i ett block. Storleken anpassas efter hur lång den är. Radbrytningar behålls.'
+              rows: 4
           -
             handle: hero_image_1
             field:
