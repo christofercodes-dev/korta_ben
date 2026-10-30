@@ -54,8 +54,59 @@ tabs:
               min_files: 1
               mode: grid
       -
+        display: 'Om oss-sektionen'
+        fields:
+          -
+            handle: about_title
+            field:
+              type: text
+              display: Rubrik
+              placeholder: 'Vad sysslar vi med?'
+          -
+            handle: about_text_1
+            field:
+              type: textarea
+              display: 'Stycke 1'
+              rows: 3
+          -
+            handle: about_text_2
+            field:
+              type: textarea
+              display: 'Stycke 2'
+              rows: 3
+          -
+            handle: about_button_text
+            field:
+              type: text
+              display: Knapptext
+              placeholder: 'Prata med oss'
+          -
+            handle: about_button_link
+            field:
+              type: text
+              display: Knappens länk
+              placeholder: /kontakt
+      -
         display: 'Utvalda projekt'
         fields:
+          -
+            handle: projects_label
+            field:
+              type: text
+              display: Etikett
+              placeholder: 'Utvalda projekt'
+          -
+            handle: projects_title
+            field:
+              type: text
+              display: Rubrik
+              placeholder: 'Några projekt vi är stolta över.'
+          -
+            handle: projects_button_text
+            field:
+              type: text
+              display: 'Knapptext (under projekten)'
+              placeholder: 'Se fler projekt'
           -
             handle: featured_projects
             field:

@@ -7,21 +7,15 @@
         >
 
             <h2 class="max-w-[900px] text-[9vw] font-light leading-[0.96] tracking-[-0.055em] md:text-[4vw]">
-                Vad sysslar vi med?
-                <br>
+                {{ about_title ?? 'Vad sysslar vi med?' }}
             </h2>
 
             <p class="mt-12 max-w-[700px] text-base leading-[1.3] text-black font-light md:mt-5 md:text-2xl">
-                Korta Ben är en kreativ byrå som gillar
-                bra idéer, enkelt språk och saker som
-                känns på riktigt.
+                {{ about_text_1 ?? 'Korta Ben är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt.' }}
             </p>
 
             <p class="mt-6 max-w-[700px] text-base leading-[1.3] font-light text-black md:text-2xl">
-                Vi jobbar med varumärken som vill göra
-                kommunikation med lite mer tanke bakom.
-                Från idé och strategi till film, content
-                och kampanjer.
+                {{ about_text_2 ?? 'Vi jobbar med varumärken som vill göra kommunikation med lite mer tanke bakom. Från idé och strategi till film, content och kampanjer.' }}
             </p>
 
 
@@ -29,12 +23,12 @@
             <div class="mt-10">
 
                 <a
-                    href="/kontakt"
+                    href="{{ about_button_link ?? '/kontakt' }}"
                     class="magnetic-button group relative inline-flex items-center gap-4 rounded-full bg-[#181818] px-7 py-4 text-sm font-semibold text-white will-change-transform"
                 >
 
                     <span>
-                        Prata med oss
+                        {{ about_button_text ?? 'Prata med oss' }}
                     </span>
 
                     <span
