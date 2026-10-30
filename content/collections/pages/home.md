@@ -14,5 +14,10 @@ featured_projects:
   - ba83ce9f-d5c6-4011-8571-f5addcd9a399
 hero_image_1: 6ce88e7d-1fac-41bc-a235-536569615f0f-1.jpg
 hero_image_2: reda-card-web.jpg
+<<<<<<< Updated upstream
 projects_title: 'Några projekt vi är extra stolta över'
+=======
+seo_title: 'Korta Ben – Kreativ byrå för varumärken, film och kampanjer'
+seo_description: 'Korta Ben är en kreativ byrå i Skåne som gillar bra idéer och enkelt språk. Vi hjälper varumärken med strategi, film, content och kampanjer.'
+>>>>>>> Stashed changes
 ---

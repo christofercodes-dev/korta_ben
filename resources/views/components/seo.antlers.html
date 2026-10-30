@@ -1,0 +1,114 @@
+{{# Titel, beskrivning, canonical, delning och strukturerad data för varje sida. #}}
+{{ _title = (seo_title ?? (uri == '/' ? config:seo:default_title : title)) }}
+{{ _desc = (seo_description ?? description ?? config:seo:default_description) }}
+{{ _is_project = (collection:handle == 'projects') }}
+
+<title>{{ _title | sanitize }}{{ if uri != '/' && !seo_title }} – {{ config:seo:site_name }}{{ /if }}</title>
+<meta name="description" content="{{ _desc | strip_tags | collapse_whitespace | truncate:160 | sanitize }}">
+
+{{ if permalink }}<link rel="canonical" href="{{ permalink }}">{{ /if }}
+
+{{ if seo_noindex || !config:seo:indexable }}
+    <meta name="robots" content="noindex, nofollow">
+{{ else }}
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+{{ /if }}
+
+<meta name="theme-color" content="#ffffff">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:site_name" content="{{ config:seo:site_name }}">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:type" content="{{ _is_project ? 'article' : 'website' }}">
+<meta property="og:title" content="{{ _title | sanitize }}">
+<meta property="og:description" content="{{ _desc | strip_tags | collapse_whitespace | truncate:200 | sanitize }}">
+{{ if permalink }}<meta property="og:url" content="{{ permalink }}">{{ /if }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ _title | sanitize }}">
+<meta name="twitter:description" content="{{ _desc | strip_tags | collapse_whitespace | truncate:200 | sanitize }}">
+
+{{ if seo_image }}
+    {{ seo_image }}
+        {{ if extension != 'json' }}
+            <meta property="og:image" content="{{ config:app:url }}{{ glide:url preset="og" }}">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta name="twitter:image" content="{{ config:app:url }}{{ glide:url preset="og" }}">
+        {{ /if }}
+    {{ /seo_image }}
+{{ elseif image }}
+    {{ image }}
+        <meta property="og:image" content="{{ config:app:url }}{{ glide:url preset="og" }}">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:image" content="{{ config:app:url }}{{ glide:url preset="og" }}">
+    {{ /image }}
+{{ elseif hero_image_1 }}
+    {{ hero_image_1 }}
+        <meta property="og:image" content="{{ config:app:url }}{{ glide:url preset="og" }}">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:image" content="{{ config:app:url }}{{ glide:url preset="og" }}">
+    {{ /hero_image_1 }}
+{{ /if }}
+
+<!-- Strukturerad data -->
+{{ if uri == '/' }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "{{ config:app:url }}/#organization",
+            "name": {{ config:seo:site_name | json }},
+            "url": {{ config:app:url | json }},
+            "description": {{ config:seo:default_description | json }},
+            {{ if company:email }}"email": {{ company:email | json }},{{ /if }}
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": {{ company:address | json }},
+                "addressCountry": "SE"
+            }{{ if company:instagram }},
+            "sameAs": [{{ company:instagram | json }}]{{ /if }}
+        },
+        {
+            "@type": "WebSite",
+            "@id": "{{ config:app:url }}/#website",
+            "url": {{ config:app:url | json }},
+            "name": {{ config:seo:site_name | json }},
+            "inLanguage": "sv-SE",
+            "publisher": { "@id": "{{ config:app:url }}/#organization" }
+        }
+    ]
+}
+</script>
+{{ elseif _is_project }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "name": {{ title | json }},
+            "description": {{ _desc | strip_tags | collapse_whitespace | truncate:300 | json }},
+            "url": {{ permalink | json }},
+            "inLanguage": "sv-SE",
+            "creator": {
+                "@type": "Organization",
+                "name": {{ config:seo:site_name | json }},
+                "url": {{ config:app:url | json }}
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Start", "item": {{ config:app:url | json }} },
+                { "@type": "ListItem", "position": 2, "name": "Projekt", "item": "{{ config:app:url }}/projekt" },
+                { "@type": "ListItem", "position": 3, "name": {{ title | json }}, "item": {{ permalink | json }} }
+            ]
+        }
+    ]
+}
+</script>
+{{ /if }}

@@ -1,0 +1,5 @@
+default:
+  name: 'Korta Ben'
+  url: '{{ env:APP_URL }}'
+  locale: sv_SE
+  lang: sv

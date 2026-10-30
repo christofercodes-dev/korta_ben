@@ -122,6 +122,11 @@ tabs:
     display: Sidebar
     sections:
       -
+        display: SEO
+        fields:
+          -
+            import: seo
+      -
         fields:
           -
             handle: slug

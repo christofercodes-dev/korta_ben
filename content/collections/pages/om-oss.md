@@ -26,5 +26,7 @@ team:
     role: 'Min roll'
     type: person
     enabled: true
+seo_title: 'Om Korta Ben – Vilka vi är'
+seo_description: 'Vi skapar visuella uttryck för varumärken som vill göra ett starkare intryck. Möt teamet bakom Korta Ben.'
 ---
 Vi tror på idéer som känns lika relevanta som de ser bra ut. Genom strategi, design och kreativ produktion hjälper vi företag att hitta ett tydligare uttryck och kommunicera med större självklarhet.

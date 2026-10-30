@@ -20,8 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ (title ?? site:name) | sanitize }}</title>
-    {{ if description }}<meta name="description" content="{{ description | truncate:160 | sanitize }}">{{ /if }}
+    {{ partial:components/seo }}
 
     {{ vite src="resources/js/site.js|resources/css/site.css" }}
     <!-- Sora -->

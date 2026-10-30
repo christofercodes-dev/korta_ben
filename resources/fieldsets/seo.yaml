@@ -1,0 +1,32 @@
+title: SEO
+fields:
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: SEO-titel
+      instructions: 'Rubriken i Google. Max ca 60 tecken. Lämna tom för att använda sidans titel.'
+      character_limit: 70
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: SEO-beskrivning
+      instructions: 'Texten under rubriken i Google. 120–160 tecken. Skriv en mening som får någon att klicka.'
+      character_limit: 160
+      rows: 3
+  -
+    handle: seo_image
+    field:
+      type: assets
+      container: assets
+      display: Delningsbild
+      instructions: 'Bilden som visas när sidan delas (LinkedIn, Facebook, Slack). Lämna tom för att använda projektets bild.'
+      max_files: 1
+      mode: grid
+  -
+    handle: seo_noindex
+    field:
+      type: toggle
+      display: 'Dölj för sökmotorer'
+      default: false
