@@ -76,5 +76,6 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793189309
+updated_at: 1793347664
+hero_image: oqto-presentation-template.jpg
 ---
