@@ -6,6 +6,7 @@ import initLottie from './components/lottie.js';
 import initNavbar from './components/navbar.js';
 import initProjectsGrid from './components/projects-grid.js';
 import initProjects from './components/projects.js';
+import initReveal from './components/reveal.js';
 import initServicesPage from './components/services-page.js';
 import initVideo from './components/video.js';
 
@@ -301,6 +302,7 @@ aboutElements.forEach((element) => observer.observe(element));
     initNavbar,
     initProjectsGrid,
     initProjects,
+    initReveal,
     initServicesPage,
     initVideo,
 ].forEach((init) => {

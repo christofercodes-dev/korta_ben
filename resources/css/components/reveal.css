@@ -1,0 +1,15 @@
+/* Staggered reveal (see js/components/reveal.js) */
+
+.reveal-ready [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 56px, 0);
+    transition:
+        opacity 1100ms cubic-bezier(.16, 1, .3, 1) var(--reveal-delay, 0ms),
+        transform 1300ms cubic-bezier(.16, 1, .3, 1) var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.reveal-ready [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+}
