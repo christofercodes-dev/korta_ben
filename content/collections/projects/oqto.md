@@ -37,11 +37,6 @@ project_content:
     type: images
     enabled: true
   -
-    id: OtEom7dhKJ00SEJdl3L3x
-    video: 'https://vimeo.com/1223949720?fl=ip&fe=ec&share=copy'
-    type: video
-    enabled: true
-  -
     id: EpnrJNlgUkTboeSHtcDpU
     images:
       - oqto-presentation-template4.jpg
@@ -77,7 +72,7 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793347863
+updated_at: 1793693785
 hero_image: oqto-presentation-template.jpg
 description: |-
   Din högra hand.
@@ -86,4 +81,5 @@ description: |-
   Oqto är nästa generations ekonomisystem, skapat för att ge ekonomer superkrafter. Smart automation och ett modernt gränssnitt minskar administration och onödiga klick, så mer tid går till analys och beslut som driver verksamheten framåt.
 
   Ett ekonomisystem som jobbar för dig, inte emot dig.
+seo_noindex: false
 ---
