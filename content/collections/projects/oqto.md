@@ -41,7 +41,6 @@ project_content:
     images:
       - oqto_logga_2026_eyes_2_logomark_orange-copy-5.svg
       - oqto_logga_2026_eyes_2_logomark_orange-copy-8.svg
-      - oqto_logga_2026_eyes_2_logomark_orange-copy-15.svg
       - oqto_logga_2026_eyes_2_logomark_orange-copy-16.svg
       - oqto_logga_2026_thuglife_emoji_orange.svg
     type: image_band
