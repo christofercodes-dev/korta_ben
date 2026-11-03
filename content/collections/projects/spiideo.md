@@ -6,8 +6,15 @@ category:
   - campaign
 image: spideo.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793715693
+updated_at: 1793715801
 project_content:
+  -
+    id: Snhq-yzl6ywtAgJrckkIV
+    images:
+      - untitled2.mp4
+      - psc3_rain.mp4
+    type: images
+    enabled: true
   -
     id: LrHwWn7_gYxP3ycj20n0k
     images:
