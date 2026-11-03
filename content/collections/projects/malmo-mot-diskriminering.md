@@ -8,7 +8,7 @@ category:
   - web
 image: holding-mobile-mockup-01-.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793697724
+updated_at: 1793697826
 hero_image: holding-mobile-mockup-01-.jpg
 project_content:
   -
@@ -34,13 +34,13 @@ project_content:
     images:
       - mmd-kortaben-6992.jpg
       - mmd-kortaben-7238.jpg
+      - mmd-kortaben-7336.jpg
       - mmd-kortaben-7159.jpg
+      - mmd-kortaben-7015.jpg
       - mmd-kortaben-7057.jpg
       - mmd-kortaben-7112.jpg
-      - mmd-kortaben-7144.jpg
       - mmd-kortaben-7253.jpg
-      - mmd-kortaben-7015.jpg
-      - mmd-kortaben-7336.jpg
+      - mmd-kortaben-7144.jpg
     type: image_band
     enabled: true
   -
