@@ -6,10 +6,11 @@ category:
   - foto
   - video
 image: edd-presentation-template.jpg
-updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
-updated_at: 1793359702
+updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
+updated_at: 1793696458
 project_content:
-  - id: c5_-iFCmjjzAz2jyOHdEo
+  -
+    id: c5_-iFCmjjzAz2jyOHdEo
     left: edd-var26_kortaben-9767.jpg
     right: edd_bag_campaign_1013-2511022_video_2_20260323_v1.mp4
     overlay: edd_logo_kontur_vit.svg
@@ -22,7 +23,8 @@ project_content:
       - edd-presentation-template2.jpg
     type: images
     enabled: false
-  - id: '-GC3AtSzbWdEssxgGF5sz'
+  -
+    id: '-GC3AtSzbWdEssxgGF5sz'
     video: 'https://vimeo.com/1240698095/028848b816?fl=tl&fe=ec&share=copy'
     type: video
     enabled: true
@@ -81,6 +83,40 @@ project_content:
     id: NP-P7oS6Wy8KrxL8MMBVV
     images:
       - edd-presentation-template3.jpg
+    type: images
+    enabled: true
+  -
+    id: qyGoer-kz1zqE6dtbPXt3
+    images:
+      - edd_kortaben-1082.jpg
+      - cinegraph-audio.mp4
+    type: images
+    enabled: true
+  -
+    id: 8ZlJRQeXRXMJR_5hFJYRt
+    images:
+      - edd_kortaben-0300.jpg
+      - edd_kortaben-0576.jpg
+      - edd_kortaben-0427.jpg
+      - edd_kortaben-0267.jpg
+      - edd_kortaben-0255.jpg
+      - edd_kortaben-1019.jpg
+      - edd_kortaben-1089.jpg
+      - edd_kortaben-0792.jpg
+      - edd_kortaben-1171.jpg
+      - edd_kortaben-0955.jpg
+      - edd_kortaben-1192.jpg
+      - edd_kortaben-1249.jpg
+      - edd_kortaben-1276.jpg
+      - edd_kortaben-1319.jpg
+      - edd_kortaben-1340.jpg
+      - edd_kortaben-1444.jpg
+    type: image_band
+    enabled: true
+  -
+    id: s1mFBebwzphgHYGiSOIcB
+    images:
+      - edd_kortaben-0363.jpg
     type: images
     enabled: true
 hero_image: edd-presentation-template.jpg
