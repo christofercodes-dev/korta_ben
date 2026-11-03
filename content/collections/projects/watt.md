@@ -16,10 +16,6 @@ project_content:
       - '-watt-kortaben-0002.jpg'
     type: images
     enabled: true
-  - id: VgWW7TdJONSzETpBOhBp4
-    video: 'https://vimeo.com/1090819510/e26a795e27?share=copy&fl=sv&fe=ci'
-    type: video
-    enabled: true
   -
     id: C-2B1aGpD75UdWTvmDd2s
     images:
@@ -92,7 +88,7 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793348339
+updated_at: 1793693402
 hero_image: watt-presentation-template.jpg
 description: |-
   Det var ambitionen när vi startade Watt Heating AB 2009 och har idag blivit något av vårt signum. Med ett brinnande engagemang för produkter till vattenburen värme fokuserar vi på att erbjuda marknadens bästa pris på våra typer av produkter.
@@ -100,4 +96,5 @@ description: |-
   Vi strävar alltid efter utveckling genom intensiv global bevakning av branschen och levererar det senaste inom vår produktkategori.
 
   Våra ägare har stor erfarenhet inom området och bidrar med sin kompetens på olika positioner i företaget.
+seo_noindex: false
 ---
