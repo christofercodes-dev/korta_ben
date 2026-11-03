@@ -7,7 +7,7 @@ category:
   - video
 image: edd-presentation-template.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793696458
+updated_at: 1793696886
 project_content:
   -
     id: c5_-iFCmjjzAz2jyOHdEo
@@ -24,6 +24,12 @@ project_content:
     type: images
     enabled: false
   -
+    id: 6jctmTEuNkc2DlMLs17MX
+    images:
+      - edd-var26_kortaben-9510.jpg
+    type: images
+    enabled: true
+  -
     id: '-GC3AtSzbWdEssxgGF5sz'
     video: 'https://vimeo.com/1240698095/028848b816?fl=tl&fe=ec&share=copy'
     type: video
@@ -33,12 +39,6 @@ project_content:
     id: p3Xe3DWSaWyUckARcW-PI
     images:
       - edd-presentation-template4.jpg
-    type: images
-    enabled: true
-  -
-    id: 6jctmTEuNkc2DlMLs17MX
-    images:
-      - edd-var26_kortaben-9510.jpg
     type: images
     enabled: true
   -
