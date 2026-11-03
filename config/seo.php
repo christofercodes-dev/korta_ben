@@ -9,10 +9,10 @@ return [
     */
     'indexable' => (bool) env('SEO_INDEXABLE', false),
 
-    'site_name' => 'Korta Ben',
+    'site_name' => 'Korta ben',
 
-    'default_title' => 'Korta Ben – Kreativ byrå för varumärken, film och kampanjer',
+    'default_title' => 'Korta ben – Kreativ byrå för varumärken, film och kampanjer',
 
-    'default_description' => 'Korta Ben är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt. Från idé och strategi till film, content och kampanjer.',
+    'default_description' => 'Korta ben är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt. Från idé och strategi till film, content och kampanjer.',
 
 ];

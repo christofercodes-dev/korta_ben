@@ -14,8 +14,8 @@ featured_projects:
 hero_image_1: oqto_retro-pc.mp4
 hero_image_2: reda-card-web.jpg
 projects_title: 'Några projekt vi är extra stolta över'
-seo_title: 'Korta Ben – Kreativ byrå för varumärken, film och kampanjer'
-seo_description: 'Korta Ben är en kreativ byrå i Skåne som gillar bra idéer och enkelt språk. Vi hjälper varumärken med strategi, film, content och kampanjer.'
+seo_title: 'Korta ben – Kreativ byrå för varumärken, film och kampanjer'
+seo_description: 'Korta ben är en kreativ byrå i Skåne som gillar bra idéer och enkelt språk. Vi hjälper varumärken med strategi, film, content och kampanjer.'
 seo_noindex: false
 about_text_1: 'Korta ben är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt.'
 about_text_2: 'Vi jobbar med varumärken som vill göra kommunikation med lite mer tanke bakom. Från idé och strategi till film, content och kampanjer.'
