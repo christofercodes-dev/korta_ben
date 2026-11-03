@@ -7,7 +7,7 @@ category:
   - video
 image: edd-presentation-template.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793715914
+updated_at: 1793716086
 project_content:
   -
     id: c5_-iFCmjjzAz2jyOHdEo
@@ -24,9 +24,9 @@ project_content:
     type: images
     enabled: false
   -
-    id: p3Xe3DWSaWyUckARcW-PI
+    id: _6QJFkkBAzfVUSdDNx2xQ
     images:
-      - edd-presentation-template4.jpg
+      - kba_4242-edit@0.5x.jpg
     type: images
     enabled: true
   -
@@ -78,6 +78,12 @@ project_content:
       - edd_kortaben_2274.jpg
       - hats-edd-kba_9501.jpg
     type: image_grid
+    enabled: true
+  -
+    id: p3Xe3DWSaWyUckARcW-PI
+    images:
+      - edd-presentation-template4.jpg
+    type: images
     enabled: true
   -
     id: NP-P7oS6Wy8KrxL8MMBVV
