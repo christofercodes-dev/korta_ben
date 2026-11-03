@@ -37,10 +37,21 @@ project_content:
     type: images
     enabled: true
   -
-    id: EpnrJNlgUkTboeSHtcDpU
+    id: _8ndhjIvZJ2EjtDttNX-H
     images:
-      - oqto-presentation-template4.jpg
-    type: images
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-5.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-6.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-7.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-8.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-9.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-10.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-11.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-12.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-14.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-15.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-16.svg
+      - oqto_logga_2026_thuglife_emoji_orange.svg
+    type: image_band
     enabled: true
   -
     id: 2wtKvNKT_uoUPxZXCDVow
@@ -72,7 +83,7 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793693785
+updated_at: 1793694161
 hero_image: oqto-presentation-template.jpg
 description: |-
   Din högra hand.
