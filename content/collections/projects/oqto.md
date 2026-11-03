@@ -12,7 +12,7 @@ project_content:
   -
     id: N_EGs1voSX55Y9qVAr38e
     images:
-      - computerold.jpg
+      - oqto_retro-pc.mp4
       - stickers.jpg
     type: images
     enabled: true
@@ -36,7 +36,8 @@ project_content:
       - oqto-presentation-template3.jpg
     type: images
     enabled: true
-  - id: OtEom7dhKJ00SEJdl3L3x
+  -
+    id: OtEom7dhKJ00SEJdl3L3x
     video: 'https://vimeo.com/1223949720?fl=ip&fe=ec&share=copy'
     type: video
     enabled: true
