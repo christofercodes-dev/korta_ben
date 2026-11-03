@@ -33,7 +33,7 @@ project_content:
       - reda-ad-1200x1200.jpg
       - reda-ad-1200x1200-3-2.jpg
       - reda-ad-1200x1200-9.jpg
-      - reda-ad-1200x1200-10.jpg
+      - reda-ad-1200x1200-10-1793694862.jpg
       - reda-ad-1200x1200-3.jpg
     type: image_grid
     enabled: true
@@ -70,7 +70,8 @@ project_content:
       - web-presentation-template3.jpg
     type: images
     enabled: true
-  - id: I35XrHbyZx7az0rZvBtwU
+  -
+    id: I35XrHbyZx7az0rZvBtwU
     video: 'https://vimeo.com/1170278782?fl=ls&fe=ec&share=copy'
     type: video
     enabled: true
