@@ -39,10 +39,18 @@ project_content:
   -
     id: _8ndhjIvZJ2EjtDttNX-H
     images:
-      - oqto_logga_2026_eyes_2_logomark_orange-copy-5.svg
       - oqto_logga_2026_eyes_2_logomark_orange-copy-8.svg
       - oqto_logga_2026_eyes_2_logomark_orange-copy-16.svg
       - oqto_logga_2026_thuglife_emoji_orange.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-5.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-6.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-7.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-9.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-10.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-11.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-12.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-14.svg
+      - oqto_logga_2026_eyes_2_logomark_orange-copy-15.svg
     type: image_band
     enabled: true
   -
@@ -75,7 +83,7 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793694161
+updated_at: 1793694583
 hero_image: oqto-presentation-template.jpg
 description: |-
   Din högra hand.
