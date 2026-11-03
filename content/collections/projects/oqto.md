@@ -40,7 +40,6 @@ project_content:
     id: _8ndhjIvZJ2EjtDttNX-H
     images:
       - oqto_logga_2026_eyes_2_logomark_orange-copy-5.svg
-      - oqto_logga_2026_eyes_2_logomark_orange-copy-6.svg
       - oqto_logga_2026_eyes_2_logomark_orange-copy-7.svg
       - oqto_logga_2026_eyes_2_logomark_orange-copy-8.svg
       - oqto_logga_2026_eyes_2_logomark_orange-copy-9.svg
