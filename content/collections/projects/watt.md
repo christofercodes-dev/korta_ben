@@ -88,7 +88,7 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793693402
+updated_at: 1793693482
 hero_image: watt-presentation-template.jpg
 description: |-
   Det var ambitionen när vi startade Watt Heating AB 2009 och har idag blivit något av vårt signum. Med ett brinnande engagemang för produkter till vattenburen värme fokuserar vi på att erbjuda marknadens bästa pris på våra typer av produkter.
