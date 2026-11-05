@@ -71,6 +71,18 @@ project_content:
     type: images
     enabled: true
   -
+    id: qrvitaCAdfGj_PHIKI6g8
+    images:
+      - 2_9x16_compressed.mp4
+      - reda-video-3.mp4
+      - reda_website_1017-2511006_video_5_20260302_v1_compressed.mp4
+      - reda-video-1.mp4
+      - reda_website_1017-2511006_video_3_20260302_v1_compressed.mp4
+      - reda_website_1017-2511006_video_2_20260302_v1_compressed.mp4
+      - reda-video-2.mp4
+    type: image_band
+    enabled: true
+  -
     id: gIBWd94eVX4lrfb2S6tlk
     images:
       - phone.jpg
@@ -78,6 +90,6 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793694980
+updated_at: 1793869987
 seo_noindex: false
 ---
