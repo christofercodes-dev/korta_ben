@@ -19,7 +19,7 @@ project_content:
   -
     id: uQqOqx67c4QsE3YP7rio0
     images:
-      - comp_1_iteration_1.gif
+      - pressout_v1_compressed.mp4
     type: images
     enabled: true
   -
@@ -63,5 +63,6 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793353699
+updated_at: 1793870960
+seo_noindex: false
 ---
