@@ -6,7 +6,7 @@ category:
   - campaign
 image: spideo.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793715801
+updated_at: 1793870792
 project_content:
   -
     id: Snhq-yzl6ywtAgJrckkIV
@@ -27,4 +27,5 @@ project_content:
     type: image_band
     enabled: true
 seo_noindex: false
+hero_image: spideo.jpg
 ---
