@@ -8,7 +8,7 @@ category:
   - web
 image: holding-mobile-mockup-01-.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793697826
+updated_at: 1793870577
 hero_image: holding-mobile-mockup-01-.jpg
 project_content:
   -
@@ -16,6 +16,11 @@ project_content:
     images:
       - 9fc9b6bf-e7be-4ab2-bee9-b86a1b23724f.jpg
     type: images
+    enabled: true
+  -
+    id: HjYHq3dZmnaoltVCJ8KaB
+    video_file: film-1_dyslexi_compressed.mp4
+    type: video
     enabled: true
   -
     id: OfAOeVlJMnRqFSwl0TEik
@@ -27,6 +32,20 @@ project_content:
     id: 1911_fopr-nTDjdsLzrRH
     images:
       - mmd3-web-presentation-template3.jpg
+    type: images
+    enabled: true
+  -
+    id: X2cpOyLGBwZpK8GD9FjiH
+    images:
+      - film-2_horselnedsattning_compressed.mp4
+      - film-4_homofobi_natkrankning_compressed.mp4
+      - film-3_neuropsykiatriska-svarigheter_compressed.mp4
+    type: images
+    enabled: true
+  -
+    id: C8melU-K1jgeww45E5-7F
+    images:
+      - mmd1-web-presentation-template.jpg
     type: images
     enabled: true
   -
@@ -42,12 +61,6 @@ project_content:
       - mmd-kortaben-7253.jpg
       - mmd-kortaben-7144.jpg
     type: image_band
-    enabled: true
-  -
-    id: C8melU-K1jgeww45E5-7F
-    images:
-      - mmd1-web-presentation-template.jpg
-    type: images
     enabled: true
 seo_noindex: false
 ---
