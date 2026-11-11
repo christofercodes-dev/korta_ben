@@ -25,13 +25,13 @@ project_content:
   -
     id: sqZnaIWMsyXFQE2K1KdBK
     images:
-      - spillvac-web-presentation-template2.jpg
+      - spillvac-presentation-template.jpg
     type: images
     enabled: true
   -
     id: SYDbxMcIuG3xYFU7h4N8O
     images:
-      - spillvac-web-presentation-template3.jpg
+      - spillvac-presentation-template2.jpg
     type: images
     enabled: true
   -
@@ -63,6 +63,6 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793870960
+updated_at: 1794401057
 seo_noindex: false
 ---
