@@ -31,6 +31,11 @@ project_content:
     type: image_grid
     enabled: true
   -
+    id: g9k_FkPDSZgebomUJa2D-
+    vimeo_url: 'https://vimeo.com/1223949720?share=copy&fl=sv&fe=ci'
+    type: vimeo
+    enabled: true
+  -
     id: ADDIhmAiH71xU30ZFZvHH
     images:
       - oqto-presentation-template3.jpg
@@ -83,7 +88,7 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793782003
+updated_at: 1794398741
 hero_image: oqto-presentation-template.jpg
 description: |-
   Din högra hand.
