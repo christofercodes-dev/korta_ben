@@ -17,6 +17,11 @@ project_content:
     type: images
     enabled: true
   -
+    id: g9k_FkPDSZgebomUJa2D-
+    vimeo_url: 'https://vimeo.com/1223949720?share=copy&fl=sv&fe=ci'
+    type: vimeo
+    enabled: true
+  -
     id: YaA8mBuQiHBJ40TPl1McM
     background: '#181818'
     images:
@@ -29,11 +34,6 @@ project_content:
       - oqto-ad-1200x1200-4-1793184923.jpg
       - oqto-ad-1200x1200.png
     type: image_grid
-    enabled: true
-  -
-    id: g9k_FkPDSZgebomUJa2D-
-    vimeo_url: 'https://vimeo.com/1223949720?share=copy&fl=sv&fe=ci'
-    type: vimeo
     enabled: true
   -
     id: ADDIhmAiH71xU30ZFZvHH
@@ -88,7 +88,7 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1794398741
+updated_at: 1794399449
 hero_image: oqto-presentation-template.jpg
 description: |-
   Din högra hand.
