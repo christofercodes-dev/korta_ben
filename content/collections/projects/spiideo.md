@@ -6,7 +6,7 @@ category:
   - campaign
 image: spideo.jpg
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1794398871
+updated_at: 1794399264
 project_content:
   -
     id: Snhq-yzl6ywtAgJrckkIV
@@ -14,11 +14,6 @@ project_content:
       - untitled2.mp4
       - psc3_rain.mp4
     type: images
-    enabled: true
-  -
-    id: P_8noGkMb_pR9qyc8ckWr
-    vimeo_url: 'https://vimeo.com/1121480251/60088900c0?share=copy&fl=sv&fe=ci'
-    type: vimeo
     enabled: true
   -
     id: LrHwWn7_gYxP3ycj20n0k
@@ -30,6 +25,16 @@ project_content:
       - psc3_stadium.mp4
       - wip-spiideo-logo-animation.mp4
     type: image_band
+    enabled: true
+  -
+    id: P_8noGkMb_pR9qyc8ckWr
+    vimeo_url: 'https://vimeo.com/1121480251/60088900c0?share=copy&fl=sv&fe=ci'
+    type: vimeo
+    enabled: true
+  -
+    id: TOwnZFiWxm2rWSikjdCGN
+    vimeo_url: 'https://vimeo.com/1245780294/3a4ae9d4c9?share=copy&fl=sv&fe=ci'
+    type: vimeo
     enabled: true
 seo_noindex: false
 hero_image: spideo.jpg
