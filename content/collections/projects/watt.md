@@ -23,6 +23,11 @@ project_content:
     type: images
     enabled: true
   -
+    id: yt0GQso-uSrqBfvh_F6Lu
+    vimeo_url: 'https://vimeo.com/1090819510/e26a795e27?share=copy&fl=sv&fe=ci'
+    type: vimeo
+    enabled: true
+  -
     id: Oe2EEMDsp2EEDRhcOeg3d
     images:
       - watt-presentation-template5.jpg
@@ -88,7 +93,7 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1793693482
+updated_at: 1794398524
 hero_image: watt-presentation-template.jpg
 description: |-
   Det var ambitionen när vi startade Watt Heating AB 2009 och har idag blivit något av vårt signum. Med ett brinnande engagemang för produkter till vattenburen värme fokuserar vi på att erbjuda marknadens bästa pris på våra typer av produkter.
