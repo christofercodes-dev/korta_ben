@@ -337,6 +337,21 @@
                     </div>
                 {{ /if }}
 
+            {{ elseif type == "vimeo" }}
+
+                {{ if vimeo_url | vimeo_embed }}
+                    <div class="relative aspect-video w-full overflow-hidden bg-[#e8e6e1]">
+                        <iframe
+                            src="{{ vimeo_url | vimeo_embed }}"
+                            title="{{ vimeo_title ?? title }}"
+                            class="absolute inset-0 h-full w-full border-0"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy"
+                        ></iframe>
+                    </div>
+                {{ /if }}
+
             {{ /if }}
 
         {{ /project_content }}

@@ -270,6 +270,26 @@ tabs:
                             mode: grid
                             validate:
                               - required
+                    vimeo:
+                      display: Vimeo
+                      icon: video
+                      instructions: 'Visa en film från Vimeo i 16:9. Fristående block, påverkar inte de självhostade filmerna.'
+                      fields:
+                        -
+                          handle: vimeo_url
+                          field:
+                            type: text
+                            display: 'Vimeo-länk'
+                            instructions: 'Klistra in länken till filmen, t.ex. https://vimeo.com/123456789. Privata filmer med kod (vimeo.com/123456789/abc123) fungerar också.'
+                            input_type: url
+                            validate:
+                              - required
+                        -
+                          handle: vimeo_title
+                          field:
+                            type: text
+                            display: Titel
+                            instructions: 'Valfri. Beskriver filmen för skärmläsare.'
   sidebar:
     display: Sidebar
     sections:
