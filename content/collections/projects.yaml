@@ -4,7 +4,9 @@ template: components/project
 layout: layout
 revisions: false
 route: '/projekt/{slug}'
-sort_dir: asc
+structure:
+  root: false
+  max_depth: 1
 date_behavior:
   past: null
   future: null
