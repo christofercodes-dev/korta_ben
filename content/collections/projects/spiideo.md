@@ -6,7 +6,7 @@ category:
   - campaign
 image: 3-2.png
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1794825129
+updated_at: 1794825182
 project_content:
   -
     id: Snhq-yzl6ywtAgJrckkIV
@@ -37,5 +37,5 @@ project_content:
     type: vimeo
     enabled: true
 seo_noindex: false
-hero_image: spideo.jpg
+hero_image: 3-2.png
 ---
