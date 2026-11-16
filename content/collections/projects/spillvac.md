@@ -13,7 +13,7 @@ project_content:
   -
     id: prVI5gM85SyHF5Pa4Gs62
     images:
-      - 11677015.jpg
+      - spilvac-mac.jpg
     type: images
     enabled: true
   -
@@ -63,6 +63,6 @@ project_content:
     type: images
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1794401057
+updated_at: 1794824801
 seo_noindex: false
 ---
