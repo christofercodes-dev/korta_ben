@@ -29,10 +29,10 @@ project_content:
       - oqto-ad-1200x1200-1-1794826284.png
       - oqto-ad-1200x1200-2-1794826289.png
       - oqto-ad-1200x1200-.png
-      - oqto-ad-1200x1200-1.jpg
+      - oqto-ad-1200x1200--1794827448.png
       - oqto-ad-1404x1404-1794826306.jpg
       - oqto-ad-1200x1200-1794826299.png
-      - oqto-ad-1200x1200--1794827448.png
+      - oqto-ad-1200x1200-1.jpg
     type: image_grid
     enabled: true
   -
@@ -88,7 +88,7 @@ project_content:
     type: image_band
     enabled: true
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1794827499
+updated_at: 1794827539
 hero_image: oqto-presentation-template.jpg
 description: |-
   Din högra hand.
