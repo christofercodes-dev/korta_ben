@@ -4,9 +4,9 @@ blueprint: project
 title: Spiideo
 category:
   - campaign
-image: spideo.jpg
+image: 3-2.png
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1794399287
+updated_at: 1794825129
 project_content:
   -
     id: Snhq-yzl6ywtAgJrckkIV
@@ -26,9 +26,9 @@ project_content:
       - untitled4.mp4
       - short-3.mp4
       - short4.mp4
-      - shortshort.mp4
       - psc3_stadium.mp4
       - wip-spiideo-logo-animation.mp4
+      - shortshort.mp4
     type: image_band
     enabled: true
   -
