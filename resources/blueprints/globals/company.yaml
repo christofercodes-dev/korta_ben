@@ -34,3 +34,40 @@ tabs:
               type: text
               input_type: url
               display: Instagram-länk
+  contact:
+    display: Kontaktperson
+    sections:
+      -
+        instructions: 'Visas på kontaktsidan. Lämnar du fälten tomma används företagets e-post och telefon.'
+        fields:
+          -
+            handle: contact_name
+            field:
+              type: text
+              display: Namn
+          -
+            handle: contact_email
+            field:
+              type: text
+              input_type: email
+              display: E-post
+          -
+            handle: contact_phone
+            field:
+              type: text
+              display: Telefon
+          -
+            handle: contact_phone_link
+            field:
+              type: text
+              display: 'Telefon (för länk)'
+              instructions: 'Samma nummer utan mellanslag, t.ex. +46768519560.'
+          -
+            handle: contact_image
+            field:
+              type: assets
+              container: assets
+              display: Porträtt
+              max_files: 1
+              min_files: 0
+              mode: grid

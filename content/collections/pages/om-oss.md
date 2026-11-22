@@ -5,28 +5,18 @@ title: 'Om oss'
 updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
 updated_at: 1791279869
 template: about
-about_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+about_title: 'Vi tror att de bästa idéerna är enkla att förstå och svåra att glömma.'
 section_title: 'om oss'
-big_title: 'Vi skapar visuella uttryck för varumärken som vill göra ett starkare intryck.'
+big_title: 'Korta ben, långa idéer.'
 small_title: 'Vilka vi är'
-about_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+about_content: 'Vi är en liten kreativ studio i Stockamöllan som hjälper företag att hitta rätt ord, rätt bilder och rätt känsla. Du jobbar nära dem som faktiskt gör jobbet, utan långa processer och utan mellanhänder. Vi tar oss an allt från idé och strategi till foto, film, content och kampanjer, och vi bryr oss lika mycket om detaljerna som om helheten.'
 team:
   - id: k_m41Oi8y8eic_pDxRRCm
-    name: 'Förnamn Efternamn'
-    role: 'Min roll'
-    type: person
-    enabled: true
-  - id: fjPDiYCTUZbLYzT0uWkFn
-    name: 'Förnamn Efternamn'
-    role: 'Min roll'
-    type: person
-    enabled: true
-  - id: _4vLnproJJJBSsE1hZxFT
-    name: 'Förnamn Efternamn'
-    role: 'Min roll'
+    name: 'Marcus Brunström'
+    role: 'Idéer, foto & film'
     type: person
     enabled: true
 seo_title: 'Om Korta ben – Vilka vi är'
-seo_description: 'Vi skapar visuella uttryck för varumärken som vill göra ett starkare intryck. Möt teamet bakom Korta ben.'
+seo_description: 'Korta ben är en liten kreativ studio i Stockamöllan. Vi gillar bra idéer, enkelt språk och saker som känns på riktigt. Möt oss och läs mer om hur vi jobbar.'
 ---
-Vi tror på idéer som känns lika relevanta som de ser bra ut. Genom strategi, design och kreativ produktion hjälper vi företag att hitta ett tydligare uttryck och kommunicera med större självklarhet.
+Vi gillar bra idéer, enkelt språk och saker som känns på riktigt. Därför börjar vi alltid med att lyssna, och lägger sedan all kraft på det som gör skillnad: ett tydligt budskap, ett uttryck som är ert eget och ett resultat som folk faktiskt vill titta på.

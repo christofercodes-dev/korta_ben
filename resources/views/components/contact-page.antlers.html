@@ -58,7 +58,7 @@
      CONTACT FORM
 ================================================== -->
 
-<section class="contact-section contact-form-section overflow-hidden bg-[#181818] px-5 py-24 text-white md:px-8 md:py-40">
+<section class="contact-section contact-person-section overflow-hidden bg-[#181818] px-5 py-24 text-white md:px-8 md:py-40">
 
     <div class="mx-auto max-w-[1440px]">
 
@@ -66,164 +66,49 @@
 
             <!-- LABEL -->
             <div class="min-w-0 md:col-span-3 md:col-start-1">
-
                 <p class="contact-section-label section-label text-white/40">
-                    Skicka förfrågan
+                    Din kontakt
                 </p>
-
             </div>
 
-
-            <!-- FORM -->
+            <!-- PERSON -->
             <div class="min-w-0 md:col-span-8 md:col-start-5">
 
-                <h2 class="contact-section-title max-w-[850px] text-[clamp(2.8rem,5.5vw,6rem)] font-medium leading-[0.9] tracking-[-0.06em]">
-                    Berätta om ditt projekt.
-                </h2>
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-8 md:gap-10">
 
-
-                <form
-                    method="POST"
-                    action="#"
-                    class="contact-form mt-20 md:mt-28"
-                >
-
-                    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-8 md:gap-y-16">
-
-
-                        <!-- NAME -->
-                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
-
-                            <label
-                                for="name"
-                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
-                            >
-                                Namn
-                            </label>
-
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                required
-                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
-                                placeholder="Ditt namn"
-                            >
-
+                    {{ if company:contact_image }}
+                        <div class="contact-form-field md:col-span-3">
+                            <div class="aspect-[4/5] overflow-hidden bg-white/5">
+                                {{ company:contact_image }}
+                                    <img
+                                        src="{{ glide:url preset="w800" }}"
+                                        srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w"
+                                        sizes="(min-width: 768px) 28vw, 100vw"
+                                        alt="{{ company:contact_name ?? 'Porträtt' }}"
+                                        class="block h-full w-full object-cover"
+                                        loading="lazy"
+                                    >
+                                {{ /company:contact_image }}
+                            </div>
                         </div>
+                    {{ /if }}
 
+                    <div class="min-w-0 {{ if company:contact_image }}md:col-span-5 md:flex md:flex-col md:justify-end{{ else }}md:col-span-8{{ /if }}">
 
-                        <!-- EMAIL -->
-                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
+                        <h2 class="contact-section-title max-w-[850px] text-[clamp(2.8rem,5.5vw,6rem)] font-medium leading-[0.9] tracking-[-0.06em]">
+                            Hej, jag är {{ company:contact_name | explode:" " | first }}.
+                        </h2>
 
-                            <label
-                                for="email"
-                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
-                            >
-                                E-post
-                            </label>
-
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                required
-                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
-                                placeholder="din@email.se"
-                            >
-
-                        </div>
-
-
-                        <!-- COMPANY -->
-                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
-
-                            <label
-                                for="company"
-                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
-                            >
-                                Företag
-                            </label>
-
-                            <input
-                                id="company"
-                                name="company"
-                                type="text"
-                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
-                                placeholder="Företagsnamn"
-                            >
-
-                        </div>
-
-
-                        <!-- PROJECT TYPE -->
-                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white">
-
-                            <label
-                                for="project"
-                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
-                            >
-                                Projekt
-                            </label>
-
-                            <input
-                                id="project"
-                                name="project"
-                                type="text"
-                                class="w-full border-0 bg-transparent p-0 text-[17px] font-light tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
-                                placeholder="Vad behöver ni hjälp med?"
-                            >
-
-                        </div>
-
-
-                        <!-- MESSAGE -->
-                        <div class="contact-form-field group border-b border-white/20 pb-4 transition-colors duration-500 focus-within:border-white md:col-span-2">
-
-                            <label
-                                for="message"
-                                class="mb-3 block text-[9px] font-medium uppercase tracking-[0.25em] text-white/35"
-                            >
-                                Meddelande
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="4"
-                                required
-                                class="w-full resize-none border-0 bg-transparent p-0 text-[17px] font-light leading-[1.5] tracking-[-0.02em] text-white outline-none placeholder:text-white/20"
-                                placeholder="Berätta lite om projektet..."
-                            ></textarea>
-
+                        <div class="contact-form-submit mt-10 max-w-[480px] text-[15px] leading-[1.7] text-white/55 md:mt-14 md:text-[17px]">
+                            <p>
+                                Det är jag du pratar med, från första mejlet till färdigt resultat.
+                                Berätta kort vad du har på gång, så återkommer jag så fort jag kan.
+                            </p>
                         </div>
 
                     </div>
 
-
-                    <!-- SUBMIT -->
-                    <div class="contact-form-submit mt-14 flex items-center justify-between md:mt-20">
-
-                        <p class="max-w-[300px] text-[10px] leading-[1.6] text-white/35">
-                            Genom att skicka formuläret godkänner du att vi kontaktar dig angående din förfrågan.
-                        </p>
-
-                        <button
-                            type="submit"
-                            class="group inline-flex items-center gap-6 border-b border-white/30 pb-3 text-[10px] font-medium uppercase tracking-[0.22em] transition-colors duration-500 hover:border-white"
-                        >
-                            <span>
-                                Skicka
-                            </span>
-
-                            <span class="transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
-                                →
-                            </span>
-                        </button>
-
-                    </div>
-
-                </form>
+                </div>
 
             </div>
 
@@ -269,11 +154,11 @@
                         </p>
 
                         <a
-                            href="mailto:{{ company:email }}"
+                            href="mailto:{{ company:contact_email ?? company:email }}"
                             class="group inline-flex items-center gap-4 text-[clamp(1.5rem,2.8vw,3rem)] font-medium leading-none tracking-[-0.045em]"
                         >
                             <span>
-                                {{ company:email }}
+                                {{ company:contact_email ?? company:email }}
                             </span>
 
                             <span class="text-black/30 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
@@ -292,11 +177,11 @@
                         </p>
 
                         <a
-                            href="tel:{{ company:phone_link }}"
+                            href="tel:{{ company:contact_phone_link ?? company:phone_link }}"
                             class="group inline-flex items-center gap-4 text-[clamp(1.5rem,2.8vw,3rem)] font-medium leading-none tracking-[-0.045em]"
                         >
                             <span>
-                                {{ company:phone }}
+                                {{ company:contact_phone ?? company:phone }}
                             </span>
 
                             <span class="text-black/30 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
