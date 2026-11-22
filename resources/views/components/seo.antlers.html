@@ -65,9 +65,12 @@
             "url": {{ config:app:url | json }},
             "description": {{ config:seo:default_description | json }},
             {{ if company:email }}"email": {{ company:email | json }},{{ /if }}
+            {{ if company:phone_link }}"telephone": {{ company:phone_link | json }},{{ /if }}
             "address": {
                 "@type": "PostalAddress",
-                "addressLocality": {{ company:address | json }},
+                "streetAddress": "Gunnarödsvägen 2",
+                "postalCode": "241 96",
+                "addressLocality": "Stockamöllan",
                 "addressCountry": "SE"
             }{{ if company:instagram }},
             "sameAs": [{{ company:instagram | json }}]{{ /if }}

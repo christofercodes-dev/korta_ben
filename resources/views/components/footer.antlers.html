@@ -11,13 +11,10 @@
             <img
             src="/images/logos/logo-symbol.svg"
             alt="Korta ben"
-            class="h-8 w-auto"
+            class="h-8 w-auto brightness-0 invert"
         >
 
-            <p class="mt-5 max-w-[280px] text-[12px] leading-[1.7] text-white/40">
-                Kreativ studio för foto, film,
-                content och idéer som får ta plats.
-            </p>
+            <address class="mt-5 max-w-[280px] whitespace-pre-line text-[12px] not-italic leading-[1.7] text-white/50">{{ company:address }}</address>
 
         </div>
 
@@ -32,15 +29,15 @@
 
             <nav class="flex flex-col gap-3">
 
-                <a href="#hero" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
+                <a href="/" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
                     Hem
                 </a>
 
-                <a href="#work" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
-                    Cases
+                <a href="/projekt" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
+                    Projekt
                 </a>
 
-                <a href="#contact"
+                <a href="/kontakt"
                     class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
                     Kontakt
                 </a>
@@ -85,12 +82,8 @@
 
             <div class="flex flex-col gap-3">
 
-                <a href="{{ company:instagram ?? '#' }}" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
+                <a href="{{ company:instagram ?? 'https://www.instagram.com/korta.ben/' }}" target="_blank" rel="noopener" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
                     Instagram
-                </a>
-
-                <a href="#" class="w-fit text-[11px] text-white/70 transition-colors duration-300 hover:text-white">
-                    LinkedIn
                 </a>
 
             </div>
@@ -108,15 +101,11 @@
         class="flex flex-col gap-3 pt-6 text-[7px] uppercase tracking-[0.25em] text-white/25 md:flex-row md:items-center md:justify-between">
 
         <p>
-            © {{ now format="Y" }} Korta ben
-        </p>
-
-        <p>
             Stockamöllan · Skåne
         </p>
 
         <p>
-            All rights reserved
+            © {{ now format="Y" }} Korta ben
         </p>
 
     </div>
