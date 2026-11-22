@@ -4,7 +4,7 @@ blueprint: page
 title: Home
 template: home
 updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
-updated_at: 1795383395
+updated_at: 1795383438
 hero_title: 'Vi är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt.'
 featured_projects:
   - 2c58b9de-67e5-4578-8eb9-b2f37bd1144b
@@ -19,5 +19,5 @@ seo_description: 'Korta ben är en kreativ byrå i Skåne som gillar bra idéer 
 seo_noindex: false
 about_text_1: 'Korta ben är en kreativ byrå som gillar bra idéer, enkelt språk och saker som känns på riktigt.'
 about_text_2: 'Vi jobbar med varumärken som vill göra kommunikation med lite mer tanke bakom. Från idé och strategi till film, content och kampanjer.'
-statement_text: 'Det är där det räknas som vi är som bäst.'
+statement_text: 'Det är när du ska bli förstådd som vi är som bäst.'
 ---
