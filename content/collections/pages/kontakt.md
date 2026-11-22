@@ -9,4 +9,3 @@ updated_at: 1788725327
 seo_title: 'Kontakta Korta ben'
 seo_description: 'Har du en idé eller ett projekt på gång? Hör av dig direkt till Marcus på Korta ben, så berättar vi hur vi kan hjälpa till med foto, film, content och kampanjer.'
 ---
-Har du en idé, en fråga eller ett projekt på gång? Du pratar direkt med mig. Inga mellanhänder och inga ärendenummer, bara ett svar från en människa.

@@ -8,7 +8,6 @@ template: about
 about_title: 'Vi tror att de bästa idéerna är enkla att förstå och svåra att glömma.'
 section_title: 'om oss'
 big_title: 'Bra idéer. Enkelt språk. På riktigt.'
-small_title: 'Vilka vi är'
 about_content: |-
   Att vara från Stockamöllan kan låta som en ursäkt, men vi ser det som hela poängen.
 
@@ -31,7 +30,7 @@ team:
   - id: _4vLnproJJJBSsE1hZxFT
     image: marcus-brunstrom-om-oss.jpg
     name: 'Marcus Brunström'
-    role: 'Producent / Projektledning'
+    role: 'UI/UX / Fotograf'
     type: person
     enabled: true
   - id: tmMartinLarsson000001

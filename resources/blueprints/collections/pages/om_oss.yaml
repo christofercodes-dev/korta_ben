@@ -17,11 +17,6 @@ tabs:
         display: 'om oss'
         fields:
           -
-            handle: small_title
-            field:
-              type: text
-              display: 'Liten rubrik'
-          -
             handle: big_title
             field:
               type: text

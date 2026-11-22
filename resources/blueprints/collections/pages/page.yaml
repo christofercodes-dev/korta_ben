@@ -91,12 +91,6 @@ tabs:
         display: 'Utvalda projekt'
         fields:
           -
-            handle: projects_label
-            field:
-              type: text
-              display: Etikett
-              placeholder: 'Utvalda projekt'
-          -
             handle: projects_title
             field:
               type: text

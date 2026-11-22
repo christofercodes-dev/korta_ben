@@ -1,6 +1,7 @@
 import initAboutPage from './components/about-page.js';
 import initAbout from './components/about.js';
 import initBanner from './components/banner.js';
+import initContactForm from './components/contact-form.js';
 import initContactPage from './components/contact-page.js';
 import initLottie from './components/lottie.js';
 import initNavbar from './components/navbar.js';
@@ -297,6 +298,7 @@ aboutElements.forEach((element) => observer.observe(element));
     initAboutPage,
     initAbout,
     initBanner,
+    initContactForm,
     initContactPage,
     initLottie,
     initNavbar,
