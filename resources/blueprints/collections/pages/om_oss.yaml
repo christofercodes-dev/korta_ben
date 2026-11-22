@@ -59,6 +59,15 @@ tabs:
                       display: Person
                       fields:
                         -
+                          handle: image
+                          field:
+                            type: assets
+                            container: assets
+                            display: Porträtt
+                            max_files: 1
+                            min_files: 0
+                            mode: grid
+                        -
                           handle: name
                           field:
                             type: text

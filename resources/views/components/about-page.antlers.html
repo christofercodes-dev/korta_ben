@@ -80,18 +80,32 @@
                     Människorna bakom det vi gör. </h2>
             </div>
         </div> <!-- TEAM LIST -->
-        <div class="about-team-list mt-24 md:mt-40"> {{ team }} <div class="about-team-member group py-6 md:py-8">
-                <div class="grid grid-cols-1 gap-3 md:grid-cols-12 md:items-baseline">
-                    <div class="md:col-span-7 md:col-start-2">
-                        <h3
-                            class="text-[clamp(1.8rem,3.2vw,3.8rem)] font-medium leading-none tracking-[-0.045em] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
-                            {{ name }} </h3>
-                    </div>
-                    <div class="md:col-span-3 md:col-start-10 md:text-right">
-                        <p class="text-[9px] font-medium uppercase tracking-[0.2em] text-black/35"> {{ role }} </p>
-                    </div>
+        <div class="about-team-list mt-24 grid grid-cols-2 gap-x-3 gap-y-12 md:mt-40 md:grid-cols-5 md:gap-x-5 md:gap-y-16">
+            {{ team }}
+                <div class="about-team-member group min-w-0">
+                    {{ if image }}
+                        <div class="aspect-[4/5] overflow-hidden bg-[#e8e6e1]">
+                            {{ image }}
+                                <img
+                                    src="{{ glide:url preset="w800" }}"
+                                    srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w"
+                                    sizes="(min-width: 768px) 20vw, 50vw"
+                                    alt="{{ name }}"
+                                    class="block h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] md:group-hover:scale-[1.03]"
+                                    loading="lazy"
+                                >
+                            {{ /image }}
+                        </div>
+                    {{ /if }}
+                    <h3 class="mt-5 text-[clamp(1.2rem,1.8vw,1.8rem)] font-medium leading-[1.05] tracking-[-0.035em]">
+                        {{ name }}
+                    </h3>
+                    <p class="mt-2 text-[9px] font-medium uppercase leading-[1.6] tracking-[0.2em] text-black/35">
+                        {{ role }}
+                    </p>
                 </div>
-            </div> {{ /team }} </div>
+            {{ /team }}
+        </div>
     </div>
 </section>
 <!-- ================================================== CLOSING ================================================== -->

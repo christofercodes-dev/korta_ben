@@ -15,12 +15,35 @@ about_content: |-
   Det enda bruset här är det från Rönne å. Den enda distraktionen kommer från naturen. Det är en perfekt plats att utgå från när man ska skapa något som känns.
 
   Vi vill att saker ska kännas på riktigt. Bilder där folk ser ut som folk. Film som sticker ut. Texter som låter som en människa och inte som en serverhall.
-
-  Har du en idé som behöver hjälp att komma ut? Hör av dig. Vi tar den därifrån.
 team:
   - id: k_m41Oi8y8eic_pDxRRCm
+    image: amanda-ricciardi.jpg
+    name: 'Amanda Ricciardi'
+    role: 'Fotograf'
+    type: person
+    enabled: true
+  - id: fjPDiYCTUZbLYzT0uWkFn
+    image: linnea-johansson.jpg
+    name: 'Linnéa Johansson'
+    role: 'Illustratör / Original'
+    type: person
+    enabled: true
+  - id: _4vLnproJJJBSsE1hZxFT
+    image: marcus-brunstrom-om-oss.jpg
     name: 'Marcus Brunström'
-    role: 'Idéer, foto & film'
+    role: 'Producent / Projektledning'
+    type: person
+    enabled: true
+  - id: tmMartinLarsson000001
+    image: martin-larsson.jpg
+    name: 'Martin Larsson'
+    role: 'Manusförfattare / Regissör'
+    type: person
+    enabled: true
+  - id: tmViktorEsbjorn000002
+    image: viktor-esbjornsson.jpg
+    name: 'Viktor Esbjörnsson'
+    role: 'Fotograf / 2D-3D'
     type: person
     enabled: true
 seo_title: 'Om Korta ben – Vilka vi är'
