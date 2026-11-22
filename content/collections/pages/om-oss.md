@@ -7,9 +7,16 @@ updated_at: 1791279869
 template: about
 about_title: 'Vi tror att de bästa idéerna är enkla att förstå och svåra att glömma.'
 section_title: 'om oss'
-big_title: 'Korta ben, långa idéer.'
+big_title: 'Bra idéer. Enkelt språk. På riktigt.'
 small_title: 'Vilka vi är'
-about_content: 'Vi är en liten kreativ studio i Stockamöllan som hjälper företag att hitta rätt ord, rätt bilder och rätt känsla. Du jobbar nära dem som faktiskt gör jobbet, utan långa processer och utan mellanhänder. Vi tar oss an allt från idé och strategi till foto, film, content och kampanjer, och vi bryr oss lika mycket om detaljerna som om helheten.'
+about_content: |-
+  Att vara från Stockamöllan kan låta som en ursäkt, men vi ser det som hela poängen.
+
+  Det enda bruset här är det från Rönne å. Den enda distraktionen kommer från naturen. Det är en perfekt plats att utgå från när man ska skapa något som känns.
+
+  Vi vill att saker ska kännas på riktigt. Bilder där folk ser ut som folk. Film som sticker ut. Texter som låter som en människa och inte som en serverhall.
+
+  Har du en idé som behöver hjälp att komma ut? Hör av dig. Vi tar den därifrån.
 team:
   - id: k_m41Oi8y8eic_pDxRRCm
     name: 'Marcus Brunström'
@@ -19,4 +26,4 @@ team:
 seo_title: 'Om Korta ben – Vilka vi är'
 seo_description: 'Korta ben är en liten kreativ studio i Stockamöllan. Vi gillar bra idéer, enkelt språk och saker som känns på riktigt. Möt oss och läs mer om hur vi jobbar.'
 ---
-Vi gillar bra idéer, enkelt språk och saker som känns på riktigt. Därför börjar vi alltid med att lyssna, och lägger sedan all kraft på det som gör skillnad: ett tydligt budskap, ett uttryck som är ert eget och ett resultat som folk faktiskt vill titta på.
+Vi hjälper företag att hitta rätt ord, rätt bilder och rätt känsla, från första idé till färdigt resultat. Du jobbar nära dem som faktiskt gör jobbet.
