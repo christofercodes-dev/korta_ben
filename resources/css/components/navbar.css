@@ -315,8 +315,9 @@
 
             flex-direction: column;
 
+            /* Extra luft nertill så att chatt- och cookieknapparna inte täcker innehållet. */
             padding:
-                88px 20px 24px;
+                88px 20px calc(104px + env(safe-area-inset-bottom));
 
             opacity: 0;
 
