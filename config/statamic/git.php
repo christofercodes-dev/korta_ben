@@ -118,7 +118,7 @@ return [
         resource_path('users'),
         resource_path('preferences.yaml'),
         resource_path('sites.yaml'),
-        storage_path('forms'),
+        // storage_path('forms') ingår medvetet inte: kontaktmeddelanden är personuppgifter och ska inte commitas till GitHub.
         public_path('assets'),
     ],
 

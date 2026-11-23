@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Statamic\Facades\Form;
 
 class ContactController extends Controller
 {
@@ -29,6 +30,13 @@ class ContactController extends Controller
             'message.required' => 'Skriv ett meddelande.',
             'message.max' => 'Meddelandet är för långt.',
         ]);
+
+        // Spara alltid i Forms (Control Panel) först, så inget går förlorat om webhooken strular.
+        try {
+            Form::find('kontakt')?->makeSubmission()->data($data)->save();
+        } catch (\Throwable $e) {
+            Log::error('Kontaktformulär: kunde inte spara i Forms. '.$e->getMessage());
+        }
 
         $url = config('contact.webhook_url');
 
