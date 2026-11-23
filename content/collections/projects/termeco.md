@@ -5,9 +5,10 @@ title: Termeco
 category:
   - foto
   - web
+  - campaign
 image: termeco-presentation-template.jpg
 updated_by: 0db83eba-c4e9-4f20-be54-8d4583a19011
-updated_at: 1795424738
+updated_at: 1795440132
 project_content:
   -
     id: miL6QtVjMsutoiJFXwZwg
