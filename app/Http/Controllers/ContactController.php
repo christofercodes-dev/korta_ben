@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Statamic\Facades\Form;
@@ -15,6 +16,12 @@ class ContactController extends Controller
     {
         // Honeypot: riktiga besökare ser aldrig fältet. Låtsas att det gick bra.
         if ($request->filled('website')) {
+            return $this->done($request);
+        }
+
+        // Tidsspärr: en människa behöver några sekunder på sig. Botar skickar direkt,
+        // eller utan giltig token. Låtsas även här att det gick bra.
+        if (! $this->openedLongEnough($request)) {
             return $this->done($request);
         }
 
@@ -86,6 +93,19 @@ class ContactController extends Controller
         }
 
         return $this->done($request);
+    }
+
+    private function openedLongEnough(Request $request): bool
+    {
+        try {
+            $shownAt = (int) Crypt::decryptString((string) $request->input('_ts'));
+        } catch (\Throwable) {
+            return false;
+        }
+
+        $age = time() - $shownAt;
+
+        return $age >= (int) config('contact.min_seconds');
     }
 
     private function done(Request $request): JsonResponse|RedirectResponse

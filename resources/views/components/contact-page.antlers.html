@@ -95,6 +95,7 @@
                         novalidate
                     >
                         {{ csrf_field }}
+                        <input type="hidden" name="_ts" value="{{ '' | form_token }}">
 
                         <!-- Honeypot, dolt för riktiga besökare -->
                         <div class="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">

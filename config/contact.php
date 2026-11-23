@@ -17,6 +17,9 @@ return [
 
     'webhook_secret' => env('CONTACT_WEBHOOK_SECRET'),
 
+    // Minsta antal sekunder från att formuläret visas tills det får skickas (tidsspärr mot botar).
+    'min_seconds' => (int) env('CONTACT_MIN_SECONDS', 4),
+
     'source' => env('CONTACT_SOURCE', 'kortaben.se'),
 
 ];
