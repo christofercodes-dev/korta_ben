@@ -1,7 +1,7 @@
 {{ partial:components/navbar }}
 
 {{ if hero_image }}
-    <section class="h-svh w-full bg-white px-5 pb-5 pt-20 md:px-8 md:pb-8 md:pt-24">
+    <section class="w-full bg-white px-5 pb-5 pt-20 md:h-svh md:px-8 md:pb-8 md:pt-24 {{ if hero_image }}{{ hero_image }}{{ if is_video || extension == "json" }}h-svh{{ /if }}{{ /hero_image }}{{ /if }}">
         <div class="h-full w-full overflow-hidden bg-[#e8e6e1]">
         {{ hero_image }}
             {{ if extension == "json" }}
@@ -14,7 +14,7 @@
                     srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                     sizes="100vw"
                     alt="{{ alt }}"
-                    class="h-full w-full object-cover"
+                    class="block h-auto w-full md:h-full md:object-cover"
                 >
             {{ /if }}
         {{ /hero_image }}
@@ -89,12 +89,12 @@
 
                     {{ images }}
 
-                        <figure class="min-w-0 overflow-hidden bg-[#e8e6e1] md:flex-1 {{ if images | count > 1 }}aspect-[4/5]{{ /if }}">
+                        <figure class="min-w-0 overflow-hidden bg-[#e8e6e1] md:flex-1 {{ if images | count > 1 }}md:aspect-[4/5]{{ /if }}">
                             {{ if extension == "json" }}
                                 {{ partial:components/lottie :file="url" :alt="alt" class="w-full" fit="contain" }}
                             {{ elseif is_video }}
                                 {{ if images | count > 1 }}
-                                    {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-full w-full" wrapper_class="h-full w-full" fit="cover" }}
+                                    {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-auto w-full md:h-full" wrapper_class="h-auto w-full md:h-full" fit="cover" }}
                                 {{ else }}
                                     {{ partial:components/video :file="url" :sound="has_sound" :poster="poster" :alt="alt" class="h-auto w-full" fit="contain" }}
                                 {{ /if }}
@@ -102,7 +102,7 @@
                                 <img
                                     src="{{ url }}"
                                     alt="{{ alt }}"
-                                    class="block w-full {{ if images | count > 1 }}h-full object-cover{{ else }}h-auto{{ /if }}"
+                                    class="block w-full {{ if images | count > 1 }}h-auto md:h-full md:object-cover{{ else }}h-auto{{ /if }}"
                                     loading="lazy"
                                 >
                             {{ else }}
@@ -111,7 +111,7 @@
                                     srcset="{{ glide:url preset="w800" }} 800w, {{ glide:url preset="w1600" }} 1600w, {{ glide:url preset="w2400" }} 2400w"
                                     sizes="(min-width: 1440px) 1440px, 100vw"
                                     alt="{{ alt }}"
-                                    class="block w-full {{ if images | count > 1 }}h-full object-cover{{ else }}h-auto{{ /if }}"
+                                    class="block w-full {{ if images | count > 1 }}h-auto md:h-full md:object-cover{{ else }}h-auto{{ /if }}"
                                     loading="lazy"
                                 >
                             {{ /if }}
