@@ -14,7 +14,7 @@
         "estouai/cookie-consent": "^1.3",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
-        "statamic/cms": "6.39.0",
+        "statamic/cms": "^6.39",
         "symfony/http-client": "^8.1",
         "symfony/postmark-mailer": "^8.1"
     },
