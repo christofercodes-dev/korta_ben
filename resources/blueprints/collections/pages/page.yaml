@@ -91,12 +91,6 @@ tabs:
         display: 'Utvalda projekt'
         fields:
           -
-            handle: projects_title
-            field:
-              type: text
-              display: Rubrik
-              placeholder: 'Några projekt vi är stolta över.'
-          -
             handle: projects_button_text
             field:
               type: text
