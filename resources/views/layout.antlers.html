@@ -28,6 +28,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    {{ cookie_consent:defaults }}
+
     <!-- Support -->
     <script src="https://support.kortaben.se/api/public/widget.js" async></script>
 </head>
@@ -35,6 +37,10 @@
 <body class="antialiased bg-zinc-100 font-sans leading-normal text-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
 
     {{ template_content }}
+
+    {{ cookie_consent }}
+    {{ cookie_consent:button }}
+    {{ cookie_consent:scripts }}
 
 </body>
 
