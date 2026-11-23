@@ -30,6 +30,11 @@
 
     {{ cookie_consent:defaults }}
 
+    {{ if config:seo:indexable && config:seo:fathom_site_id }}
+        <!-- Fathom Analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="{{ config:seo:fathom_site_id }}" defer></script>
+    {{ /if }}
+
     <!-- Support -->
     <script src="https://support.kortaben.se/api/public/widget.js" async></script>
 </head>

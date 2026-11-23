@@ -9,6 +9,9 @@ return [
     */
     'indexable' => (bool) env('SEO_INDEXABLE', false),
 
+    // Fathom Analytics (cookielös statistik). Laddas bara när sajten är indexerbar, alltså i produktion.
+    'fathom_site_id' => env('FATHOM_SITE_ID', 'UXVEXJET'),
+
     'site_name' => 'Korta ben',
 
     'default_title' => 'Korta ben – Kreativ byrå för varumärken, film och kampanjer',
