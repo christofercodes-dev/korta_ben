@@ -81,13 +81,7 @@ project_content:
       - svensk_meny2.jpg
     type: images
     enabled: true
-  -
-    id: Ef9iE5FCNNmCkiXf521BS
-    images:
-      - fp2-presentation-template.jpg
-    type: images
-    enabled: true
 seo_noindex: false
 updated_by: 11553726-99a7-47ab-9700-9ae359dd6102
-updated_at: 1795516055
+updated_at: 1795686656
 ---
