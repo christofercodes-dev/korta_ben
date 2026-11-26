@@ -16,19 +16,13 @@ tabs:
           -
             handle: category
             field:
-              type: select
-              multiple: true
+              type: terms
+              taxonomies:
+                - categories
+              create: true
+              mode: select
               display: Kategorier
-              instructions: 'Välj en eller flera. Visas ovanför projektnamnet.'
-              options:
-                - key: foto
-                  value: Foto
-                - key: video
-                  value: Film
-                - key: campaign
-                  value: Campaign
-                - key: web
-                  value: Webb
+              instructions: 'Välj en eller flera. Visas ovanför projektnamnet. Nya kategorier läggs till under Taxonomies → Kategorier, eller direkt här.'
               validate:
                 - required
           -
